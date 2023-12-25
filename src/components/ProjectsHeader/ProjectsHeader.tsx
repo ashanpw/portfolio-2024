@@ -15,14 +15,18 @@ export const ProjectsHeader = () => {
             "FRONTEND BACKEND COMPUTER VISION ANDROID",
             "WEB APPLICATIONS BACKEND SYSTEMS & APIS",
             "MANY MORE PROJECTS TO COME",
+            "SOME STUFF IVE WORKED ON",
+            "FRONTEND BACKEND COMPUTER VISION ANDROID",
+            "WEB APPLICATIONS BACKEND SYSTEMS & APIS",
+            "MANY MORE PROJECTS TO COME",
         ],
     };
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         console.log("y changed to", latest);
     });
-    const moveLeft = useTransform(scrollYProgress, [0, 1], ["-50%", "300%"]);
+    const moveLeft = useTransform(scrollYProgress, [0, 1], ["-50%", "500%"]);
     const moveRight = useTransform(scrollYProgress, [0, 1], ["50%", "-300%"]);
-    const moveDown = useTransform(scrollYProgress, [0, 1], ["-200%", "1000%"]);
+    const moveDown = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
     const movingBanners = text.contentList.map((t, idx) => (
         <S.Title
             style={{
@@ -37,10 +41,8 @@ export const ProjectsHeader = () => {
     ));
     return (
         <S.Container ref={ref}>
-            <div style={{ paddingTop: "35rem" }}>
                 <S.H1>PROJECTS</S.H1>
-            </div>
-            <div>{movingBanners}</div>
+            <div style={{overflow: "hidden"} }>{movingBanners}</div>
         </S.Container>
     );
 };
