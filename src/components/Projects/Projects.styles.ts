@@ -6,7 +6,7 @@ const Grid = styled.div`
     @media (min-width: 768px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 30rem;
+        gap: 20rem;
     }
     padding: 10rem 0;
 `;
@@ -23,9 +23,16 @@ const Date = styled.p`
 const Description = styled.p`
     color: ${ColorTokens.secondary};
     line-height: 3rem;
+    @media (min-width: 768px) {
+        max-width: 95%;
+    }
 `;
 const Img = styled.img`
     width: 100%;
+`;
+
+const Index = styled.p`
+    margin-bottom: 2rem;
 `;
 export const S = {
     Grid,
@@ -33,4 +40,5 @@ export const S = {
     Date,
     Description,
     Img,
+    Index,
 };

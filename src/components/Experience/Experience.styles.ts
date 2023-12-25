@@ -1,16 +1,20 @@
 import styled from "styled-components";
 import { ColorTokens } from "../../ColorTokens/ColorTokens";
+import { motion } from "framer-motion";
 
-const Grid = styled.div`
+const Grid = styled.div<{ idx: number }>`
+    ${(props) => props.idx > 0 && "padding-top: 2.5rem;"}
     @media (min-width: 768px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    padding: 4rem 0;
+    gap: 2.5rem 0;
 `;
 
 const Line = styled.div`
     border-bottom: 0.5px solid ${ColorTokens.tertiary};
+    grid-column: 1/-1;
+    margin-bottom: 2.5rem 0;
 `;
 
 const SubSection = styled.div`
@@ -32,10 +36,17 @@ const Title = styled.p`
     font-size: 1.6rem;
 `;
 
+const Img = styled(motion.img)`
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+`;
+
 export const S = {
     Description,
     Grid,
     Line,
     SubSection,
     Title,
+    Img,
 };

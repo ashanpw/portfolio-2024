@@ -1,10 +1,8 @@
-import styled from "styled-components/macro";
+import styled from "styled-components";
 
 export const EmblaDiv = styled.div`
-    max-width: 160rem;
-    margin: auto;
-    position: relative;
     margin-bottom: 5rem;
+    margin-right: 2rem;
     @media (min-width: 768px) {
         margin-bottom: 0;
     }
@@ -12,14 +10,6 @@ export const EmblaDiv = styled.div`
 
 export const EmblaViewport = styled.div`
     overflow: hidden;
-    margin: 0 2.5rem 0 2.5rem;
-    border: 1rem solid #2b2b2b;
-    border-radius: 5rem;
-
-    @media (min-width: 768px) {
-        border-radius: 6.4rem;
-        margin: 0 10rem 0 10rem;
-    }
 `;
 
 export const EmblaContainer = styled.div<{ isMobile: boolean }>`

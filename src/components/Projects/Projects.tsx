@@ -1,4 +1,6 @@
 import { IndentedContainer } from "../../App.styles";
+import { Carousel } from "../Carousel/Carousel";
+import { ProjectsHeader } from "../ProjectsHeader/ProjectsHeader";
 import { S } from "./Projects.styles";
 
 export const Projects = () => {
@@ -49,21 +51,21 @@ export const Projects = () => {
 
     return (
         <>
-            <h1>{text.title}</h1>
+            <ProjectsHeader />
             <IndentedContainer>
                 {text.contentItems.map((p, idx) => {
                     return (
                         <>
                             <S.Grid>
                                 <div>
-                                    <p>{"/0" + (idx + 1)}</p>
+                                    <S.Index>{"/0" + (idx + 1)}</S.Index>
                                     <h5>{p.name}</h5>
                                     <S.Date>{p.date}</S.Date>
                                     <S.Description>
                                         {p.description}
                                     </S.Description>
                                 </div>
-                                <S.Img src="https://fastly.picsum.photos/id/554/1920/1080.jpg?hmac=xGriRcjdEWz3SykVN_2QvpDz2kHei6eYTV8JKXequVw" />
+                                <Carousel />
                             </S.Grid>
                             <S.Line />
                         </>
