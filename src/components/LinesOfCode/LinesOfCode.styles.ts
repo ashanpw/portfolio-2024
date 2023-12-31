@@ -12,7 +12,7 @@ const Container = styled.div`
 const Title = styled(motion.div)`
     position: sticky;
     top: 0;
-    padding-top: 25rem;
+    padding-top: 30rem;
     margin-top: -30rem;
     text-align: center;
     z-index: -1;

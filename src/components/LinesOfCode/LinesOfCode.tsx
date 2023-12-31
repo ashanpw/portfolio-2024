@@ -163,6 +163,50 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
+                    <motion.img
+                        src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
+                        style={{
+                            x: randomIntFromInterval(0, 100),
+                            y: useTransform(
+                                scrollYProgress,
+                                [1, 0],
+                                [randomIntFromInterval(-200, 500), 0]
+                            ),
+                        }}
+                    />
+                    <motion.img
+                        src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
+                        style={{
+                            x: randomIntFromInterval(0, 100),
+                            y: useTransform(
+                                scrollYProgress,
+                                [1, 0],
+                                [randomIntFromInterval(-200, 500), 0]
+                            ),
+                        }}
+                    />
+                    <motion.img
+                        src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
+                        style={{
+                            x: randomIntFromInterval(0, 100),
+                            y: useTransform(
+                                scrollYProgress,
+                                [1, 0],
+                                [randomIntFromInterval(-200, 500), 0]
+                            ),
+                        }}
+                    />
+                    <motion.img
+                        src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
+                        style={{
+                            x: randomIntFromInterval(0, 100),
+                            y: useTransform(
+                                scrollYProgress,
+                                [1, 0],
+                                [randomIntFromInterval(-200, 500), 0]
+                            ),
+                        }}
+                    />
                 </S.Grid>
             </S.Container>
         </div>

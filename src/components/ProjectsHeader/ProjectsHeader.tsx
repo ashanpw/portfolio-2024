@@ -11,38 +11,59 @@ export const ProjectsHeader = () => {
 
     const text = {
         contentList: [
-            "SOME STUFF IVE WORKED ON",
-            "FRONTEND BACKEND COMPUTER VISION ANDROID",
-            "WEB APPLICATIONS BACKEND SYSTEMS & APIS",
-            "MANY MORE PROJECTS TO COME",
-            "SOME STUFF IVE WORKED ON",
-            "FRONTEND BACKEND COMPUTER VISION ANDROID",
-            "WEB APPLICATIONS BACKEND SYSTEMS & APIS",
-            "MANY MORE PROJECTS TO COME",
+            "FRONTEND BACKEND COMPUTER VISION ANDROID FRONTEND BACKEND COMPUTER VISION ANDROID",
+            "FRONTEND BACKEND COMPUTER VISION ANDROID FRONTEND BACKEND COMPUTER VISION ANDROID",
+            "FRONTEND BACKEND COMPUTER VISION ANDROID FRONTEND BACKEND COMPUTER VISION ANDROID",
+            "FRONTEND BACKEND COMPUTER VISION ANDROID FRONTEND BACKEND COMPUTER VISION ANDROID",
+            "FRONTEND BACKEND COMPUTER VISION ANDROID FRONTEND BACKEND COMPUTER VISION ANDROID",
+            "FRONTEND BACKEND COMPUTER VISION ANDROID FRONTEND BACKEND COMPUTER VISION ANDROID",
+            "FRONTEND BACKEND COMPUTER VISION ANDROID FRONTEND BACKEND COMPUTER VISION ANDROID",
+            "FRONTEND BACKEND COMPUTER VISION ANDROID FRONTEND BACKEND COMPUTER VISION ANDROID",
         ],
     };
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        console.log("y changed to", latest);
-    });
+
     const moveLeft = useTransform(scrollYProgress, [0, 1], ["-50%", "500%"]);
     const moveRight = useTransform(scrollYProgress, [0, 1], ["50%", "-300%"]);
-    const moveDown = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-    const movingBanners = text.contentList.map((t, idx) => (
-        <S.Title
-            style={{
-                rotate: idx % 2 === 0 ? 15 : -15,
-                transformOrigin: "center",
-                translateX: idx % 2 === 0 ? moveLeft : moveRight,
-                translateY: moveDown,
-            }}
-        >
-            {t}
-        </S.Title>
-    ));
+    const moveDown = useTransform(scrollYProgress, [0, 1], ["0%", "0%"]);
+    const moveDown2 = useTransform(scrollYProgress, [0, 1], ["-150%", "000%"]);
+    const movingBannersUpperHalf = text.contentList
+        .slice(0, 4)
+        .map((t, idx) => (
+            <S.Title
+                style={{
+                    rotate: 5 + idx,
+                    transformOrigin: "center",
+                    translateX: moveLeft,
+                    translateY: moveDown,
+                }}
+            >
+                {t}
+            </S.Title>
+        ));
+    // Update useState fn with angle and move amount
+    const movingBannersBottomHalf = text.contentList
+        .slice(4, text.contentList.length)
+        .map((t, idx) => (
+            <S.Title
+                style={{
+                    rotate: -idx - 5,
+                    transformOrigin: "center",
+                    translateX: moveRight,
+                    translateY: moveDown2,
+                    backgroundColor: "blue",
+                    color: "beige",
+                }}
+            >
+                {t}
+            </S.Title>
+        ));
     return (
         <S.Container ref={ref}>
-                <S.H1>PROJECTS</S.H1>
-            <div style={{overflow: "hidden"} }>{movingBanners}</div>
+            <S.H1>PROJECTS</S.H1>
+            <div style={{ overflow: "hidden" }}>
+                {movingBannersUpperHalf}
+                {movingBannersBottomHalf}
+            </div>
         </S.Container>
     );
 };

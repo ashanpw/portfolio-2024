@@ -46,12 +46,53 @@ export const Projects = () => {
                 ],
                 mediaAlt: "",
             },
+            {
+                name: "PC SETUP",
+                date: "AUG - SEP 2019",
+                description:
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
+                mediaList: [
+                    {
+                        src: "https://fastly.picsum.photos/id/811/200/300.jpg?hmac=h_NbFElSb3w71ZJbJxKMQg8QNgch87Gbus_L_rsfi6g",
+                        type: "img",
+                    },
+                ],
+                mediaAlt: "",
+            },
         ],
     };
+    const displayProject = (
+        <div>
+            <img
+                src="https://fastly.picsum.photos/id/153/2560/1080.jpg?hmac=61g0FjIORgpZpcyr1-sWg33Dfjo8DxBG-QPVBDuSuEc"
+                width="90%"
+                style={{
+                    padding: "0 2rem",
+
+                    overflow: "hidden",
+                }}
+                alt=""
+            />
+            <IndentedContainer>
+                <div>
+                    <S.Grid>
+                        <div />
+                        <div>
+                            <S.Index>{"/0"}</S.Index>
+                            <h5>{"test"}</h5>
+                            <S.Date>{"test"}</S.Date>
+                            <S.Description>{"desc"}</S.Description>
+                        </div>
+                    </S.Grid>
+                </div>
+            </IndentedContainer>
+        </div>
+    );
 
     return (
         <>
             <ProjectsHeader />
+            {displayProject}
             <IndentedContainer>
                 {text.contentItems.map((p, idx) => {
                     return (
