@@ -10,8 +10,7 @@ const Container = styled.div`
 `;
 
 const Title = styled(motion.h1)`
-    background-color: ${ColorTokens.quartenary};
-    font-size: 15rem;
+    font-size: 10rem;
     color: ${ColorTokens.title};
     top: 50%;
     transform: translate(-50%, -50%);
@@ -30,12 +29,27 @@ const H1 = styled.h1`
     padding-top: 30rem;
     margin-top: -30rem;
     text-align: center;
-    z-index: -1;
+
     font-size: clamp(6rem, 13vw, 20rem);
 `;
 
+export const LogoContainer = styled(motion.div)`
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 12.5rem;
+    gap: 20rem;
+    border: 0.5px solid ${ColorTokens.tertiary};
+    width: 100%;
+    background: ${ColorTokens.background};
+    z-index: -500;
+    margin: auto;
+    min-width: 150vw;
+`;
 export const S = {
     Title,
     Container,
     H1,
+    LogoContainer,
 };
