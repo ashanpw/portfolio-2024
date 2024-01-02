@@ -12,7 +12,7 @@ const Grid = styled.div<{ idx: number }>`
 `;
 
 const Line = styled.div`
-    border-bottom: 0.5px solid ${ColorTokens.tertiary};
+    border-bottom: 0.5px solid ${ColorTokens.quartenary};
     grid-column: 1/-1;
     margin-bottom: 2.5rem 0;
 `;

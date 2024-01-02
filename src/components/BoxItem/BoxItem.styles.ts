@@ -35,9 +35,15 @@ const TextItem = styled.div<{ showText: boolean }>`
         ${(props) => !props.showText && "display: none;"}
     }
 `;
+
+const HorizontalContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
 export const S = {
     FlexBox,
     Ul,
     BGImage,
     TextItem,
+    HorizontalContainer,
 };

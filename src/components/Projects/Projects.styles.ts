@@ -12,7 +12,7 @@ const Grid = styled.div`
 `;
 
 const Line = styled.div`
-    border-bottom: 0.5px solid ${ColorTokens.tertiary};
+    border-bottom: 0.5px solid ${ColorTokens.quartenary};
 `;
 
 const Date = styled.p`
@@ -28,7 +28,9 @@ const Description = styled.p`
     }
 `;
 const Img = styled.img`
-    width: 100%;
+    max-height: 60rem;
+    width: calc(100% - 4rem);
+    margin: 2rem;
 `;
 
 const Index = styled.p`

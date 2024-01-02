@@ -79,7 +79,7 @@ export const ProjectsHeader = () => {
     return (
         <S.Container ref={ref}>
             <S.H1>PROJECTS</S.H1>
-            <div style={{ overflow: "hidden" }}>
+            <div style={{ overflow: "hidden", padding: "5rem 0" }}>
                 <S.LogoContainer
                     style={{
                         x: moveLeft,

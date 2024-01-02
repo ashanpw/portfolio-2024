@@ -12,7 +12,6 @@ export const Technology = () => {
                     "REACT // TYPESCRIPT",
                     "PLAYWRIGHT",
                     "STORYBOOK",
-                    "RTL // JEST",
                     "NEXTJS",
                     "FRAMER MOTION",
                 ],
@@ -31,12 +30,11 @@ export const Technology = () => {
             {
                 header: "BACKEND",
                 listItems: [
-                    "JAX-RS / JERSEY",
+                    "JAX-RS",
                     "GRAPHQL",
                     "AREST",
-                    "APACHE / HTTP",
-                    "LOG4J",
-                    "GUICE / DAGGER",
+                    "APACHE",
+                    "GUICE // DAGGER",
                     "LOMBOK",
                 ],
             },

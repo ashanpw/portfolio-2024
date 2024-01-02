@@ -10,14 +10,14 @@ const Grid = styled.div`
 `;
 const Label = styled.p``;
 const Value = styled.p`
-    color: ${ColorTokens.tertiary};
+    color: ${ColorTokens.quartenary};
     justify-self: center;
     @media (max-width: 768px) {
         font-size: 1.2rem;
     }
 `;
 const Line = styled.div`
-    border-bottom: 0.5px solid ${ColorTokens.tertiary};
+    border-bottom: 0.5px solid ${ColorTokens.quartenary};
 `;
 export const S = {
     Label,

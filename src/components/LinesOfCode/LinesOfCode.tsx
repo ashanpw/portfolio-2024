@@ -18,7 +18,7 @@ export const LinesOfCode = () => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["0 1", "1.33 1"],
+        offset: ["0 -.5", "2 2"],
         smooth: 5,
     });
 
@@ -30,10 +30,10 @@ export const LinesOfCode = () => {
                     <h2>{text.subtitle}</h2>
                 </S.Title>
                 <S.Grid>
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -41,10 +41,10 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -52,10 +52,10 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -63,7 +63,7 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
                             x: randomIntFromInterval(-100, 0),
@@ -75,10 +75,10 @@ export const LinesOfCode = () => {
                             justifySelf: "right",
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -86,10 +86,10 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -97,10 +97,10 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -108,10 +108,10 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -119,10 +119,10 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -130,10 +130,10 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -141,10 +141,21 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
+                            y: useTransform(
+                                scrollYProgress,
+                                [1, 0],
+                                [randomIntFromInterval(-200, -2500), 0]
+                            ),
+                        }}
+                    />
+                    <S.MotionImg
+                        src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
+                        style={{
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -152,10 +163,10 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -163,10 +174,10 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -174,10 +185,10 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
-                        src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
+                    <S.MotionImg
+                        src="https://fastly.picsum.photos/id/106/200/300.jpg?hmac=qnjqfh7hXrQF9MAA1T3JOgK3dhnLfxOo-HkzhyZoB2g"
                         style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
@@ -185,21 +196,10 @@ export const LinesOfCode = () => {
                             ),
                         }}
                     />
-                    <motion.img
+                    <S.MotionImg
                         src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
                         style={{
-                            x: randomIntFromInterval(0, 100),
-                            y: useTransform(
-                                scrollYProgress,
-                                [1, 0],
-                                [randomIntFromInterval(-200, 500), 0]
-                            ),
-                        }}
-                    />
-                    <motion.img
-                        src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
-                        style={{
-                            x: randomIntFromInterval(0, 100),
+                            x: randomIntFromInterval(-50, 200),
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],

@@ -23,16 +23,28 @@ const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-height: 100dvh;
-    gap: 20rem 5rem;
+    max-width: 100vw;
+    gap: 1rem 0;
     padding-top: 35rem;
     padding-bottom: 25rem;
     @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 768px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 0;
+    }
+`;
+
+const MotionImg = styled(motion.img)`
+    max-width: 15rem;
+    max-height: 10rem;
+    @media (min-width: 768px) {
+        max-height: 25rem;
     }
 `;
 export const S = {
     Container,
     Title,
     Grid,
+    MotionImg,
 };

@@ -5,6 +5,7 @@ export interface BoxItemProps {
         listItems: string[];
         bgImg?: string;
         bgImgAlt?: string;
+        idx?: number;
     };
 }
 

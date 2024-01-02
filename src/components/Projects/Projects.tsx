@@ -63,14 +63,8 @@ export const Projects = () => {
     };
     const displayProject = (
         <div>
-            <img
+            <S.Img
                 src="https://fastly.picsum.photos/id/153/2560/1080.jpg?hmac=61g0FjIORgpZpcyr1-sWg33Dfjo8DxBG-QPVBDuSuEc"
-                width="90%"
-                style={{
-                    padding: "0 2rem",
-
-                    overflow: "hidden",
-                }}
                 alt=""
             />
             <IndentedContainer>
