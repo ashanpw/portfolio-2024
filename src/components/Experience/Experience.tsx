@@ -35,14 +35,22 @@ export const Experience = (props: any) => {
     }, [animate, currentHoveredItem, mousePos.x, mousePos.y]);
 
     const mouseOver = (idx: number) => {
-        setCurrentHoveredItem(idx);
+        if (idx !== currentHoveredItem) {
+            animate(
+                `#img-${idx}`,
+                { left: mousePos.x, top: mousePos.y },
+                { duration: 0 }
+            );
+            setCurrentHoveredItem(idx);
+        }
+
         animate(`#img-${idx}`, { opacity: 1 }, { duration: 0.001 });
     };
 
     const mouseLeave = (idx: number) => {
-        animate(`#img-${idx}`, { opacity: 0 }, { duration: 0, delay: 0.009 });
+        animate(`#img-${idx}`, { opacity: 0 }, { duration: 0, delay: 0.025 });
     };
-
+// TODO: Remove  <p>{"/0" + (idx + 1)}</p> 
     const experienceItems = ExperienceText.contentItems.map((p, idx) => (
         <>
             <S.Grid
@@ -52,7 +60,7 @@ export const Experience = (props: any) => {
             >
                 {idx === 0 && <S.Line />}
                 <div>
-                    <p>{"/0" + (idx + 1)}</p>
+                    <p>{"/0" + (idx + 1)}</p> 
                     <S.Title>{p.company}</S.Title>
                     <S.SubSection>
                         <p>{p.title}</p>

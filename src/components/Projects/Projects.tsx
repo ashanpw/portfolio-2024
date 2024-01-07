@@ -65,7 +65,6 @@ export const Projects = () => {
     return (
         <>
             <ProjectsHeader />
-
             <IndentedContainer>
                 <S.Line />
                 {text.contentItems.map((p, idx) => {

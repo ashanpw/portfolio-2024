@@ -18,7 +18,7 @@ export const LinesOfCode = () => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["0 0", "2 2"],
+        offset: [-0.8, 1, 2, 2],
         smooth: 5,
     });
 
