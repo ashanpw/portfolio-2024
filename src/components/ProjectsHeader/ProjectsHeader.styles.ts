@@ -46,6 +46,7 @@ const LogoContainer = styled(motion.div)`
     z-index: -500;
     margin: auto;
     min-width: 150vw;
+    margin-bottom: 10rem;
 `;
 
 const Img = styled.img`

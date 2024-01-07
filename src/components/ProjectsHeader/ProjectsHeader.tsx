@@ -31,53 +31,44 @@ export const ProjectsHeader = () => {
             "storybook",
             "tensorflow",
             "typescript",
-            "typescript",
-            "tensorflow",
-            "storybook",
-            "ruby",
-            "react",
-            "pytorch",
-            "python",
-            "playwright",
-            "opencv",
-            "nodejs",
-            "nextjs",
-            "kotlin",
-            "java",
-            "graphql",
-            "framermotion",
-            "cypress",
-            "aws",
-            "apache",
-            "androidstudio",
         ],
     };
 
     const moveRight = useTransform(scrollYProgress, [0, 1], ["-32.5%", "30%"]);
     const moveLeft = useTransform(scrollYProgress, [0, 1], ["-12.5%", "-50%"]);
     const moveDown = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
-    const movingBannersUpperHalf = text.contentList
-        .slice(0, Math.floor(text.contentList.length / 2))
-        .map((t) => (
-            <S.Img
-                src={`${BucketUrlPrefix}/projects/${t}.png`}
-                height="17px"
-                alt=""
-                loading="lazy"
-                style={{ filter: "grayscale(100%)" }}
-            />
-        ));
-
-    const movingBannersBottomHalf = text.contentList
-        .slice(Math.floor(text.contentList.length / 2), text.contentList.length)
-        .map((t) => (
-            <S.Img
-                src={`${BucketUrlPrefix}/projects/${t}.png`}
-                height="17px"
-                alt=""
-                loading="lazy"
-            />
-        ));
+    const shuffle = (array: string[]) => {
+        return array
+            .map((a) => ({ sort: Math.random(), value: a }))
+            .sort((a, b) => a.sort - b.sort)
+            .map((a) => a.value);
+    };
+    const movingBannersUpper = shuffle(text.contentList).map((t) => (
+        <S.Img
+            src={`${BucketUrlPrefix}/library-logos/${t}.png`}
+            height="17px"
+            alt=""
+            loading="lazy"
+            style={{ filter: "grayscale(100%)" }}
+        />
+    ));
+    const movingBannersCenter = shuffle(text.contentList).map((t) => (
+        <S.Img
+            src={`${BucketUrlPrefix}/library-logos/${t}.png`}
+            height="17px"
+            alt=""
+            loading="lazy"
+        />
+    ));
+    const movingBannersBottom = shuffle(text.contentList).map((t) => (
+        <S.Img
+            src={`${BucketUrlPrefix}/library-logos/${t}.png`}
+            height="17px"
+            alt=""
+            loading="lazy"
+            style={{ filter: "grayscale(100%)" }}
+        />
+    ));
     return (
         <S.Container ref={ref}>
             <S.H1>PROJECTS</S.H1>
@@ -86,12 +77,11 @@ export const ProjectsHeader = () => {
                     style={{
                         x: moveLeft,
                         y: moveDown,
-                        marginBottom: "10rem",
                         zIndex: "1",
                         rotate: -4,
                     }}
                 >
-                    {movingBannersUpperHalf}
+                    {movingBannersUpper}
                 </S.LogoContainer>
                 <S.LogoContainer
                     style={{
@@ -99,21 +89,19 @@ export const ProjectsHeader = () => {
                         y: moveDown,
                         zIndex: "-1",
                         rotate: 4,
-                        marginBottom: "10rem",
                     }}
                 >
-                    {movingBannersBottomHalf}
+                    {movingBannersCenter}
                 </S.LogoContainer>
                 <S.LogoContainer
                     style={{
                         x: moveLeft,
                         y: moveDown,
-                        marginBottom: "10rem",
                         zIndex: "1",
                         rotate: -4,
                     }}
                 >
-                    {movingBannersUpperHalf}
+                    {movingBannersBottom}
                 </S.LogoContainer>
             </div>
         </S.Container>
