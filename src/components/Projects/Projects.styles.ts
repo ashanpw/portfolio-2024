@@ -33,14 +33,10 @@ const Img = styled.img`
     margin: 2rem;
 `;
 
-const Index = styled.p`
-    margin-bottom: 2rem;
-`;
 export const S = {
     Grid,
     Line,
     Date,
     Description,
     Img,
-    Index,
 };

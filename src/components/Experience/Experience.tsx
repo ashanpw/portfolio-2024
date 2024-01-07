@@ -29,7 +29,7 @@ export const Experience = (props: any) => {
             animate(
                 `#img-${currentHoveredItem}`,
                 { left: mousePos.x, top: mousePos.y },
-                { duration: 0 }
+                { duration: 0.2 }
             );
         }
     }, [animate, currentHoveredItem, mousePos.x, mousePos.y]);

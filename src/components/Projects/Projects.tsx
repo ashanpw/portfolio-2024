@@ -61,39 +61,18 @@ export const Projects = () => {
             },
         ],
     };
-    const displayProject = (
-        <div>
-            <S.Img
-                src="https://fastly.picsum.photos/id/153/2560/1080.jpg?hmac=61g0FjIORgpZpcyr1-sWg33Dfjo8DxBG-QPVBDuSuEc"
-                alt=""
-            />
-            <IndentedContainer>
-                <div>
-                    <S.Grid>
-                        <div />
-                        <div>
-                            <S.Index>{"/0"}</S.Index>
-                            <h5>{"test"}</h5>
-                            <S.Date>{"test"}</S.Date>
-                            <S.Description>{"desc"}</S.Description>
-                        </div>
-                    </S.Grid>
-                </div>
-            </IndentedContainer>
-        </div>
-    );
 
     return (
         <>
             <ProjectsHeader />
-            {displayProject}
+
             <IndentedContainer>
+                <S.Line />
                 {text.contentItems.map((p, idx) => {
                     return (
                         <>
                             <S.Grid>
                                 <div>
-                                    <S.Index>{"/0" + (idx + 1)}</S.Index>
                                     <h5>{p.name}</h5>
                                     <S.Date>{p.date}</S.Date>
                                     <S.Description>

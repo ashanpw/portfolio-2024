@@ -1,6 +1,7 @@
 import { useRef } from "react";
-import { LogoContainer, S } from "./ProjectsHeader.styles";
+import { S } from "./ProjectsHeader.styles";
 import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
+import { BucketUrlPrefix } from "../../utils/Contants";
 
 export const ProjectsHeader = () => {
     const ref = useRef(null);
@@ -11,44 +12,44 @@ export const ProjectsHeader = () => {
 
     const text = {
         contentList: [
-            "androidstudio.png",
-            "apache.png",
-            "aws.png",
-            "cypress.png",
-            "framermotion.png",
-            "graphql.png",
-            "java.png",
-            "kotlin.png",
-            "nextjs.png",
-            "nodejs.png",
-            "opencv.png",
-            "playwright.png",
-            "python.png",
-            "pytorch.png",
-            "react.png",
-            "ruby.png",
-            "storybook.png",
-            "tensorflow.png",
-            "typescript.png",
-            "typescript.png",
-            "tensorflow.png",
-            "storybook.png",
-            "ruby.png",
-            "react.png",
-            "pytorch.png",
-            "python.png",
-            "playwright.png",
-            "opencv.png",
-            "nodejs.png",
-            "nextjs.png",
-            "kotlin.png",
-            "java.png",
-            "graphql.png",
-            "framermotion.png",
-            "cypress.png",
-            "aws.png",
-            "apache.png",
-            "androidstudio.png",
+            "androidstudio",
+            "apache",
+            "aws",
+            "cypress",
+            "framermotion",
+            "graphql",
+            "java",
+            "kotlin",
+            "nextjs",
+            "nodejs",
+            "opencv",
+            "playwright",
+            "python",
+            "pytorch",
+            "react",
+            "ruby",
+            "storybook",
+            "tensorflow",
+            "typescript",
+            "typescript",
+            "tensorflow",
+            "storybook",
+            "ruby",
+            "react",
+            "pytorch",
+            "python",
+            "playwright",
+            "opencv",
+            "nodejs",
+            "nextjs",
+            "kotlin",
+            "java",
+            "graphql",
+            "framermotion",
+            "cypress",
+            "aws",
+            "apache",
+            "androidstudio",
         ],
     };
 
@@ -57,23 +58,24 @@ export const ProjectsHeader = () => {
     const moveDown = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
     const movingBannersUpperHalf = text.contentList
         .slice(0, Math.floor(text.contentList.length / 2))
-        .map((t, idx) => (
-            <img
-                src={t}
-                alt=""
+        .map((t) => (
+            <S.Img
+                src={`${BucketUrlPrefix}/projects/${t}.png`}
                 height="17px"
+                alt=""
+                loading="lazy"
                 style={{ filter: "grayscale(100%)" }}
             />
         ));
-    // Update useState fn with angle and move amount
+
     const movingBannersBottomHalf = text.contentList
         .slice(Math.floor(text.contentList.length / 2), text.contentList.length)
-        .map((t, idx) => (
-            <img
-                src={t}
-                alt=""
+        .map((t) => (
+            <S.Img
+                src={`${BucketUrlPrefix}/projects/${t}.png`}
                 height="17px"
-                style={{ filter: "grayscale(100%)" }}
+                alt=""
+                loading="lazy"
             />
         ));
     return (

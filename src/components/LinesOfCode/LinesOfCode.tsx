@@ -18,7 +18,7 @@ export const LinesOfCode = () => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["0 -.5", "2 2"],
+        offset: ["0 0", "2 2"],
         smooth: 5,
     });
 
@@ -148,7 +148,7 @@ export const LinesOfCode = () => {
                             y: useTransform(
                                 scrollYProgress,
                                 [1, 0],
-                                [randomIntFromInterval(-200, -2500), 0]
+                                [-1200, 0]
                             ),
                         }}
                     />

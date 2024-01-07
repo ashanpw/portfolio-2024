@@ -7,6 +7,7 @@ const Container = styled.div`
     min-height: 160dvh;
     position: relative;
     pointer-events: none;
+    margin-bottom: 20rem;
 `;
 
 const Title = styled(motion.h1)`
@@ -29,11 +30,10 @@ const H1 = styled.h1`
     padding-top: 30rem;
     margin-top: -30rem;
     text-align: center;
-
     font-size: clamp(6rem, 13vw, 20rem);
 `;
 
-export const LogoContainer = styled(motion.div)`
+const LogoContainer = styled(motion.div)`
     position: relative;
     display: flex;
     justify-content: center;
@@ -47,9 +47,14 @@ export const LogoContainer = styled(motion.div)`
     margin: auto;
     min-width: 150vw;
 `;
+
+const Img = styled.img`
+    filter: grayscale(100%);
+`;
 export const S = {
     Title,
     Container,
     H1,
     LogoContainer,
+    Img,
 };
