@@ -10,12 +10,13 @@ import { NavBar } from "./components/NavBar/NavBar";
 import { Hero } from "./components/Hero/Hero";
 import { Introduction } from "./components/Introduction/Introduction";
 import { PersonalStatement } from "./components/PersonalStatement/PersonalStatement";
+import { Contact } from "./components/Contact/Contact";
 
 export const App = () => {
-    return (
-        <div>
-            <NavBar />
-            <Hero />
+  return (
+    <div>
+      <NavBar />
+      {/* <Hero />
             <Introduction />
             <AboutBoxes />
             <PersonalStatement />
@@ -23,10 +24,11 @@ export const App = () => {
             <Proficiencies />
             <LinesOfCode />
             <Technology />
-            <Experience />
-            <Projects />
-        </div>
-    );
+            <Experience /> */}
+      <Projects />
+      <Contact />
+    </div>
+  );
 };
 
 export default App;

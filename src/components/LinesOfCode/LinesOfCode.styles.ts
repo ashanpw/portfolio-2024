@@ -3,48 +3,48 @@ import styled from "styled-components";
 import { ColorTokens } from "../../ColorTokens/ColorTokens";
 
 const Container = styled.div`
-    min-height: 160dvh;
-    position: relative;
-    margin-bottom: 50rem;
-    max-width: 100%;
+  min-height: 160dvh;
+  position: relative;
+  margin-bottom: 20rem;
+  max-width: 100%;
 `;
 
 const Title = styled(motion.div)`
-    position: sticky;
-    top: 0;
-    padding-top: 30rem;
-    margin-top: -30rem;
-    text-align: center;
-    z-index: -1;
-    color: ${ColorTokens.title};
+  position: sticky;
+  top: 0;
+  padding-top: 30rem;
+  margin-top: -30rem;
+  text-align: center;
+  z-index: -1;
+  color: ${ColorTokens.title};
 `;
 
 const Grid = styled.div`
-    display: grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 100dvh;
+  max-width: 100vw;
+  gap: 1rem 0;
+  padding-top: 35rem;
+  padding-bottom: 25rem;
+  @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    max-height: 100dvh;
-    max-width: 100vw;
-    gap: 1rem 0;
-    padding-top: 35rem;
-    padding-bottom: 25rem;
-    @media (min-width: 768px) {
-        grid-template-columns: 1fr 1fr;
-    }
-    @media (min-width: 768px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 `;
 
 const MotionImg = styled(motion.img)`
-    max-width: 15rem;
-    max-height: 10rem;
-    @media (min-width: 768px) {
-        max-height: 25rem;
-    }
+  max-width: 15rem;
+  max-height: 10rem;
+  @media (min-width: 768px) {
+    max-height: 25rem;
+  }
 `;
 export const S = {
-    Container,
-    Title,
-    Grid,
-    MotionImg,
+  Container,
+  Title,
+  Grid,
+  MotionImg,
 };
