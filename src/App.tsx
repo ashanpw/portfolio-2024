@@ -11,21 +11,23 @@ import { Hero } from "./components/Hero/Hero";
 import { Introduction } from "./components/Introduction/Introduction";
 import { PersonalStatement } from "./components/PersonalStatement/PersonalStatement";
 import { Contact } from "./components/Contact/Contact";
+import { ContactHeader } from "./components/ContactHeader/ContactHeader";
 
 export const App = () => {
   return (
     <div>
       <NavBar />
-      {/* <Hero />
-            <Introduction />
-            <AboutBoxes />
-            <PersonalStatement />
-            <Workspace />
-            <Proficiencies />
-            <LinesOfCode />
-            <Technology />
-            <Experience /> */}
+      <Hero />
+      <Introduction />
+      <AboutBoxes />
+      <PersonalStatement />
+      <Workspace />
+      <Proficiencies />
+      <LinesOfCode />
+      <Technology />
+      <Experience />
       <Projects />
+      <ContactHeader />
       <Contact />
     </div>
   );

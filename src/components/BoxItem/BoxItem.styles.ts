@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { ColorTokens } from "../../ColorTokens/ColorTokens";
 
-const FlexBox = styled.div<{ useLargeSizing?: boolean; useDarkMode?: boolean }>`
+const FlexBox = styled(motion.div)<{
+  useLargeSizing?: boolean;
+  useDarkMode?: boolean;
+}>`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -34,7 +37,7 @@ const BGImage = styled(motion.img)`
   filter: grayscale(90%) opacity(0.5);
 `;
 
-const TextItem = styled.div<{ showText: boolean }>`
+const TextItem = styled(motion.div)<{ showText: boolean }>`
   @media (max-width: 768px) {
     ${(props) => !props.showText && "display: none;"}
   }
@@ -46,7 +49,7 @@ const HorizontalContainer = styled.div`
 `;
 
 const H4 = styled.h4<{ useDarkMode?: boolean }>`
-  ${(props) => props.useDarkMode && `color: ${ColorTokens.tertiary};`}
+  ${(props) => props.useDarkMode && `white;`}
 `;
 export const S = {
   FlexBox,

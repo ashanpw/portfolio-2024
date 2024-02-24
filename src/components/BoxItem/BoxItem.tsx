@@ -1,4 +1,4 @@
-import { animate, useAnimate } from "framer-motion";
+import { animate, motion, useAnimate } from "framer-motion";
 import { S } from "./BoxItem.styles";
 import { BoxItemProps } from "./BoxItem.types";
 
@@ -10,6 +10,24 @@ export const BoxItem = (props: BoxItemProps) => {
   };
   const hideBGImage = () => {
     animate("img", { opacity: 0 }, { ease: "linear" });
+  };
+
+  const textContainerVariants = {
+    initial: {},
+    animate: {
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.1,
+      },
+    },
+  };
+  const textItemVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+    },
   };
 
   return (
@@ -24,9 +42,14 @@ export const BoxItem = (props: BoxItemProps) => {
         <S.H4 useDarkMode={props.useDarkMode}>{header}</S.H4>
         {idx && <h4>/0{idx}</h4>}
       </S.HorizontalContainer>
-      <S.TextItem showText={props.showTextOnMobile ?? false}>
+      <S.TextItem
+        showText={props.showTextOnMobile ?? false}
+        variants={textContainerVariants}
+        initial="initial"
+        whileInView="animate"
+      >
         {listItems.map((i) => (
-          <p>{i}</p>
+          <motion.p variants={textItemVariants}>{i}</motion.p>
         ))}
       </S.TextItem>
     </S.FlexBox>

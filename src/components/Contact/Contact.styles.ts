@@ -3,33 +3,41 @@ import styled from "styled-components";
 import { ColorTokens } from "../../ColorTokens/ColorTokens";
 const Container = styled.div`
   color: #fff;
-  background-color: #000;
-  min-height: 70dvh;
-  position: relative;
-  padding-top: 7.5rem;
+
+  overflow: hidden;
+  max-width: 100dvw;
 `;
 const Circle = styled(motion.div)`
-  width: 30rem;
-  height: 30rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  color: #fff;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: red;
+  background-color: #green;
 `;
 
 const Grid = styled.div`
   @media (min-width: 768px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   margin-bottom: 10rem;
 `;
-const MotionSvg = styled(motion.svg)``;
+const MotionSvg = styled(motion.svg)`
+  margin-left: 25%;
+  color: #eaeaea;
+  opacity: 85%;
+`;
+
+const Title = styled(motion.h1)`
+  position: relative;
+  text-align: center;
+  margin-bottom: 35dvh;
+`;
+
 export const S = {
   Container,
   Circle,
   Grid,
   MotionSvg,
+  Title,
 };

@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const P = styled.h2`
+const P = styled(motion.h2)`
   font-weight: 500;
 `;
 const Div = styled.div`
@@ -8,7 +9,7 @@ const Div = styled.div`
   margin-left: 1rem;
   @media (min-width: 768px) {
     margin-left: 33.3%;
-    margin-right: 23%;
+    margin-right: 3%;
   }
 `;
 
