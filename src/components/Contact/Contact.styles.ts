@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { ColorTokens } from "../../ColorTokens/ColorTokens";
 const Container = styled.div`
   color: #fff;
-
-  overflow: hidden;
   max-width: 100dvw;
 `;
 const Circle = styled(motion.div)`

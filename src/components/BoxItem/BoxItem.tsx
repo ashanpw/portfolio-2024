@@ -1,6 +1,7 @@
 import { animate, motion, useAnimate } from "framer-motion";
 import { S } from "./BoxItem.styles";
 import { BoxItemProps } from "./BoxItem.types";
+import { ListAnimationVariants } from "../../utils/Constants";
 
 export const BoxItem = (props: BoxItemProps) => {
   const { bgImg, bgImgAlt, header, listItems, idx } = props.content;
@@ -23,10 +24,15 @@ export const BoxItem = (props: BoxItemProps) => {
   };
   const textItemVariants = {
     initial: {
+      y: 10,
       opacity: 0,
     },
     animate: {
+      y: 0,
       opacity: 1,
+      transition: {
+        ease: "easeOut",
+      },
     },
   };
 

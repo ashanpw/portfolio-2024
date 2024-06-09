@@ -19,6 +19,7 @@ export const ContactHeader = () => {
           y: useTransform(scrollYProgress, [1, 0], [-1000, 0]),
           rotateX: useTransform(scrollYProgress, [1, 0], [30, -10]),
           transformOrigin: "center",
+          maxWidth: "100%",
         }}
       ></S.Tunnel>
     </S.Container>

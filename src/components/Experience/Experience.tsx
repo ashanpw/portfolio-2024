@@ -2,7 +2,10 @@ import { motion, useAnimate } from "framer-motion";
 import { S } from "./Experience.styles";
 import { useState, useEffect } from "react";
 import { ExperienceText } from "./Experience.text";
-import { ListAnimationVariants } from "../../utils/Constants";
+import {
+  LineAnimationVariants,
+  ListAnimationVariants,
+} from "../../utils/Constants";
 import { IndentedContainer } from "../IndentedContainer/IndentedContainer";
 
 export const Experience = (props: any) => {
@@ -56,13 +59,19 @@ export const Experience = (props: any) => {
     <>
       <S.Grid
         initial="initial"
-        whileInView="visible"
+        whileInView="animate"
         variants={ListAnimationVariants}
         onMouseMove={(_) => mouseOver(idx)}
         onMouseLeave={(_) => mouseLeave(idx)}
         idx={idx}
       >
-        {idx === 0 && <S.Line />}
+        {idx === 0 && (
+          <S.Line
+            initial="initial"
+            whileInView="animate"
+            variants={LineAnimationVariants}
+          />
+        )}
         <S.ContentSection>
           <S.Title>{p.company}</S.Title>
           <S.SubSection>
@@ -72,7 +81,11 @@ export const Experience = (props: any) => {
           </S.SubSection>
         </S.ContentSection>
         <S.Description>{p.description}</S.Description>
-        <S.Line />
+        <S.Line
+          initial="initial"
+          whileInView="animate"
+          variants={LineAnimationVariants}
+        />
       </S.Grid>
       <S.Img src={p.imgSrc} alt={p.imgAlt} id={`img-${idx}`} />
     </>

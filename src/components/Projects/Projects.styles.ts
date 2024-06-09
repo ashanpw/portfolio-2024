@@ -2,33 +2,47 @@ import styled from "styled-components";
 import { ColorTokens } from "../../ColorTokens/ColorTokens";
 import { motion } from "framer-motion";
 
-const Container = styled(motion.div)`
-  padding: 0 10rem 0 2.5rem;
+const Container = styled(motion.div)``;
+
+const ContainerItem = styled.div<{ idx: number }>`
+  ${(props) => props.idx % 3 === 0 && "margin: 0 0 0 45%;"}
+  ${(props) => props.idx % 3 === 1 && "margin: 0 0 0 45%;"}
+  ${(props) => props.idx % 3 === 2 && "margin: 0  0 0 45%;"}
+  padding: 0 10rem 30rem 5rem;
+`;
+
+const TextItem = styled(motion.div)<{ idx: number }>`
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: start
+  gap: 10rem;
+
+  ${(props) => props.idx % 3 === 1 && "order: -1;"}
 `;
 const Grid = styled(motion.div)`
   align-items: center;
-  padding: 0 10rem 0 2.5rem;
+  padding: 0 0rem 0 2.5rem;
   @media (min-width: 768px) {
     display: grid;
-    grid-template-columns: 1fr 1.25fr;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 7.5rem;
   }
 `;
 
-const Line = styled.div`
-  border-bottom: 0.5px solid ${ColorTokens.quartenary};
-  margin: 5rem 0;
+const Line = styled(motion.div)`
+  border-bottom: 0.5px solid black;
+  padding: 2.5rem 0;
 `;
-
 const Date = styled.p`
-  color: ${ColorTokens.secondary};
-  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  color: ${ColorTokens.primary};
 `;
 
-const Description = styled.p`
+const Description = styled(motion.p)`
   color: ${ColorTokens.secondary};
   line-height: 3rem;
   @media (min-width: 768px) {
-    max-width: 95%;
   }
 `;
 const Img = styled.img`
@@ -39,6 +53,8 @@ const Img = styled.img`
 
 export const S = {
   Container,
+  ContainerItem,
+  TextItem,
   Grid,
   Line,
   Date,

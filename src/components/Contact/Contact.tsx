@@ -47,7 +47,20 @@ export const Contact = () => {
   };
   return (
     <S.Container>
-      <S.Title>CONTACT</S.Title>
+      <div style={{ position: "relative" }}>
+        <img
+          src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "0",
+            transform: "translate(-50%, -10%)",
+            zIndex: -1,
+          }}
+        />
+
+        <S.Title>CONTACT</S.Title>
+      </div>
       <S.Grid>
         <BoxItem content={text.contentItems[0]} showTextOnMobile useDarkMode />
         <BoxItem content={text.contentItems[1]} showTextOnMobile useDarkMode />

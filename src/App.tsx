@@ -18,10 +18,10 @@ export const App = () => {
     <div>
       <NavBar />
       <Hero />
-      <Introduction />
+      {/* <Introduction /> */}
       <AboutBoxes />
-      <PersonalStatement />
-      <Workspace />
+      {/* <PersonalStatement /> */}
+      {/* <Workspace /> */}
       <Proficiencies />
       <LinesOfCode />
       <Technology />

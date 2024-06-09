@@ -1,5 +1,6 @@
 import { IndentedContainer } from "../IndentedContainer/IndentedContainer";
 import { BoxGrid } from "../BoxGrid/BoxGrid";
+import { S } from "./Workspace.styles";
 
 export const Workspace = () => {
   const text = {
@@ -31,7 +32,7 @@ export const Workspace = () => {
   };
   return (
     <IndentedContainer>
-      <h3>{text.title}</h3>
+      <S.H3>{text.title}</S.H3>
       <BoxGrid contentList={text.contentItems} />
     </IndentedContainer>
   );

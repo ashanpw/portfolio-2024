@@ -4,7 +4,7 @@ export const ExperienceText = {
   contentItems: [
     {
       company: "AMAZON",
-      title: "SOFTWARE DEVELOPMENT ENGINEER II",
+      title: "SOFTWARE DEV ENGINEER II",
       org: "PEOPLE ENGINE",
       date: "NOV 2023 - PRESENT",
       description:
@@ -15,7 +15,7 @@ export const ExperienceText = {
     },
     {
       company: "AMAZON",
-      title: "SOFTWARE DEVELOPMENT ENGINEER I",
+      title: "SOFTWARE DEV ENGINEER I",
       org: "AMAZON GAME STUDIOS",
       date: "DEC 2021 - NOV 2023",
       description:
@@ -26,7 +26,7 @@ export const ExperienceText = {
     },
     {
       company: "AWS",
-      title: "SOFTWARE DEVELOPMENT ENGINEER I",
+      title: "SOFTWARE DEV ENGINEER I",
       org: "AWS APP MESH",
       date: "FEB 2021 - DEC 2021",
       description:

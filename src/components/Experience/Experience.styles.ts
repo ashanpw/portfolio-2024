@@ -3,27 +3,26 @@ import { ColorTokens } from "../../ColorTokens/ColorTokens";
 import { motion } from "framer-motion";
 
 const Grid = styled(motion.div)<{ idx: number }>`
-  ${(props) => props.idx > 0 && "padding-top: 2.5rem;"}
+  ${(props) => props.idx > 0 && "padding-top: 5rem;"}
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  gap: 2.5rem 0;
+  gap: 5rem 0;
 `;
 
-const Line = styled.div`
-  border-bottom: 0.5px solid ${ColorTokens.quartenary};
+const Line = styled(motion.div)`
+  border-bottom: 0.5px solid black;
   grid-column: 1/-1;
   margin-bottom: 2.5rem 0;
 `;
 
 const ContentSection = styled.div`
-  padding: 0 2.5rem;
+  padding: 0 5rem;
 `;
 
 const SubSection = styled.div`
-  color: ${ColorTokens.secondary};
-  margin: 3rem 0 0 0;
+  font-size: 1.3rem;
 `;
 
 const Description = styled.p`
@@ -38,6 +37,7 @@ const Description = styled.p`
 
 const Title = styled.p`
   font-size: 1.6rem;
+  margin-bottom: 2rem;
 `;
 
 const Img = styled(motion.img)`

@@ -7,9 +7,8 @@ export const Introduction = () => {
       <S.P style={{ marginLeft: "10rem" }}>
         <strong>ASHAN</strong>
       </S.P>
-      <S.P>
-        AND I AM A SOFTWARE <strong>ENGINEER</strong>.
-      </S.P>
+      <S.P>AND I AM A SOFTWARE</S.P>
+      <strong>ENGINEER</strong>.
     </S.Div>
   );
 };

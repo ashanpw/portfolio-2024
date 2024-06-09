@@ -10,7 +10,7 @@ export const Projects = () => {
     title: "PROJECTS",
     contentItems: [
       {
-        name: "PC SETUP",
+        name: "DRIVER DROWSINESS DETECTION SYSTEM",
         date: "AUG - SEP 2019",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
@@ -64,36 +64,59 @@ export const Projects = () => {
     ],
   };
 
+  const textContainerVariants = {
+    initial: {},
+    animate: {
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.6,
+      },
+    },
+  };
+  const descriptionAnimationVariants = {
+    initial: {
+      y: 10,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeOut",
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <>
       <ProjectsHeader />
-      <IndentedContainer>
-        <S.Line />
+
+      <S.Container>
         {text.contentItems.map((p, idx) => {
           return (
-            <motion.div
-              variants={ListAnimationVariants}
-              initial="initial"
-              whileInView="visible"
-            >
-              <S.Container>
-                <Carousel />
-              </S.Container>
-              <S.Grid>
-                <div>
-                  <p>{"/0" + (idx + 1)}</p>
-                  <h5>{p.name}</h5>
+            <S.ContainerItem idx={idx}>
+              <Carousel />
+              <S.TextItem
+                idx={idx}
+                variants={textContainerVariants}
+                initial="initial"
+                whileInView="animate"
+              >
+                <motion.div variants={descriptionAnimationVariants}>
+                  <p style={{ fontSize: "1.6rem", marginBottom: "1rem" }}>
+                    {p.name}
+                  </p>
                   <S.Date>{p.date}</S.Date>
-                </div>
-
-                <S.Description>{p.description}</S.Description>
-              </S.Grid>
-
-              <S.Line />
-            </motion.div>
+                </motion.div>
+                <S.Description variants={descriptionAnimationVariants}>
+                  {p.description}
+                </S.Description>
+              </S.TextItem>
+            </S.ContainerItem>
           );
         })}
-      </IndentedContainer>
+      </S.Container>
     </>
   );
 };

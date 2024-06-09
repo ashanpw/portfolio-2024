@@ -19,8 +19,13 @@ const P = styled.p`
   padding-left: 5rem;
   color: ${ColorTokens.tertiary};
 `;
+
+const H3 = styled.h3`
+  margin-left: 4rem;
+`;
 export const S = {
   Title,
   Container,
   P,
+  H3,
 };

@@ -10,7 +10,7 @@ export const Technology = () => {
         header: "FRONTEND",
         listItems: [
           "NODEJS",
-          "REACT // TYPESCRIPT",
+          "REACT",
           "PLAYWRIGHT",
           "STORYBOOK",
           "NEXTJS",
@@ -18,13 +18,17 @@ export const Technology = () => {
         ],
       },
       {
+        header: "ML // AI",
+        listItems: ["PYTORCH", "TENSORFLOW", "NUMPY // PANDAS"],
+      },
+      {
         header: "CLOUD",
         listItems: [
-          "AWS ECS // FARGATE",
           "DOCKER",
           "AWS LAMBDA",
           "AWS CDK",
-          "PIPELINES // AUTOMATION",
+          "PIPELINES",
+          "AWS ECS // FARGATE",
           "INTEGRATION TESTING",
         ],
       },
@@ -38,10 +42,6 @@ export const Technology = () => {
           "GUICE // DAGGER",
           "LOMBOK",
         ],
-      },
-      {
-        header: "ML // AI",
-        listItems: ["PYTORCH", "TENSORFLOW", "NUMPY // PANDAS"],
       },
     ],
   };

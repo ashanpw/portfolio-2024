@@ -10,18 +10,18 @@ const Grid = styled(motion.div)`
   padding: 4rem 0;
 `;
 const Label = styled.p`
-  padding-left: 2.5rem;
+  padding-left: 4rem;
 `;
 const Value = styled.p`
   color: ${ColorTokens.quartenary};
   justify-self: center;
   padding-left: 2.5rem;
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 `;
-const Line = styled.div`
-  border-bottom: 0.5px solid ${ColorTokens.quartenary};
+const Line = styled(motion.div)`
+  border-bottom: 0.5px solid black;
 `;
 export const S = {
   Label,
