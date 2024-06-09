@@ -4,6 +4,7 @@ import { ColorTokens } from "../../ColorTokens/ColorTokens";
 const Container = styled.div`
   color: #fff;
   max-width: 100dvw;
+  background-color: black;
 `;
 const Circle = styled(motion.div)`
   width: 3rem;

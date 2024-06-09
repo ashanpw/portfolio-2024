@@ -6,7 +6,7 @@ const Container = styled.div`
   height: 160dvh;
   position: relative;
   pointer-events: none;
-  margin-bottom: 20rem;
+  padding-bottom: 20rem;
   z-index: -1;
 `;
 

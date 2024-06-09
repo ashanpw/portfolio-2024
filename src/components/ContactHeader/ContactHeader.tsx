@@ -11,17 +11,18 @@ export const ContactHeader = () => {
   });
 
   return (
-    <S.Container ref={ref}>
-      <S.Tunnel
-        style={{
-          scaleX: useTransform(scrollYProgress, [1, 0], [25, 1]),
-          scaleY: useTransform(scrollYProgress, [1, 0], [25, 1]),
-          y: useTransform(scrollYProgress, [1, 0], [-1000, 0]),
-          rotateX: useTransform(scrollYProgress, [1, 0], [30, -10]),
-          transformOrigin: "center",
-          maxWidth: "100%",
-        }}
-      ></S.Tunnel>
-    </S.Container>
+    <div style={{ position: "relative", maxWidth: "100vw", overflow: "clip" }}>
+      <S.Container ref={ref}>
+        <S.Tunnel
+          style={{
+            scaleX: useTransform(scrollYProgress, [1, 0], [40, 1]),
+            scaleY: useTransform(scrollYProgress, [1, 0], [40, 1]),
+            y: useTransform(scrollYProgress, [1, 0], [-1000, 0]),
+            rotateX: useTransform(scrollYProgress, [1, 0], [30, -10]),
+            transformOrigin: "center",
+          }}
+        ></S.Tunnel>
+      </S.Container>
+    </div>
   );
 };
