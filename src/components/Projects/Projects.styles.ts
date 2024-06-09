@@ -8,7 +8,7 @@ const ContainerItem = styled.div<{ idx: number }>`
   ${(props) => props.idx % 3 === 0 && "margin: 0 0 0 45%;"}
   ${(props) => props.idx % 3 === 1 && "margin: 0 0 0 45%;"}
   ${(props) => props.idx % 3 === 2 && "margin: 0  0 0 45%;"}
-  padding: 0 10rem 30rem 5rem;
+  padding: 0 5rem 5rem 5rem;
 `;
 
 const TextItem = styled(motion.div)<{ idx: number }>`

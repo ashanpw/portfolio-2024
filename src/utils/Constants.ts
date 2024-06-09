@@ -22,7 +22,7 @@ export const LineAnimationVariants = {
     borderWidth: "1.4px",
   },
   animate: {
-    borderWidth: "1px",
+    borderWidth: "0.5px",
     width: "100%",
     transition: {
       delay: 0.5,

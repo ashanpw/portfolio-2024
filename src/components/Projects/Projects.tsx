@@ -3,7 +3,10 @@ import { IndentedContainer } from "../IndentedContainer/IndentedContainer";
 import { Carousel } from "../Carousel/Carousel";
 import { ProjectsHeader } from "../ProjectsHeader/ProjectsHeader";
 import { S } from "./Projects.styles";
-import { ListAnimationVariants } from "../../utils/Constants";
+import {
+  LineAnimationVariants,
+  ListAnimationVariants,
+} from "../../utils/Constants";
 
 export const Projects = () => {
   const text = {
@@ -93,27 +96,41 @@ export const Projects = () => {
       <ProjectsHeader />
 
       <S.Container>
+        <IndentedContainer>
+          <S.Line
+            variants={LineAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+          />
+        </IndentedContainer>
         {text.contentItems.map((p, idx) => {
           return (
-            <S.ContainerItem idx={idx}>
-              <Carousel />
-              <S.TextItem
-                idx={idx}
-                variants={textContainerVariants}
-                initial="initial"
-                whileInView="animate"
-              >
-                <motion.div variants={descriptionAnimationVariants}>
-                  <p style={{ fontSize: "1.6rem", marginBottom: "1rem" }}>
-                    {p.name}
-                  </p>
-                  <S.Date>{p.date}</S.Date>
-                </motion.div>
-                <S.Description variants={descriptionAnimationVariants}>
-                  {p.description}
-                </S.Description>
-              </S.TextItem>
-            </S.ContainerItem>
+            <>
+              <S.ContainerItem idx={idx}>
+                <Carousel />
+                <S.TextItem
+                  idx={idx}
+                  variants={textContainerVariants}
+                  initial="initial"
+                  whileInView="animate"
+                >
+                  <motion.div variants={descriptionAnimationVariants}>
+                    <p style={{ marginBottom: "0.8rem" }}>{p.name}</p>
+                    <S.Date>{p.date}</S.Date>
+                  </motion.div>
+                  <S.Description variants={descriptionAnimationVariants}>
+                    {p.description}
+                  </S.Description>
+                </S.TextItem>
+              </S.ContainerItem>
+              <IndentedContainer>
+                <S.Line
+                  variants={LineAnimationVariants}
+                  initial="initial"
+                  whileInView="animate"
+                />
+              </IndentedContainer>
+            </>
           );
         })}
       </S.Container>

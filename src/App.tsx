@@ -15,7 +15,7 @@ import { ContactHeader } from "./components/ContactHeader/ContactHeader";
 
 export const App = () => {
   return (
-    <div>
+    <>
       <NavBar />
       <Hero />
       {/* <Introduction /> */}
@@ -29,7 +29,7 @@ export const App = () => {
       <Projects />
       <ContactHeader />
       <Contact />
-    </div>
+    </>
   );
 };
 
