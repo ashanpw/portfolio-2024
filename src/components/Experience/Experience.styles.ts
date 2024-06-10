@@ -44,6 +44,7 @@ const Img = styled(motion.img)`
   position: fixed;
   pointer-events: none;
   transform: translate(-50%, -50%);
+  width: 50rem;
 `;
 
 export const S = {

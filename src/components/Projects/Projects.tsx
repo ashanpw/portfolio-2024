@@ -19,7 +19,7 @@ export const Projects = () => {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
         mediaList: [
           {
-            src: "https://fastly.picsum.photos/id/811/200/300.jpg?hmac=h_NbFElSb3w71ZJbJxKMQg8QNgch87Gbus_L_rsfi6g",
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/bruteForce.png",
             type: "img",
           },
         ],
@@ -32,7 +32,7 @@ export const Projects = () => {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
         mediaList: [
           {
-            src: "https://fastly.picsum.photos/id/811/200/300.jpg?hmac=h_NbFElSb3w71ZJbJxKMQg8QNgch87Gbus_L_rsfi6g",
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/cannyLandscape.png",
             type: "img",
           },
         ],
@@ -45,7 +45,7 @@ export const Projects = () => {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
         mediaList: [
           {
-            src: "https://fastly.picsum.photos/id/811/200/300.jpg?hmac=h_NbFElSb3w71ZJbJxKMQg8QNgch87Gbus_L_rsfi6g",
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/characterRecognition.png",
             type: "img",
           },
         ],
@@ -58,7 +58,7 @@ export const Projects = () => {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
         mediaList: [
           {
-            src: "https://fastly.picsum.photos/id/811/200/300.jpg?hmac=h_NbFElSb3w71ZJbJxKMQg8QNgch87Gbus_L_rsfi6g",
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/depthDetection.png",
             type: "img",
           },
         ],
