@@ -32,6 +32,11 @@ const Grid = styled(motion.div)`
 const Line = styled(motion.div)`
   border-bottom: 0.5px solid black;
   padding: 2.5rem 0;
+  margin-bottom: 10rem;
+  margin-left: 1rem;
+  @media (min-width: 768px) {
+    margin-left: 33.33%;
+  }
 `;
 const Date = styled.p`
   font-size: 1.3rem;
@@ -39,6 +44,10 @@ const Date = styled.p`
   color: ${ColorTokens.primary};
 `;
 
+const Title = styled.p`
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+`;
 const Description = styled(motion.p)`
   color: ${ColorTokens.secondary};
   line-height: 3rem;
@@ -60,4 +69,5 @@ export const S = {
   Date,
   Description,
   Img,
+  Title,
 };

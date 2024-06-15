@@ -13,53 +13,120 @@ export const Projects = () => {
     title: "PROJECTS",
     contentItems: [
       {
-        name: "DRIVER DROWSINESS DETECTION SYSTEM",
+        name: "PROJECT WIND",
         date: "AUG - SEP 2019",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
         mediaList: [
           {
-            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/bruteForce.png",
-            type: "img",
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/project-wind/projectWindMain.mp4",
+            type: "video",
+          },
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/project-wind/projectWindAbout.mp4",
+            type: "video",
+          },
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/project-wind/projectWindExperience.png",
+            type: "image",
+          },
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/project-wind/projectWindProjects.png",
+            type: "image",
           },
         ],
         mediaAlt: "",
       },
       {
-        name: "PC SETUP",
+        name: "PROJECT MOON",
         date: "AUG - SEP 2019",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
         mediaList: [
           {
-            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/cannyLandscape.png",
-            type: "img",
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/project-moon/projectMoonMain.png",
+            type: "image",
+          },
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/project-moon/projectMoonPlacesVisited.mp4",
+            type: "video",
+          },
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/project-moon/projectMoonStats.png",
+            type: "image",
           },
         ],
         mediaAlt: "",
       },
       {
-        name: "PC SETUP",
+        name: "PEDESTRIAN DETECTION SYSTEM",
         date: "AUG - SEP 2019",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
         mediaList: [
           {
-            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/characterRecognition.png",
-            type: "img",
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/pedestrian-detection/pedestrianDetection.png",
+            type: "image",
           },
         ],
         mediaAlt: "",
       },
       {
-        name: "PC SETUP",
+        name: "STORYBOARD APP",
         date: "AUG - SEP 2019",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
         mediaList: [
           {
-            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/depthDetection.png",
-            type: "img",
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/story-board/storyBoardMain.png",
+            type: "image",
+          },
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/story-board/storyBoardMain.png",
+            type: "image",
+          },
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/story-board/storyBoardLogin.png",
+            type: "image",
+          },
+        ],
+        mediaAlt: "",
+      },
+      {
+        name: "QUARANTINE APP",
+        date: "AUG - SEP 2019",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
+        mediaList: [
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/quarantine/quarantinePoster.png",
+            type: "image",
+          },
+        ],
+        mediaAlt: "",
+      },
+      {
+        name: "DROWSINESS DETECTION SYSTEM",
+        date: "AUG - SEP 2019",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
+        mediaList: [
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/drowsiness-detection/drowsinessDetection.mp4",
+            type: "video",
+          },
+        ],
+        mediaAlt: "",
+      },
+      {
+        name: "JUMP MAN",
+        date: "AUG - SEP 2019",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
+        mediaList: [
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/jump-man-game/jumpmanGame.png",
+            type: "image",
           },
         ],
         mediaAlt: "",
@@ -91,23 +158,24 @@ export const Projects = () => {
     },
   };
 
+  console.log(text.contentItems);
+
   return (
     <>
       <ProjectsHeader />
 
       <S.Container>
-        <IndentedContainer>
-          <S.Line
-            variants={LineAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-          />
-        </IndentedContainer>
+        <S.Line
+          variants={LineAnimationVariants}
+          initial="initial"
+          whileInView="animate"
+        />
+
         {text.contentItems.map((p, idx) => {
           return (
             <>
               <S.ContainerItem idx={idx}>
-                <Carousel />
+                <Carousel mediaList={p.mediaList} />
                 <S.TextItem
                   idx={idx}
                   variants={textContainerVariants}
@@ -115,7 +183,9 @@ export const Projects = () => {
                   whileInView="animate"
                 >
                   <motion.div variants={descriptionAnimationVariants}>
-                    <p style={{ marginBottom: "0.8rem" }}>{p.name}</p>
+                    <S.Title style={{ marginBottom: "0.8rem" }}>
+                      {p.name}
+                    </S.Title>
                     <S.Date>{p.date}</S.Date>
                   </motion.div>
                   <S.Description variants={descriptionAnimationVariants}>
@@ -123,13 +193,12 @@ export const Projects = () => {
                   </S.Description>
                 </S.TextItem>
               </S.ContainerItem>
-              <IndentedContainer>
-                <S.Line
-                  variants={LineAnimationVariants}
-                  initial="initial"
-                  whileInView="animate"
-                />
-              </IndentedContainer>
+
+              <S.Line
+                variants={LineAnimationVariants}
+                initial="initial"
+                whileInView="animate"
+              />
             </>
           );
         })}

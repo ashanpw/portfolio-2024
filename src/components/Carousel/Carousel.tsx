@@ -13,11 +13,11 @@ import { motion } from "framer-motion";
 export const Carousel = (props: any) => {
   const sourceAnimationVariant = {
     initial: {
-      scale: 1.3,
+      y: 50,
       opacity: 0.0,
     },
     animate: {
-      scale: 1,
+      y: 0,
       opacity: 1,
       transition: {
         duration: 0.6,
@@ -36,36 +36,52 @@ export const Carousel = (props: any) => {
     emblaApi?.scrollTo(idx);
   };
 
+  const gg = props.mediaList.map((media: any, idx: number) => {
+    return (
+      <EmblaSlide key={idx}>
+        {media.type === "video" && (
+          <motion.video
+            src={media.src}
+            width="100%"
+            height="100%"
+            autoPlay={true}
+            controls={false}
+            loop={true}
+            muted={true}
+            initial="initial"
+            whileInView="animate"
+            variants={sourceAnimationVariant}
+          />
+        )}
+
+        {media.type === "image" && (
+          <motion.img
+            src={media.src}
+            style={{ aspectRatio: "16/9" }}
+            width="100%"
+            height="100%"
+            variants={sourceAnimationVariant}
+            initial="initial"
+            whileInView="animate"
+          />
+        )}
+      </EmblaSlide>
+    );
+  });
+
+  console.log(gg);
+
   return (
     <EmblaDiv>
       <EmblaViewport ref={emblaRef}>
-        <EmblaContainer isMobile={props.isMobile}>
-          <EmblaSlide key={1}>
-            {/* <video
-                            src="https://ashanpw-asset-bucket.s3.amazonaws.com/ProjectWindOpening.mp4"
-                            width="100%"
-                            height="100%"
-                            autoPlay={true}
-                            controls={false}
-                            loop={true}
-                            muted={true}
-                        /> */}
-            <motion.img
-              src="https://fastly.picsum.photos/id/1019/1920/1080.jpg?hmac=XGm3xPMZTa3H-YXR0qxs91ClJOdn43Ei0xRbGTpq6wA"
-              alt=""
-              width="100%"
-              height="100%"
-              variants={sourceAnimationVariant}
-              initial="initial"
-              whileInView="animate"
-            />
-          </EmblaSlide>
-          <EmblaSlide key={2}>Slide 2</EmblaSlide>
-          <EmblaSlide key={3}>Slide 3</EmblaSlide>
-        </EmblaContainer>
+        <EmblaContainer isMobile={props.isMobile}>{gg}</EmblaContainer>
       </EmblaViewport>
 
-      <Dots selectedIdx={selectedIdx} size={3} onClickFn={scrollToSlide} />
+      <Dots
+        selectedIdx={selectedIdx}
+        size={props.mediaList.length}
+        onClickFn={scrollToSlide}
+      />
     </EmblaDiv>
   );
 };

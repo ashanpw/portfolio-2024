@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Container = styled.div`
   max-width: 100%;
-  min-height: 160dvh;
+  min-height: 140dvh;
   position: relative;
   pointer-events: none;
   margin-bottom: 20rem;
