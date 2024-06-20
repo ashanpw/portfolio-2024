@@ -3,14 +3,15 @@ import { ColorTokens } from "../../ColorTokens/ColorTokens";
 import { motion } from "framer-motion";
 
 const Grid = styled(motion.div)`
-  @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 4rem 0;
 `;
 const Label = styled.p`
-  padding-left: 4rem;
+  padding-left: 1.5rem;
+  @media (min-width: 768px) {
+    padding-left: 4rem;
+  }
 `;
 const Value = styled.p`
   color: ${ColorTokens.quartenary};

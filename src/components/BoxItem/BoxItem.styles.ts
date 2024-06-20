@@ -10,7 +10,7 @@ const FlexBox = styled(motion.div)<{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 3rem 4rem;
+  padding: 1.5rem 2rem;
   ${(props) =>
     props.useLargeSizing ? "min-height: 30rem" : "min-height: 16rem"};
 
@@ -20,6 +20,7 @@ const FlexBox = styled(motion.div)<{
   margin: -0.1rem 0 0 -0.1rem;
   @media (min-width: 768px) {
     min-height: 30rem;
+    padding: 3rem 4rem;
   }
 `;
 

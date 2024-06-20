@@ -41,10 +41,16 @@ const Title = styled.p`
 `;
 
 const Img = styled(motion.img)`
-  position: fixed;
   pointer-events: none;
+`;
+
+const ImgContainer = styled.div`
   transform: translate(-50%, -50%);
-  width: 50rem;
+
+  position: fixed;
+  width: 40rem;
+  overflow: hidden;
+  pointer-events: none;
 `;
 
 export const S = {
@@ -55,4 +61,5 @@ export const S = {
   SubSection,
   Title,
   Img,
+  ImgContainer,
 };

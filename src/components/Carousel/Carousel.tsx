@@ -57,7 +57,7 @@ export const Carousel = (props: any) => {
         {media.type === "image" && (
           <motion.img
             src={media.src}
-            style={{ aspectRatio: "16/9" }}
+            style={{}}
             width="100%"
             height="100%"
             variants={sourceAnimationVariant}
@@ -68,8 +68,6 @@ export const Carousel = (props: any) => {
       </EmblaSlide>
     );
   });
-
-  console.log(gg);
 
   return (
     <EmblaDiv>

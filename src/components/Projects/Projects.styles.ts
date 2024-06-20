@@ -2,12 +2,16 @@ import styled from "styled-components";
 import { ColorTokens } from "../../ColorTokens/ColorTokens";
 import { motion } from "framer-motion";
 
-const Container = styled(motion.div)``;
+const Container = styled(motion.div)`
+  overflow: hidden;
+  max-width: 100vw;
+`;
 
 const ContainerItem = styled.div<{ idx: number }>`
-  ${(props) => props.idx % 3 === 0 && "margin: 0 0 0 45%;"}
-  ${(props) => props.idx % 3 === 1 && "margin: 0 0 0 45%;"}
-  ${(props) => props.idx % 3 === 2 && "margin: 0  0 0 45%;"}
+  margin-left: 40%;
+  @media (min-width: 2000px) {
+    margin-left: 50%;
+  }
   padding: 0 5rem 5rem 5rem;
 `;
 
@@ -22,6 +26,7 @@ const TextItem = styled(motion.div)<{ idx: number }>`
 const Grid = styled(motion.div)`
   align-items: center;
   padding: 0 0rem 0 2.5rem;
+
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1.5fr 1fr;

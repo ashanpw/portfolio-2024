@@ -38,19 +38,33 @@ export const Projects = () => {
         mediaAlt: "",
       },
       {
+        name: "QUARANTINE APP",
+        date: "AUG - SEP 2019",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
+        mediaList: [
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/quarantine/quarantineVideo.mp4",
+            type: "video",
+          },
+        ],
+        mediaAlt: "",
+      },
+      {
         name: "PROJECT MOON",
         date: "AUG - SEP 2019",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
         mediaList: [
           {
-            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/project-moon/projectMoonMain.png",
-            type: "image",
-          },
-          {
             src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/project-moon/projectMoonPlacesVisited.mp4",
             type: "video",
           },
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/project-moon/projectMoonMain.png",
+            type: "image",
+          },
+
           {
             src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/project-moon/projectMoonStats.png",
             type: "image",
@@ -58,6 +72,20 @@ export const Projects = () => {
         ],
         mediaAlt: "",
       },
+      {
+        name: "STORYBOARD APP",
+        date: "AUG - SEP 2019",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
+        mediaList: [
+          {
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/story-board/storyboardFrameDark.png",
+            type: "image",
+          },
+        ],
+        mediaAlt: "",
+      },
+
       {
         name: "PEDESTRIAN DETECTION SYSTEM",
         date: "AUG - SEP 2019",
@@ -72,47 +100,13 @@ export const Projects = () => {
         mediaAlt: "",
       },
       {
-        name: "STORYBOARD APP",
-        date: "AUG - SEP 2019",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
-        mediaList: [
-          {
-            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/story-board/storyBoardMain.png",
-            type: "image",
-          },
-          {
-            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/story-board/storyBoardMain.png",
-            type: "image",
-          },
-          {
-            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/story-board/storyBoardLogin.png",
-            type: "image",
-          },
-        ],
-        mediaAlt: "",
-      },
-      {
-        name: "QUARANTINE APP",
-        date: "AUG - SEP 2019",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
-        mediaList: [
-          {
-            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/quarantine/quarantinePoster.png",
-            type: "image",
-          },
-        ],
-        mediaAlt: "",
-      },
-      {
         name: "DROWSINESS DETECTION SYSTEM",
         date: "AUG - SEP 2019",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
         mediaList: [
           {
-            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/drowsiness-detection/drowsinessDetection.mp4",
+            src: "https://ashanpw-asset-bucket.s3.amazonaws.com/projects/drowsiness-detection/DrowsinessDetectionSystem.mp4",
             type: "video",
           },
         ],
@@ -157,8 +151,6 @@ export const Projects = () => {
       },
     },
   };
-
-  console.log(text.contentItems);
 
   return (
     <>

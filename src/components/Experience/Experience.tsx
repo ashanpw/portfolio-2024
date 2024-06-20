@@ -9,12 +9,29 @@ import {
 import { IndentedContainer } from "../IndentedContainer/IndentedContainer";
 
 export const Experience = (props: any) => {
-  const [scope, animate] = useAnimate();
   const [mousePos, setMousePos] = useState({
     x: -1,
     y: -1,
   });
   const [currentHoveredItem, setCurrentHoveredItem] = useState(-1);
+  const handleOnHover = (idx: number) => {
+    setCurrentHoveredItem(idx);
+  };
+
+  const imageAnimationVariants = {
+    initial: {
+      opacity: 0,
+      scale: 1.5,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        ease: "easeOut",
+        duration: 0.5,
+      },
+    },
+  };
 
   useEffect(() => {
     const handleMouseMove = (event: { clientX: any; clientY: any }) => {
@@ -28,41 +45,15 @@ export const Experience = (props: any) => {
     };
   }, []);
 
-  useEffect(() => {
-    if (currentHoveredItem >= 0) {
-      animate(
-        `#img-${currentHoveredItem}`,
-        { left: mousePos.x, top: mousePos.y },
-        { duration: 0.2 }
-      );
-    }
-  }, [animate, currentHoveredItem, mousePos.x, mousePos.y]);
-
-  const mouseOver = (idx: number) => {
-    if (idx !== currentHoveredItem) {
-      animate(
-        `#img-${idx}`,
-        { left: mousePos.x, top: mousePos.y },
-        { duration: 0 }
-      );
-      setCurrentHoveredItem(idx);
-    }
-
-    animate(`#img-${idx}`, { opacity: 1 }, { duration: 0.001 });
-  };
-
-  const mouseLeave = (idx: number) => {
-    animate(`#img-${idx}`, { opacity: 0 }, { duration: 0, delay: 0.025 });
-  };
-  // TODO: Remove  <p>{"/0" + (idx + 1)}</p>
   const experienceItems = ExperienceText.contentItems.map((p, idx) => (
     <>
       <S.Grid
         initial="initial"
         whileInView="animate"
         variants={ListAnimationVariants}
-        onMouseMove={(_) => mouseOver(idx)}
-        onMouseLeave={(_) => mouseLeave(idx)}
+        onMouseMove={() => handleOnHover(idx)}
+        onMouseLeave={() => setCurrentHoveredItem(-1)}
+        onMouseEnter={() => setCurrentHoveredItem(idx)}
         idx={idx}
       >
         {idx === 0 && (
@@ -87,18 +78,27 @@ export const Experience = (props: any) => {
           variants={LineAnimationVariants}
         />
       </S.Grid>
-      <S.Img src={p.imgSrc} alt={p.imgAlt} id={`img-${idx}`} />
+      <S.ImgContainer style={{ left: mousePos.x, top: mousePos.y }}>
+        {currentHoveredItem === idx && (
+          <S.Img
+            src={p.imgSrc}
+            alt={p.imgAlt}
+            id={`img-${idx}`}
+            variants={imageAnimationVariants}
+            initial="initial"
+            animate="animate"
+          />
+        )}
+      </S.ImgContainer>
     </>
   ));
 
   return (
-    <div ref={scope}>
-      <IndentedContainer
-        index={ExperienceText.index}
-        title={ExperienceText.title}
-      >
-        {experienceItems}
-      </IndentedContainer>
-    </div>
+    <IndentedContainer
+      index={ExperienceText.index}
+      title={ExperienceText.title}
+    >
+      {experienceItems}
+    </IndentedContainer>
   );
 };

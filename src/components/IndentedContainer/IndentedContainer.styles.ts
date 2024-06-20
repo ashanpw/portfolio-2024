@@ -3,7 +3,9 @@ import { ColorTokens } from "../../ColorTokens/ColorTokens";
 
 const Title = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 2fr;
+  }
   align-items: start;
 `;
 
@@ -18,10 +20,16 @@ const Container = styled.div`
 const P = styled.p`
   padding-left: 5rem;
   color: ${ColorTokens.tertiary};
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const H3 = styled.h3`
-  margin-left: 4rem;
+  margin-left: 1.5rem;
+  @media (min-width: 768px) {
+    margin-left: 4rem;
+  }
 `;
 export const S = {
   Title,

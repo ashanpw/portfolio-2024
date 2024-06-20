@@ -4,7 +4,10 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100dvw;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  @media (min-width: 1400px) {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
   font-size: 1.3rem;
   line-height: 2.1rem;
   position: fixed;
@@ -28,7 +31,7 @@ const Contact = styled.p`
 const Ul = styled.ul`
   list-style-type: none;
   @media (max-width: 1400px) {
-    opacity: 0;
+    display: none;
   }
 `;
 

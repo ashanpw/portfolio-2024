@@ -24,6 +24,7 @@ const Grid = styled.div`
   grid-template-columns: 1fr 1fr;
   max-height: 100dvh;
   max-width: 100vw;
+  overflow: hidden;
   align-items: center;
   gap: 2.5rem 0;
   padding-top: 150rem;
