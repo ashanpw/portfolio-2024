@@ -1,17 +1,13 @@
-import { motion } from "framer-motion";
-import { AboutBoxes } from "./components/AboutBoxes/AboutBoxes";
-import { Experience } from "./components/Experience/Experience";
-import { LinesOfCode } from "./components/LinesOfCode/LinesOfCode";
-import { Proficiencies } from "./components/Proficiencies/Proficiencies";
-import { Projects } from "./components/Projects/Projects";
-import { Technology } from "./components/Technology/Technology";
-import { Workspace } from "./components/Workspace/Workspace";
-import { NavBar } from "./components/NavBar/NavBar";
-import { Hero } from "./components/Hero/Hero";
-import { Introduction } from "./components/Introduction/Introduction";
-import { PersonalStatement } from "./components/PersonalStatement/PersonalStatement";
-import { Contact } from "./components/Contact/Contact";
-import { ContactHeader } from "./components/ContactHeader/ContactHeader";
+import { AboutBoxes } from "./components/Molecules/AboutBoxes/AboutBoxes";
+import { Experience } from "./components/Molecules/Experience/Experience";
+import { LinesOfCode } from "./components/Molecules/LinesOfCode/LinesOfCode";
+import { Proficiencies } from "./components/Molecules/Proficiencies/Proficiencies";
+import { Projects } from "./components/Molecules/Projects/Projects";
+import { Technology } from "./components/Molecules/Technology/Technology";
+import { NavBar } from "./components/Molecules/NavBar/NavBar";
+import { Hero } from "./components/Molecules/Hero/Hero";
+import { Contact } from "./components/Molecules/Contact/Contact";
+import { ContactHeader } from "./components/Molecules/ContactHeader/ContactHeader";
 
 export const App = () => {
   return (
