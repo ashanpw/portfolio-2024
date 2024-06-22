@@ -57,7 +57,7 @@ export const Carousel = (props: any) => {
         {media.type === "image" && (
           <motion.img
             src={media.src}
-            style={{}}
+            style={{ aspectRatio: "16/9" }}
             width="100%"
             height="100%"
             variants={sourceAnimationVariant}

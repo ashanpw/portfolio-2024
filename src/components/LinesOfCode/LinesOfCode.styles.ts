@@ -25,7 +25,7 @@ const Grid = styled.div`
   max-height: 100dvh;
   max-width: 100vw;
   overflow: hidden;
-  align-items: center;
+  place-items: center;
   gap: 2.5rem 0;
   padding-top: 150rem;
   padding-bottom: 25rem;
