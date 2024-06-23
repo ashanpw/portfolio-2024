@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 const Container = styled(motion.div)`
   display: flex;
-  margin-left: 33%;
   min-height: 100dvh;
   justify-content: end;
   align-items: end;
+  position: relative;
 `;
 const Title = styled.p`
   font-family: bona nova;

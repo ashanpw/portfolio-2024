@@ -176,7 +176,7 @@ export const LinesOfCode = () => {
 
     {
       imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/skyFallGame.png",
+        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/jumpmanGame.png",
       x: randomIntFromInterval(-200, 200),
       y: useTransform(
         scrollYProgress,
