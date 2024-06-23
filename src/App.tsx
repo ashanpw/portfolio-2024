@@ -8,25 +8,26 @@ import { Hero } from "./components/Molecules/Hero/Hero";
 import { Contact } from "./components/Molecules/Contact/Contact";
 import { ContactHeader } from "./components/Molecules/ContactHeader/ContactHeader";
 import { Technology } from "./components/Molecules/Technology/Technology";
+import ReactLenis from "@studio-freight/react-lenis";
 
 export const App = () => {
-  return (
-    <>
-      <NavBar />
-      <Hero />
-      {/* <Introduction /> */}
-      <AboutBoxes />
-      {/* <PersonalStatement /> */}
-      {/* <Workspace /> */}
-      <Proficiencies />
-      <LinesOfCode />
-      <Technology />
-      <Experience />
-      <Projects />
-      <ContactHeader />
-      <Contact />
-    </>
-  );
+    return (
+        <ReactLenis root>
+            <NavBar />
+            <Hero />
+            {/* <Introduction /> */}
+            <AboutBoxes />
+            {/* <PersonalStatement /> */}
+            {/* <Workspace /> */}
+            <Proficiencies />
+            <LinesOfCode />
+            <Technology />
+            <Experience />
+            <Projects />
+            <ContactHeader />
+            <Contact />
+        </ReactLenis>
+    );
 };
 
 export default App;

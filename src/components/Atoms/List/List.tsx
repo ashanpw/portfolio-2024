@@ -1,31 +1,26 @@
-import { motion } from "framer-motion";
-import {
-    LineAnimationVariants,
-    ListAnimationVariants,
-} from "../../../utils/Constants";
+import { ListAnimationVariants } from "../../../utils/Constants";
 import { S } from "./List.styles";
 import { ListProps } from "./List.types";
 import { ColorTokens } from "../../../ColorTokens/ColorTokens";
 import { Line } from "../Line/Line";
 
 export const List = (props: ListProps) => {
+    const { useDarkMode } = props;
     return (
         <>
             {props.contentItems.map((p, idx) => (
                 <>
-                    {idx === 0 && <Line useDarkMode={props.useDarkMode} />}
+                    {idx === 0 && <Line useDarkMode={useDarkMode} />}
                     <S.Grid
                         initial="initial"
                         whileInView="animate"
                         variants={ListAnimationVariants}
                     >
-                        <S.Label useDarkMode={props.useDarkMode}>
-                            {p.label}
-                        </S.Label>
-                        <S.Value>
+                        <S.Label useDarkMode={useDarkMode}>{p.label}</S.Label>
+                        <S.Value useDarkMode={useDarkMode}>
                             {p.url ? (
                                 <S.A
-                                    href="https://www.google.com/"
+                                    href={p.url}
                                     whileHover={{
                                         color: ColorTokens.tertiary,
                                     }}
@@ -38,7 +33,7 @@ export const List = (props: ListProps) => {
                             )}
                         </S.Value>
                     </S.Grid>
-                    <Line useDarkMode={props.useDarkMode} />
+                    <Line useDarkMode={useDarkMode} />
                 </>
             ))}
         </>

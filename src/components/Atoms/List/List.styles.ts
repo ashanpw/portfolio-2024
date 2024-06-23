@@ -8,13 +8,13 @@ const Grid = styled(motion.div)`
     padding: 4rem 0;
 `;
 const Label = styled.p<{ useDarkMode?: boolean }>`
-    ${(props) => props.useDarkMode && `color: ${ColorTokens.quartenary};`}
+    ${(props) => props.useDarkMode && `color: ${ColorTokens.tertiary};`}
     @media (min-width: 768px) {
         padding-left: 4rem;
     }
 `;
-const Value = styled.p`
-    color: ${ColorTokens.quartenary};
+const Value = styled.p<{ useDarkMode?: boolean }>`
+    ${(props) => props.useDarkMode && `color: ${ColorTokens.quartenary};`}
     justify-self: center;
     padding-left: 2.5rem;
     @media (max-width: 768px) {
@@ -23,8 +23,8 @@ const Value = styled.p`
 `;
 
 const A = styled(motion.a)`
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 `;
 export const S = {
     A,
