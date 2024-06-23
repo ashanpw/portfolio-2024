@@ -20,7 +20,7 @@ export const AboutBoxes = () => {
     ],
   };
   return (
-    <S.Grid>
+    <S.Grid id="introduction">
       <BoxItem content={text.contentItems[0]} showTextOnMobile />
       <BoxItem content={text.contentItems[1]} showTextOnMobile />
       <BoxItem content={text.contentItems[2]} showTextOnMobile />

@@ -26,7 +26,10 @@ export const NavBar = () => {
       <S.Ul>
         {text.navItems.map((s, idx) => (
           <li>
-            <S.A href={`#${s}`} whileHover={{ color: ColorTokens.quartenary }}>
+            <S.A
+              href={`#${s.toLowerCase()}`}
+              whileHover={{ color: ColorTokens.quartenary }}
+            >
               {idx === text.navItems.length - 1 && (
                 <li style={{ marginTop: "1.5rem" }}></li>
               )}
