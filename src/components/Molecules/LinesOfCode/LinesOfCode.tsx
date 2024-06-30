@@ -95,7 +95,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/pedestrianDetection.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -105,7 +105,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/projectMoonHome.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -115,7 +115,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/unityARProject.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -125,7 +125,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/projectWindExperience.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -136,7 +136,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/projectWindHome.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -146,7 +146,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/ggDeadIsland2.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -156,7 +156,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/cannyLandscape.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -166,7 +166,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/primeGaming.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -177,7 +177,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/jumpmanGame.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -188,7 +188,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/seattleHouseListingCongestion.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -198,7 +198,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/bruteForce.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -209,7 +209,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/turboCheckout.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -219,7 +219,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/studyBubble.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -229,7 +229,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/ggDetailPage2.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -239,7 +239,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/storyboardAppLoginScreen.PNG",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -249,7 +249,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/ggDetailPage1.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -260,7 +260,7 @@ export const LinesOfCode = () => {
     {
       imgSrc:
         "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/quarantinePoster.png",
-      x: randomIntFromInterval(-200, 200),
+      x: randomIntFromInterval(-50, 50),
       y: useTransform(scrollYProgress, [1, 0], [-3000, 200]),
     },
     {
@@ -304,7 +304,7 @@ export const LinesOfCode = () => {
           <S.MotionImg
             src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
             style={{
-              x: randomIntFromInterval(-200, 200),
+              x: randomIntFromInterval(-50, 50),
               y: useTransform(scrollYProgress, [1, 0], [-1200, 0]),
             }}
           />

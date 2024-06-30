@@ -5,11 +5,12 @@ import { motion } from "framer-motion";
 const Container = styled(motion.div)`
   display: flex;
   min-height: 100dvh;
-  justify-content: end;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  overflow: hidden;
 `;
-const Title = styled.p`
+const Title = styled(motion.p)`
   font-family: bona nova;
   font-size: 40rem;
   line-height: 40rem;

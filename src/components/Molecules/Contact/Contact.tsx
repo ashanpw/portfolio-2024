@@ -1,7 +1,10 @@
 import { S } from "./Contact.styles";
 import { IndentedContainer } from "../../Atoms/IndentedContainer/IndentedContainer";
 import { List } from "../../Atoms/List/List";
-import { SourceAnimationVariant } from "../../../utils/Constants";
+import {
+  ListAnimationVariants,
+  SourceAnimationVariant,
+} from "../../../utils/Constants";
 export const Contact = () => {
   const circleAnimationVariants = {
     initial: {
@@ -48,9 +51,6 @@ export const Contact = () => {
             <S.Image
               src="https://ashanpw-asset-bucket.s3.amazonaws.com/contact/abstractArtBackground.png"
               alt=""
-              variants={SourceAnimationVariant}
-              initial="initial"
-              whileInView="animate"
             />
             <S.P>CANNY EDGE DETECTION PYTHON SCRIPT</S.P>
           </S.FlexBox>

@@ -9,12 +9,12 @@ export const EmblaDiv = styled.div`
 
 export const EmblaViewport = styled.div`
   overflow: hidden;
+  border: 1px solid black;
 `;
 
 export const EmblaContainer = styled.div<{ isMobile: boolean }>`
   aspect-ratio: ${(props) => (props.isMobile ? "9/16" : "16/9")};
   display: flex;
-  border: 1px solid black;
 `;
 
 export const EmblaSlide = styled.div`
