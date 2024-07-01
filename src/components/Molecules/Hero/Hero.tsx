@@ -8,32 +8,23 @@ export const Hero = () => {
   useEffect(() => {
     animate(
       "video",
-      { rotate: 0, scale: 1, y: 0 },
-      { ease: "easeOut", delay: 0.1, duration: 2 }
+      { rotate: 0, opacity: 1, scale: 0.75 },
+      { ease: "easeOut", delay: 1, duration: 1 }
     );
-    animate(
-      "video",
-      { opacity: 1 },
-      { ease: "easeInOut", delay: 0.3, duration: 2 }
-    ).then(() => {
-      animate(
-        "video",
-        { x: 400 },
-        { ease: "easeInOut", delay: 0.4, duration: 1.4 }
-      );
-    });
+    // animate("video", { scale: 1 }, { ease: "easeOut", delay: 3, duration: 1 });
   }, []);
 
   return (
     <S.Container ref={scope}>
       <motion.video
-        src="https://ashanpw-asset-bucket.s3.amazonaws.com/hero/heroTitle.mp4"
-        width="700"
-        height="700"
+        src="https://ashanpw-asset-bucket.s3.amazonaws.com/hero/heroTitleCompressed.mp4"
+        width="800"
+        height="800"
         autoPlay={true}
         controls={false}
         muted={true}
-        initial={{ opacity: 0, y: 20, scale: 0.8 }}
+        initial={{ rotate: 15, scale: 0.5 }}
+        preload="priority"
       />
     </S.Container>
   );

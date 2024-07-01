@@ -14,7 +14,7 @@ import { MouseCursor } from "./components/Molecules/MouseCursor/MouseCursor";
 export const App = () => {
   return (
     <ReactLenis root>
-      {/* <NavBar /> */}
+      <NavBar />
       {/* <MouseCursor /> */}
       <Hero />
       {/* <Introduction /> */}
@@ -22,7 +22,7 @@ export const App = () => {
       {/* <PersonalStatement /> */}
       {/* <Workspace /> */}
       <Proficiencies />
-      <LinesOfCode />
+      {/* <LinesOfCode /> */}
       <Technology />
       <Experience />
       <Projects />
