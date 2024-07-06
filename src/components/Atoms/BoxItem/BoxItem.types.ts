@@ -1,16 +1,15 @@
 export interface BoxItemProps {
-  showTextOnMobile?: boolean;
-  useDarkMode?: boolean;
-  content: {
-    header: string;
-    listItems: string[];
-    bgImg?: string;
-    bgImgAlt?: string;
-    idx?: number;
-  };
+    useDarkMode?: boolean;
+    content: {
+        header: string;
+        listItems: string[];
+        bgImg?: string;
+        bgImgAlt?: string;
+        idx?: number;
+    };
 }
 
 export interface BoxItem {
-  header: string;
-  listItems: string[];
+    header: string;
+    listItems: string[];
 }

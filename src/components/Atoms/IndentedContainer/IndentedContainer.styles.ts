@@ -26,7 +26,7 @@ const P = styled.p`
 `;
 
 const H3 = styled.h3`
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     @media (min-width: 768px) {
         margin-left: 4rem;
     }

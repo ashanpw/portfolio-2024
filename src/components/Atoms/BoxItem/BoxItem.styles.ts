@@ -40,11 +40,7 @@ const BGImage = styled(motion.img)`
     filter: grayscale(90%) opacity(0.5);
 `;
 
-const TextItem = styled(motion.div)<{ showText: boolean }>`
-    @media (max-width: 768px) {
-        ${(props) => !props.showText && "display: none;"}
-    }
-`;
+const TextItem = styled(motion.div)``;
 
 const HorizontalContainer = styled.div`
     display: flex;

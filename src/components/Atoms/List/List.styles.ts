@@ -14,7 +14,7 @@ const Label = styled.p<{ useDarkMode?: boolean }>`
     }
 `;
 const Value = styled.p<{ useDarkMode?: boolean }>`
-    ${(props) => props.useDarkMode && `color: ${ColorTokens.quartenary};`}
+    ${(props) => !props.useDarkMode && `color: ${ColorTokens.quartenary};`}
     justify-self: center;
     padding-left: 2.5rem;
     @media (max-width: 768px) {

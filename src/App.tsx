@@ -12,24 +12,24 @@ import ReactLenis from "@studio-freight/react-lenis";
 import { MouseCursor } from "./components/Molecules/MouseCursor/MouseCursor";
 
 export const App = () => {
-  return (
-    <ReactLenis root>
-      <NavBar />
-      {/* <MouseCursor /> */}
-      <Hero />
-      {/* <Introduction /> */}
-      <AboutBoxes />
-      {/* <PersonalStatement /> */}
-      {/* <Workspace /> */}
-      <Proficiencies />
-      {/* <LinesOfCode /> */}
-      <Technology />
-      <Experience />
-      <Projects />
-      <ContactHeader />
-      <Contact />
-    </ReactLenis>
-  );
+    return (
+        <ReactLenis root>
+            <NavBar />
+            {/* <MouseCursor /> */}
+            <Hero />
+            {/* <Introduction /> */}
+            <AboutBoxes />
+            {/* <PersonalStatement /> */}
+            {/* <Workspace /> */}
+            <Proficiencies />
+            <LinesOfCode />
+            <Technology />
+            <Experience />
+            <Projects />
+            <ContactHeader />
+            <Contact />
+        </ReactLenis>
+    );
 };
 
 export default App;
