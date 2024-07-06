@@ -12,24 +12,23 @@ const Container = styled(motion.div)`
 `;
 const Title = styled(motion.p)`
   font-family: bona nova;
-  font-size: 40rem;
+  font-size: 60dvh;
   line-height: 40rem;
-  margin-right: clamp(0rem, 13vw, 30rem);
+  z-index: 2;
+  position: absolute;
   color: ${ColorTokens.title};
-  @media (min-width: 768px) {
-    font-size: 60rem;
-    line-height: 60rem;
-  }
-  @media (min-width: 992px) {
-    font-size: 80rem;
-    line-height: 80rem;
-  }
-  @media (min-width: 1200px) {
-    font-size: 100rem;
-    line-height: 100rem;
-  }
+`;
+
+const Circle = styled(motion.div)<{ color: string }>`
+  position: absolute;
+  top: 50%;
+  width: 200dvw;
+  height: 70dvw;
+  background: ${(props) => props.color};
+  border-radius: 100%;
 `;
 export const S = {
   Container,
+  Circle,
   Title,
 };

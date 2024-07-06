@@ -1,10 +1,6 @@
 import { S } from "./Contact.styles";
 import { IndentedContainer } from "../../Atoms/IndentedContainer/IndentedContainer";
 import { List } from "../../Atoms/List/List";
-import {
-  ListAnimationVariants,
-  SourceAnimationVariant,
-} from "../../../utils/Constants";
 export const Contact = () => {
   const circleAnimationVariants = {
     initial: {

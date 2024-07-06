@@ -9,7 +9,7 @@ import {
 import { useState } from "react";
 import { Dots } from "../../Atoms/NavigationDots/NavigationDots";
 import { motion } from "framer-motion";
-import { SourceAnimationVariant } from "../../../utils/Constants";
+import { SourceAnimationVariants } from "../../../utils/Constants";
 
 export const Carousel = (props: any) => {
   const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -36,7 +36,7 @@ export const Carousel = (props: any) => {
             muted={true}
             initial="initial"
             whileInView="animate"
-            variants={SourceAnimationVariant}
+            variants={SourceAnimationVariants}
           />
         )}
 
@@ -46,7 +46,7 @@ export const Carousel = (props: any) => {
             style={{ aspectRatio: "16/9" }}
             width="100%"
             height="100%"
-            variants={SourceAnimationVariant}
+            variants={SourceAnimationVariants}
             initial="initial"
             whileInView="animate"
           />

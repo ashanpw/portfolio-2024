@@ -1,5 +1,11 @@
+import { motion } from "framer-motion";
 import { ColorTokens } from "../../../ColorTokens/ColorTokens";
 import { S } from "./NavBar.styles";
+import {
+  ListAnimationVariants,
+  TextListContainerVariants,
+  TextListItemVariants,
+} from "../../../utils/Constants";
 
 export const NavBar = () => {
   const text = {
@@ -11,6 +17,43 @@ export const NavBar = () => {
       "PROJECTS →",
     ],
     contactText: "CONTACT",
+  };
+
+  // const navbarListContainerVariants = {
+  //   initial: {},
+  //   animate: {
+  //     transition: {
+  //       ...TextListContainerVariants.animate.transition,
+  //       delay: 6,
+  //     },
+  //   },
+  // };
+
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0, // this will set a delay before the children start animating
+        staggerChildren: 1.3, // this will set the time inbetween children animation
+      },
+    },
+  };
+  const dropUpVariants = {
+    hidden: {
+      y: "100vw",
+    },
+    visible: {
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        mass: 0.3,
+        // remove delay: 0.3,
+      },
+    },
   };
 
   return (
@@ -25,7 +68,11 @@ export const NavBar = () => {
       </S.Name>
       <S.Ul>
         {text.navItems.map((s, idx) => (
-          <li>
+          <motion.li
+            variants={ListAnimationVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <S.A
               href={`#${s.toLowerCase()}`}
               whileHover={{ color: ColorTokens.quartenary }}
@@ -35,7 +82,7 @@ export const NavBar = () => {
               )}
               {s}
             </S.A>
-          </li>
+          </motion.li>
         ))}
       </S.Ul>
       <S.Contact>

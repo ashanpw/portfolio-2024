@@ -28,7 +28,7 @@ const Contact = styled.p`
   margin: 0;
 `;
 
-const Ul = styled.ul`
+const Ul = styled(motion.ul)`
   list-style-type: none;
   @media (max-width: 1400px) {
     display: none;
