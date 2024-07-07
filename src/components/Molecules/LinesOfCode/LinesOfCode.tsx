@@ -6,6 +6,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import { AssetBucketUrlPrefix } from "../../../utils/Constants";
 
 const randomIntFromInterval = (min: number, max: number) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -21,19 +22,10 @@ export const LinesOfCode = () => {
     offset: [-0.8, 1, 2, 2],
     smooth: 5,
   });
-  const defaultYTransformProps = {
-    value: scrollYProgress,
-    inputRange: [1, 0],
-    outputRange: [randomIntFromInterval(-800, 400), 0],
-  };
-
-  const { value, inputRange, outputRange } = defaultYTransformProps;
 
   const imageList = [
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/drowsinessDetection.png",
-      x: randomIntFromInterval(-200, 300),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/drowsinessDetection.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -41,20 +33,7 @@ export const LinesOfCode = () => {
       ),
     },
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/projectMoonPlacesVisited.png",
-      x: randomIntFromInterval(-200, 300),
-      y: useTransform(
-        scrollYProgress,
-        [1, 0],
-        [randomIntFromInterval(-800, 400), 0]
-      ),
-    },
-
-    {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/characterRecognition.png",
-      x: randomIntFromInterval(-200, 300),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonPlacesVisited.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -62,20 +41,7 @@ export const LinesOfCode = () => {
       ),
     },
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/depthDetection.png",
-      x: randomIntFromInterval(-200, 300),
-      y: useTransform(
-        scrollYProgress,
-        [1, 0],
-        [randomIntFromInterval(-800, 400), 0]
-      ),
-    },
-
-    {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/jumpBoxGame.png",
-      x: randomIntFromInterval(-200, 300),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/characterRecognition.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -83,9 +49,7 @@ export const LinesOfCode = () => {
       ),
     },
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/panoramaStitching.png",
-      x: randomIntFromInterval(-200, 300),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/depthDetection.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -93,9 +57,7 @@ export const LinesOfCode = () => {
       ),
     },
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/pedestrianDetection.png",
-      x: randomIntFromInterval(-50, 50),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/jumpBoxGame.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -103,9 +65,7 @@ export const LinesOfCode = () => {
       ),
     },
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/projectMoonHome.png",
-      x: randomIntFromInterval(-50, 50),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/panoramaStitching.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -113,9 +73,7 @@ export const LinesOfCode = () => {
       ),
     },
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/unityARProject.png",
-      x: randomIntFromInterval(-50, 50),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/pedestrianDetection.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -123,20 +81,7 @@ export const LinesOfCode = () => {
       ),
     },
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/projectWindExperience.png",
-      x: randomIntFromInterval(-50, 50),
-      y: useTransform(
-        scrollYProgress,
-        [1, 0],
-        [randomIntFromInterval(-800, 400), 0]
-      ),
-    },
-
-    {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/projectWindHome.png",
-      x: randomIntFromInterval(-50, 50),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonHome.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -144,9 +89,7 @@ export const LinesOfCode = () => {
       ),
     },
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/ggDeadIsland2.png",
-      x: randomIntFromInterval(-50, 50),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/unityARProject.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -154,9 +97,7 @@ export const LinesOfCode = () => {
       ),
     },
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/cannyLandscape.png",
-      x: randomIntFromInterval(-50, 50),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectWindExperience.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -164,9 +105,55 @@ export const LinesOfCode = () => {
       ),
     },
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/primeGaming.png",
-      x: randomIntFromInterval(-50, 50),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectWindHome.png`,
+      y: useTransform(
+        scrollYProgress,
+        [1, 0],
+        [randomIntFromInterval(-800, 400), 0]
+      ),
+    },
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/ggDeadIsland2.png`,
+      y: useTransform(
+        scrollYProgress,
+        [1, 0],
+        [randomIntFromInterval(-800, 400), 0]
+      ),
+    },
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/cannyLandscape.png`,
+      y: useTransform(
+        scrollYProgress,
+        [1, 0],
+        [randomIntFromInterval(-800, 400), 0]
+      ),
+    },
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/primeGaming.png`,
+      y: useTransform(
+        scrollYProgress,
+        [1, 0],
+        [randomIntFromInterval(-800, 400), 0]
+      ),
+    },
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/jumpmanGame.png`,
+      y: useTransform(
+        scrollYProgress,
+        [1, 0],
+        [randomIntFromInterval(-800, 400), 0]
+      ),
+    },
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/seattleHouseListingCongestion.png`,
+      y: useTransform(
+        scrollYProgress,
+        [1, 0],
+        [randomIntFromInterval(-800, 400), 0]
+      ),
+    },
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/bruteForce.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -175,9 +162,39 @@ export const LinesOfCode = () => {
     },
 
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/jumpmanGame.png",
-      x: randomIntFromInterval(-50, 50),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/turboCheckout.png`,
+      y: useTransform(
+        scrollYProgress,
+        [1, 0],
+        [randomIntFromInterval(-800, 400), 0]
+      ),
+    },
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/studyBubble.png`,
+      y: useTransform(
+        scrollYProgress,
+        [1, 0],
+        [randomIntFromInterval(-800, 400), 0]
+      ),
+    },
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/ggDetailPage2.png`,
+      y: useTransform(
+        scrollYProgress,
+        [1, 0],
+        [randomIntFromInterval(-800, 400), 0]
+      ),
+    },
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/storyboardAppLoginScreen.PNG`,
+      y: useTransform(
+        scrollYProgress,
+        [1, 0],
+        [randomIntFromInterval(-800, 400), 0]
+      ),
+    },
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/ggDetailPage1.png`,
       y: useTransform(
         scrollYProgress,
         [1, 0],
@@ -186,86 +203,11 @@ export const LinesOfCode = () => {
     },
 
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/seattleHouseListingCongestion.png",
-      x: randomIntFromInterval(-50, 50),
-      y: useTransform(
-        scrollYProgress,
-        [1, 0],
-        [randomIntFromInterval(-800, 400), 0]
-      ),
-    },
-    {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/bruteForce.png",
-      x: randomIntFromInterval(-50, 50),
-      y: useTransform(
-        scrollYProgress,
-        [1, 0],
-        [randomIntFromInterval(-800, 400), 0]
-      ),
-    },
-
-    {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/turboCheckout.png",
-      x: randomIntFromInterval(-50, 50),
-      y: useTransform(
-        scrollYProgress,
-        [1, 0],
-        [randomIntFromInterval(-800, 400), 0]
-      ),
-    },
-    {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/studyBubble.png",
-      x: randomIntFromInterval(-50, 50),
-      y: useTransform(
-        scrollYProgress,
-        [1, 0],
-        [randomIntFromInterval(-800, 400), 0]
-      ),
-    },
-    {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/ggDetailPage2.png",
-      x: randomIntFromInterval(-50, 50),
-      y: useTransform(
-        scrollYProgress,
-        [1, 0],
-        [randomIntFromInterval(-800, 400), 0]
-      ),
-    },
-    {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/storyboardAppLoginScreen.PNG",
-      x: randomIntFromInterval(-50, 50),
-      y: useTransform(
-        scrollYProgress,
-        [1, 0],
-        [randomIntFromInterval(-800, 400), 0]
-      ),
-    },
-    {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/ggDetailPage1.png",
-      x: randomIntFromInterval(-50, 50),
-      y: useTransform(
-        scrollYProgress,
-        [1, 0],
-        [randomIntFromInterval(-800, 400), 0]
-      ),
-    },
-
-    {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/quarantinePoster.png",
-      x: randomIntFromInterval(-50, 50),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/quarantinePoster.png`,
       y: useTransform(scrollYProgress, [1, 0], [-3000, 200]),
     },
     {
-      imgSrc:
-        "https://ashanpw-asset-bucket.s3.amazonaws.com/lines-of-code-images/projectWindMain.png",
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectWindMain.png`,
       x: randomIntFromInterval(-200, 2),
       y: useTransform(
         scrollYProgress,
@@ -304,7 +246,7 @@ export const LinesOfCode = () => {
           <S.MotionImg
             src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
             style={{
-              x: randomIntFromInterval(-50, 50),
+              
               y: useTransform(scrollYProgress, [1, 0], [-1200, 0]),
             }}
           />

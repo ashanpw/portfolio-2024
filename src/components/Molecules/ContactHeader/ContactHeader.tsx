@@ -15,7 +15,7 @@ export const ContactHeader = () => {
       <S.Container ref={ref}>
         <S.Tunnel
           style={{
-            scaleX: useTransform(scrollYProgress, [1, 0], [50, 1]),
+            scaleX: useTransform(scrollYProgress, [1, 0], [55, 1]),
             scaleY: useTransform(scrollYProgress, [1, 0], [50, 1]),
             y: useTransform(scrollYProgress, [1, 0], [-2000, 0]),
             rotateX: useTransform(scrollYProgress, [1, 0], [30, -10]),

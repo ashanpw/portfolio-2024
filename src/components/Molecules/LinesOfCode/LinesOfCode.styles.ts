@@ -30,19 +30,22 @@ const Grid = styled.div`
   padding-top: 150rem;
   padding-bottom: 25rem;
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;
 
 const MotionImg = styled(motion.img)`
-  max-width: 15rem;
-  max-height: 10rem;
+  max-width: 20rem;
+  max-height: 20rem;
   @media (min-width: 768px) {
-    max-width: 35rem;
+    max-width: 22rem;
     max-height: 30rem;
+  }
+  @media (min-width: 1600px) {
+    max-width: 28rem;
+  }
+  @media (min-width: 2000px) {
+    max-width: 35rem;
   }
 `;
 export const S = {

@@ -1,4 +1,7 @@
-export const BucketUrlPrefix = "https://ashanpw-asset-bucket.s3.amazonaws.com";
+import { SpringOptions } from "framer-motion";
+
+export const AssetBucketUrlPrefix =
+  "https://ashanpw-asset-bucket.s3.amazonaws.com";
 
 export const ListAnimationVariants = {
   initial: {
@@ -68,4 +71,10 @@ export const TextListItemVariants = {
       ease: "easeOut",
     },
   },
+};
+
+export const mouseSpringOptions: SpringOptions = {
+  damping: 30,
+  stiffness: 250,
+  mass: 0.1,
 };

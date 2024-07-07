@@ -15,10 +15,15 @@ const Tunnel = styled(motion.div)`
   top: 50%;
   margin: auto;
   border-radius: 50% 50% 0 0;
-  width: 20rem;
-  height: 27.5rem;
+
   background-color: black;
   font-size: clamp(6rem, 13vw, 20rem);
+  width: 16rem;
+  height: 23rem;
+  @media (min-width: 2000px) {
+    width: 20rem;
+    height: 28rem;
+  }
 `;
 
 export const S = {
