@@ -1,6 +1,7 @@
 import { S } from "./Contact.styles";
 import { IndentedContainer } from "../../Atoms/IndentedContainer/IndentedContainer";
 import { List } from "../../Atoms/List/List";
+import { AssetBucketUrlPrefix } from "../../../utils/Constants";
 export const Contact = () => {
     const circleAnimationVariants = {
         initial: {
@@ -37,6 +38,16 @@ export const Contact = () => {
                 url: "https://github.com/ashanpw/",
             },
         ],
+        coverImage: {
+            fallBack: `${AssetBucketUrlPrefix}/contact/abstractArtBackground-large.webp`,
+            srcSet: [
+                `${AssetBucketUrlPrefix}/contact/abstractArtBackground-large.webp 1500w`,
+                `${AssetBucketUrlPrefix}/contact/abstractArtBackground-medium.webp 1000w`,
+                `${AssetBucketUrlPrefix}/contact/abstractArtBackground-small.webp 500w`,
+            ],
+            title: "CANNY EDGE DETECTION PYTHON SCRIPT",
+            alt: "An image of abstract art which was run through a canny edge detection script in Python",
+        },
     };
     return (
         <>
@@ -45,10 +56,12 @@ export const Contact = () => {
                 <IndentedContainer>
                     <S.FlexBox>
                         <S.Image
-                            src="https://ashanpw-asset-bucket.s3.amazonaws.com/contact/abstractArtBackground.png"
-                            alt=""
+                            src={text.coverImage.fallBack}
+                            srcSet={text.coverImage.srcSet.join(", ")}
+                            sizes="(min-width: 768px) 66.6vw, 100vw"
+                            alt={text.coverImage.alt}
                         />
-                        <S.P>CANNY EDGE DETECTION PYTHON SCRIPT</S.P>
+                        <S.P>{text.coverImage.title}</S.P>
                     </S.FlexBox>
 
                     <List contentItems={text.contentItems} useDarkMode />
