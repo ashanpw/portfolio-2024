@@ -1,38 +1,117 @@
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useAnimate, useMotionValue } from 'framer-motion';
 import { S } from './Hero.styles';
 import { useEffect, useState } from 'react';
-import { MouseSpringOptions } from '../../../utils/Constants';
+import { AssetBucketUrlPrefix } from '../../../utils/Constants';
+import { v4 as uuidv4 } from 'uuid';
 
+interface Position {
+  x: number;
+  y: number;
+}
+
+interface ImageData {
+  id: string;
+  position: Position;
+  imgSrc: string;
+}
+const text = {
+  imageList: [
+    {
+      id: 0,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/drowsinessDetection.png`,
+      position: {
+        x: 0,
+        y: 0,
+      },
+    },
+    {
+      id: 1,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonPlacesVisited.png`,
+      position: {
+        x: 0,
+        y: 0,
+      },
+    },
+    {
+      id: 2,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/characterRecognition.png`,
+      position: {
+        x: 0,
+        y: 0,
+      },
+    },
+    {
+      id: 3,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonHome.png`,
+      position: {
+        x: 0,
+        y: 0,
+      },
+    },
+    {
+      id: 4,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectWindExperience.png`,
+      position: {
+        x: 0,
+        y: 0,
+      },
+    },
+  ],
+};
 export const Hero = () => {
+  const [scope, animate] = useAnimate();
+  const [initialPosition, setInitialPosition] = useState<Position | null>(null);
+  const [currentPosition, setCurrentPosition] = useState<Position | null>(null);
+  const [images, setImages] = useState<ImageData[]>([]);
+  const targetDistance = 150; // Set the target distance in pixels
+  // x, y used for tracking velocity
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const mouseAnimationTriggerThresholdX = useMotionValue(0);
-  const mouseAnimationTriggerThresholdY = useMotionValue(0);
-
-  const xSpring = useSpring(x, MouseSpringOptions);
-  const ySpring = useSpring(y, MouseSpringOptions);
+  const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const handleMouseMove = (event: { clientX: any; clientY: any }) => {
-      console.log('px', x.get(), x.getVelocity(), 'py', y.get(), y.getVelocity());
-      const prevVelocityX = x.getVelocity();
-      const prevVelocityY = y.getVelocity();
-
+      const newCurrentPosition = { x: event.clientX, y: event.clientY };
       x.set(event.clientX);
       y.set(event.clientY);
-      console.log((prevVelocityX >= 0 && x.getVelocity() >= 0) || (prevVelocityX <= 0 && x.getVelocity() <= 0));
-      if ((prevVelocityX >= 0 && x.getVelocity() >= 0) || (prevVelocityX <= 0 && x.getVelocity() <= 0)) {
-        mouseAnimationTriggerThresholdX.set(mouseAnimationTriggerThresholdX.get() + 1);
-        console.log(mouseAnimationTriggerThresholdX.get());
-      } else {
-        mouseAnimationTriggerThresholdX.set(0);
+
+      if (currentPosition === null) {
+        setCurrentPosition(newCurrentPosition);
       }
-      // if ((prevVelocityY >= 0 && y.getVelocity() >= 0) || (prevVelocityY <= 0 && y.getVelocity() <= 0)) {
-      //   mouseAnimationTriggerThresholdY.set(mouseAnimationTriggerThresholdY.get() + 1);
-      // } else {
-      //   mouseAnimationTriggerThresholdY.set(0);
-      // }
-      console.log('cx', x.get(), x.getVelocity(), 'cy', y.get(), y.getVelocity());
-      console.log('mousethreshold', mouseAnimationTriggerThresholdX.get() + mouseAnimationTriggerThresholdY.get());
+      if (initialPosition === null) {
+        setInitialPosition(currentPosition);
+      }
+
+      if (initialPosition !== null && currentPosition !== null) {
+        setCurrentPosition(newCurrentPosition);
+
+        const distanceX = newCurrentPosition.x - initialPosition.x;
+        const distanceY = newCurrentPosition.y - initialPosition.y;
+        const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+
+        if (distance >= targetDistance) {
+          setCurrentIndex((prev) => (prev + 1) % 5);
+
+          const newImage: ImageData = {
+            id: uuidv4(),
+            position: { x: event.clientX, y: event.clientY },
+            imgSrc: text.imageList[currentIndex].imgSrc,
+          };
+          setImages((prevImages) => {
+            let updatedImages;
+            if (prevImages.length >= 5) {
+              // Move the first element to the current mouse position
+              updatedImages = [...prevImages.slice(1), newImage];
+            } else {
+              updatedImages = [...prevImages, newImage];
+            }
+
+            return updatedImages;
+          });
+
+          // Reset initial position to start tracking again
+          setInitialPosition({ x: event.clientX, y: event.clientY });
+        }
+      }
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -40,36 +119,70 @@ export const Hero = () => {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, [initialPosition, currentPosition, x, y, currentIndex]);
 
+  const animateImg = (image: ImageData) => {
+    const element = document.getElementById(image.id);
+    if (element) {
+      animate(
+        element,
+        {
+          x: image.position.x,
+          y: image.position.y,
+        },
+        { duration: 1 },
+      ).then(() =>
+        animate(
+          element,
+          {
+            opacity: 0,
+            y: '150dvh',
+          },
+          { duration: 0.5, delay: 0.3, ease: 'easeInOut' },
+        ),
+      );
+    }
+  };
   return (
-    <S.Container>
+    <S.Container ref={scope}>
       <S.Title
         initial={{ y: '-25dvh', opacity: 0 }}
         animate={{
           y: 0,
-          opacity: [0, 1],
+          opacity: 1,
           transition: { delay: 2.4, ease: 'easeOut', duration: 0.8 },
         }}
       >
         ASHAN
       </S.Title>
-      <motion.img
-        src="https://ashanpw-asset-bucket.s3.amazonaws.com/experience-assets/ess.png"
-        style={{ position: 'absolute', x: xSpring, y: ySpring, translateX: '-50%', translateY: '-50%', zIndex: 98 }}
-      />
-      <motion.img
-        src="https://ashanpw-asset-bucket.s3.amazonaws.com/experience-assets/ess.png"
-        style={{ position: 'absolute', x: xSpring, y: ySpring, translateX: '-50%', translateY: '-50%', zIndex: 98 }}
-      />
-      <motion.img
-        src="https://ashanpw-asset-bucket.s3.amazonaws.com/experience-assets/ess.png"
-        style={{ position: 'absolute', x: xSpring, y: ySpring, translateX: '-50%', translateY: '-50%', zIndex: 98 }}
-      />
-      <motion.img
-        src="https://ashanpw-asset-bucket.s3.amazonaws.com/experience-assets/ess.png"
-        style={{ position: 'absolute', x: xSpring, y: ySpring, translateX: '-50%', translateY: '-50%', zIndex: 98 }}
-      />
+      {images.map((image) => {
+        return (
+          <motion.img
+            key={image.id}
+            id={image.id}
+            src={image.imgSrc}
+            alt="Mouse Tracker"
+            initial={{
+              opacity: 0,
+              x: (initialPosition?.x ?? 0) - x.getVelocity() / 100,
+              y: (initialPosition?.y ?? 0) - y.getVelocity() / 100,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            onAnimationStart={() => animateImg(image)}
+            transition={{ duration: 0 }}
+            style={{
+              position: 'absolute',
+              width: '30rem',
+              translateX: '-50%',
+              translateY: '-50%',
+              zIndex: -99,
+              pointerEvents: 'none',
+            }}
+          />
+        );
+      })}
     </S.Container>
   );
 };

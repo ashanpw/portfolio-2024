@@ -8,9 +8,9 @@ import { IndentedContainer } from '../../Atoms/IndentedContainer/IndentedContain
 export const Experience = (props: any) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-
   const xSpring = useSpring(x, MouseSpringOptions);
   const ySpring = useSpring(y, MouseSpringOptions);
+
   useEffect(() => {
     const handleMouseMove = (event: { clientX: any; clientY: any }) => {
       x.set(event.clientX + 5);
