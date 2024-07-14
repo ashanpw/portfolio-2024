@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { ColorTokens } from "../../../ColorTokens/ColorTokens";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { ColorTokens } from '../../../ColorTokens/ColorTokens';
+import { motion } from 'framer-motion';
 
 const Grid = styled(motion.div)<{ idx: number }>`
-  ${(props) => props.idx > 0 && "padding-top: 5rem;"}
+  ${(props) => props.idx > 0 && 'padding-top: 5rem;'}
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 4rem 0;
@@ -31,7 +31,7 @@ const SubSection = styled.div``;
 const Description = styled.p`
   align-self: center;
 
-  line-height: 3rem;
+  line-height: 2.8rem;
   color: ${ColorTokens.tertiary};
   @media (min-width: 768px) {
     padding: 0 5rem 0 0;
@@ -45,6 +45,7 @@ const Title = styled.p`
 
 const Img = styled(motion.img)`
   pointer-events: none;
+  max-width: 30rem;
 `;
 
 const ImgContainer = styled(motion.div)`

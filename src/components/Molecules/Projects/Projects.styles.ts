@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { ColorTokens } from "../../../ColorTokens/ColorTokens";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { ColorTokens } from '../../../ColorTokens/ColorTokens';
+import { motion } from 'framer-motion';
 
 const Container = styled(motion.div)`
   overflow: hidden;
@@ -27,7 +27,7 @@ const TextItem = styled(motion.div)<{ idx: number }>`
     grid-template-columns: 1fr 1.5fr;
     align-items: start;
     gap: 10rem;
-    ${(props) => props.idx % 3 === 1 && "order: -1;"}
+    ${(props) => props.idx % 3 === 1 && 'order: -1;'}
   }
 `;
 const Grid = styled(motion.div)`
@@ -62,7 +62,7 @@ const Title = styled.p`
 `;
 const Description = styled(motion.p)`
   color: ${ColorTokens.tertiary};
-  line-height: 3rem;
+  line-height: 2.8rem;
   @media (min-width: 768px) {
   }
 `;

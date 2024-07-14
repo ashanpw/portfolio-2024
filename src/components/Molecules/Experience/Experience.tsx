@@ -1,30 +1,26 @@
-import { motion, useAnimate, useMotionValue, useSpring } from "framer-motion";
-import { S } from "./Experience.styles";
-import { useState, useEffect } from "react";
-import { ExperienceText } from "./Experience.text";
-import {
-  LineAnimationVariants,
-  ListAnimationVariants,
-  mouseSpringOptions,
-} from "../../../utils/Constants";
-import { IndentedContainer } from "../../Atoms/IndentedContainer/IndentedContainer";
+import { motion, useAnimate, useMotionValue, useSpring } from 'framer-motion';
+import { S } from './Experience.styles';
+import { useState, useEffect } from 'react';
+import { ExperienceText } from './Experience.text';
+import { LineAnimationVariants, ListAnimationVariants, MouseSpringOptions } from '../../../utils/Constants';
+import { IndentedContainer } from '../../Atoms/IndentedContainer/IndentedContainer';
 
 export const Experience = (props: any) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const xSpring = useSpring(x, mouseSpringOptions);
-  const ySpring = useSpring(y, mouseSpringOptions);
+  const xSpring = useSpring(x, MouseSpringOptions);
+  const ySpring = useSpring(y, MouseSpringOptions);
   useEffect(() => {
     const handleMouseMove = (event: { clientX: any; clientY: any }) => {
       x.set(event.clientX + 5);
       y.set(event.clientY + 5);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -36,14 +32,14 @@ export const Experience = (props: any) => {
   const imageAnimationVariants = {
     initial: {
       opacity: 0,
-      scale: 1.5,
+      scale: 0.3,
     },
     animate: {
       opacity: 1,
       scale: 1,
       transition: {
-        ease: "easeOut",
-        duration: 0.5,
+        ease: 'easeInOut',
+        duration: 0.3,
       },
     },
   };
@@ -59,13 +55,7 @@ export const Experience = (props: any) => {
         onMouseEnter={() => setCurrentHoveredItem(idx)}
         idx={idx}
       >
-        {idx === 0 && (
-          <S.Line
-            initial="initial"
-            whileInView="animate"
-            variants={LineAnimationVariants}
-          />
-        )}
+        {idx === 0 && <S.Line initial="initial" whileInView="animate" variants={LineAnimationVariants} />}
         <S.ContentSection>
           <S.Title>{p.company}</S.Title>
           <S.SubSection>
@@ -75,18 +65,16 @@ export const Experience = (props: any) => {
           </S.SubSection>
         </S.ContentSection>
         <S.Description>{p.description}</S.Description>
-        <S.Line
-          initial="initial"
-          whileInView="animate"
-          variants={LineAnimationVariants}
-        />
+        <S.Line initial="initial" whileInView="animate" variants={LineAnimationVariants} />
       </S.Grid>
       <S.ImgContainer
         style={{
-          position: "fixed",
+          position: 'fixed',
           left: xSpring,
           top: ySpring,
           zIndex: 98,
+          translateX: '-50%',
+          translateY: '-50%',
         }}
       >
         {currentHoveredItem === idx && (
@@ -104,10 +92,7 @@ export const Experience = (props: any) => {
   ));
 
   return (
-    <IndentedContainer
-      index={ExperienceText.index}
-      title={ExperienceText.title}
-    >
+    <IndentedContainer index={ExperienceText.index} title={ExperienceText.title}>
       {experienceItems}
     </IndentedContainer>
   );

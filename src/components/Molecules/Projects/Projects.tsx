@@ -12,7 +12,7 @@ export const Projects = () => {
     contentItems: [
       {
         name: 'PROJECT WIND',
-        date: 'AUG - SEP 2019',
+        date: 'REACT, TS',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
         mediaList: [
@@ -50,7 +50,7 @@ export const Projects = () => {
       // },
       {
         name: 'PROJECT MOON',
-        date: 'AUG - SEP 2019',
+        date: 'FRONTEND',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
         mediaList: [
@@ -76,7 +76,7 @@ export const Projects = () => {
       },
       {
         name: 'STORYBOARD APP',
-        date: 'AUG - SEP 2019',
+        date: 'MOBILE',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
         mediaList: [
@@ -102,7 +102,7 @@ export const Projects = () => {
 
       {
         name: 'PEDESTRIAN DETECTION SYSTEM',
-        date: 'AUG - SEP 2019',
+        date: 'ML',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
         mediaList: [
@@ -115,7 +115,7 @@ export const Projects = () => {
       },
       {
         name: 'DROWSINESS DETECTION SYSTEM',
-        date: 'AUG - SEP 2019',
+        date: 'ML',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
         mediaList: [

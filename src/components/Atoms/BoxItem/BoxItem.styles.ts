@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import styled from "styled-components";
-import { ColorTokens } from "../../../ColorTokens/ColorTokens";
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
+import { ColorTokens } from '../../../ColorTokens/ColorTokens';
 
 const FlexBox = styled(motion.div)<{
   useDarkMode?: boolean;
@@ -11,13 +11,12 @@ const FlexBox = styled(motion.div)<{
   justify-content: space-between;
   padding: 1.5rem 2rem;
 
-  ${(props) =>
-    props.useDarkMode ? "border: 1px solid gray" : "border: 1px solid black"};
+  ${(props) => (props.useDarkMode ? 'border: 1px solid gray' : 'border: 1px solid black')};
 
   margin: -0.1rem 0 0 -0.1rem;
   min-height: 20rem;
   @media (min-width: 768px) {
-    min-height: 30rem;
+    min-height: 35rem;
     padding: 3rem 4rem;
   }
 `;

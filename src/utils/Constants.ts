@@ -1,7 +1,6 @@
-import { SpringOptions } from "framer-motion";
+import { SpringOptions } from 'framer-motion';
 
-export const AssetBucketUrlPrefix =
-  "https://ashanpw-asset-bucket.s3.amazonaws.com";
+export const AssetBucketUrlPrefix = 'https://ashanpw-asset-bucket.s3.amazonaws.com';
 
 export const ListAnimationVariants = {
   initial: {
@@ -12,7 +11,7 @@ export const ListAnimationVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      ease: "easeOut",
+      ease: 'easeOut',
       delay: 0.2,
       duration: 0.5,
     },
@@ -22,11 +21,9 @@ export const ListAnimationVariants = {
 export const LineAnimationVariants = {
   initial: {
     width: 0,
-    borderWidth: "1.4px",
   },
   animate: {
-    borderWidth: "0.5px",
-    width: "100%",
+    width: '100%',
     transition: {
       delay: 0.5,
       duration: 1,
@@ -45,7 +42,7 @@ export const SourceAnimationVariants = {
     transition: {
       duration: 0.6,
       delay: 0.2,
-      ease: "easeOut",
+      ease: 'easeOut',
     },
   },
 };
@@ -54,7 +51,7 @@ export const TextListContainerVariants = {
   initial: {},
   animate: {
     transition: {
-      when: "beforeChildren",
+      when: 'beforeChildren',
       staggerChildren: 0.1,
     },
   },
@@ -68,13 +65,13 @@ export const TextListItemVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      ease: "easeOut",
+      ease: 'easeOut',
     },
   },
 };
 
-export const mouseSpringOptions: SpringOptions = {
-  damping: 30,
+export const MouseSpringOptions: SpringOptions = {
+  damping: 50,
   stiffness: 250,
   mass: 0.1,
 };
