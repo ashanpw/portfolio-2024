@@ -18,7 +18,7 @@ const text = {
   imageList: [
     {
       id: 0,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/drowsinessDetection.png`,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/drowsinessDetection.webp`,
       position: {
         x: 0,
         y: 0,
@@ -26,7 +26,7 @@ const text = {
     },
     {
       id: 1,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonPlacesVisited.png`,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonPlacesVisited.webp`,
       position: {
         x: 0,
         y: 0,
@@ -34,7 +34,7 @@ const text = {
     },
     {
       id: 2,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/characterRecognition.png`,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/characterRecognition.webp`,
       position: {
         x: 0,
         y: 0,
@@ -42,7 +42,7 @@ const text = {
     },
     {
       id: 3,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonHome.png`,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonHome.webp`,
       position: {
         x: 0,
         y: 0,
@@ -50,7 +50,7 @@ const text = {
     },
     {
       id: 4,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectWindExperience.png`,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectWindExperience.webp`,
       position: {
         x: 0,
         y: 0,
@@ -63,13 +63,17 @@ export const Hero = () => {
   const [initialPosition, setInitialPosition] = useState<Position | null>(null);
   const [currentPosition, setCurrentPosition] = useState<Position | null>(null);
   const [images, setImages] = useState<ImageData[]>([]);
-  const targetDistance = 150; // Set the target distance in pixels
+  const targetDistance = 180; // Set the target distance in pixels
   // x, y used for tracking velocity
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showAnimations, setShowAnimations] = useState(false);
   useEffect(() => {
     const handleMouseMove = (event: { clientX: any; clientY: any }) => {
+      if (!showAnimations) {
+        return;
+      }
       const newCurrentPosition = { x: event.clientX, y: event.clientY };
       x.set(event.clientX);
       y.set(event.clientY);
@@ -119,7 +123,7 @@ export const Hero = () => {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [initialPosition, currentPosition, x, y, currentIndex]);
+  }, [initialPosition, currentPosition, x, y, currentIndex, showAnimations]);
 
   const animateImg = (image: ImageData) => {
     const element = document.getElementById(image.id);
@@ -143,18 +147,19 @@ export const Hero = () => {
       );
     }
   };
+
   return (
-    <S.Container ref={scope}>
-      <S.Title
-        initial={{ y: '-25dvh', opacity: 0 }}
-        animate={{
-          y: 0,
-          opacity: 1,
-          transition: { delay: 2.4, ease: 'easeOut', duration: 0.8 },
-        }}
-      >
-        ASHAN
-      </S.Title>
+    <S.Container
+      ref={scope}
+      onMouseMove={() => setShowAnimations(true)}
+      onMouseEnter={() => setShowAnimations(true)}
+      onMouseLeave={() => setShowAnimations(false)}
+    >
+      {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}> */}
+      {/* <S.Title>a</S.Title> */}
+      {/* <S.Title>.</S.Title> */}
+      {/* </div> */}
+
       {images.map((image) => {
         return (
           <motion.img
@@ -164,8 +169,8 @@ export const Hero = () => {
             alt="Mouse Tracker"
             initial={{
               opacity: 0,
-              x: (initialPosition?.x ?? 0) - x.getVelocity() / 100,
-              y: (initialPosition?.y ?? 0) - y.getVelocity() / 100,
+              x: (initialPosition?.x ?? 0) - x.getVelocity() / 80,
+              y: (initialPosition?.y ?? 0) - y.getVelocity() / 80,
             }}
             animate={{
               opacity: 1,
@@ -180,6 +185,7 @@ export const Hero = () => {
               zIndex: -99,
               pointerEvents: 'none',
             }}
+            loading="eager"
           />
         );
       })}

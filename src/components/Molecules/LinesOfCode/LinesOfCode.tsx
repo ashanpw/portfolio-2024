@@ -136,6 +136,7 @@ export const LinesOfCode = () => {
                   x: i.x,
                   y: i.y,
                 }}
+                loading="lazy"
               />
             );
           })}

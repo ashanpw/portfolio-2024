@@ -24,11 +24,7 @@ export const Carousel = (props: any) => {
       `${media.src}-small.webp 768w`,
     ];
     const imgFallBackSrc = `${media.src}.jpg`;
-    const videoSrcSet = [
-      `${media.src}-large.webm 1920w`,
-      `${media.src}-medium.webm 1280w`,
-      `${media.src}-small.webm 768w`,
-    ];
+    const videoSrcSet = [`${media.src}-large.webm`, `${media.src}-medium.webm`, `${media.src}-small.webm`];
     const videoFallBackSrc = `${media.src}.mp4`;
 
     return (
@@ -44,10 +40,27 @@ export const Carousel = (props: any) => {
             initial="initial"
             whileInView="animate"
             variants={SourceAnimationVariants}
+            preload="metadata"
           >
-            <motion.source src={videoSrcSet.join(', ')} style={{ aspectRatio: '16/9' }} />
-            <motion.source src={videoFallBackSrc} style={{ aspectRatio: '16/9' }} />
-            <motion.video src={videoFallBackSrc} style={{ aspectRatio: '16/9' }} />
+            <motion.source
+              src={videoSrcSet[0]}
+              type="video/webm"
+              media="(min-width: 1500px)"
+              style={{ aspectRatio: '16/9' }}
+            />
+            <motion.source
+              src={videoSrcSet[1]}
+              type="video/webm"
+              media="(min-width: 750px)"
+              style={{ aspectRatio: '16/9' }}
+            />
+            <motion.source
+              src={videoSrcSet[2]}
+              type="video/webm"
+              media="(min-width: 0)"
+              style={{ aspectRatio: '16/9' }}
+            />
+            <motion.source src={videoFallBackSrc} type="video/mp4" style={{ aspectRatio: '16/9' }} />
           </motion.video>
         )}
 
@@ -80,6 +93,7 @@ export const Carousel = (props: any) => {
               variants={SourceAnimationVariants}
               initial="initial"
               whileInView="animate"
+              loading="lazy"
             />
           </picture>
         )}

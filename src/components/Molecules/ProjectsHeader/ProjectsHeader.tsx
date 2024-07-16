@@ -35,7 +35,7 @@ export const ProjectsHeader = () => {
   };
 
   const moveRight = useTransform(scrollYProgress, [0, 1], ['-32.5%', '30%']);
-  const moveLeft = useTransform(scrollYProgress, [0, 1], ['-12.5%', '-50%']);
+  const moveLeft = useTransform(scrollYProgress, [0, 1], ['-12.5%', '-80%']);
   const moveDown = useTransform(scrollYProgress, [0, 1], ['0%', '200%']);
   const shuffle = (array: string[]) => {
     return array
@@ -55,8 +55,8 @@ export const ProjectsHeader = () => {
   return (
     <S.Container ref={ref} id="projects">
       <S.H1>PROJECTS</S.H1>
-      <div style={{ overflow: 'hidden', padding: '5rem 0' }}>
-        <S.LogoContainer
+      <S.LogoContainer>
+        <S.LogoContainerItem
           style={{
             x: moveLeft,
             y: moveDown,
@@ -65,8 +65,8 @@ export const ProjectsHeader = () => {
           }}
         >
           {movingBannersUpper}
-        </S.LogoContainer>
-        <S.LogoContainer
+        </S.LogoContainerItem>
+        <S.LogoContainerItem
           style={{
             x: moveRight,
             y: moveDown,
@@ -75,8 +75,8 @@ export const ProjectsHeader = () => {
           }}
         >
           {movingBannersCenter}
-        </S.LogoContainer>
-        <S.LogoContainer
+        </S.LogoContainerItem>
+        <S.LogoContainerItem
           style={{
             x: moveLeft,
             y: moveDown,
@@ -85,8 +85,8 @@ export const ProjectsHeader = () => {
           }}
         >
           {movingBannersBottom}
-        </S.LogoContainer>
-      </div>
+        </S.LogoContainerItem>
+      </S.LogoContainer>
     </S.Container>
   );
 };

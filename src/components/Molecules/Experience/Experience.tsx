@@ -2,7 +2,12 @@ import { motion, useAnimate, useMotionValue, useSpring } from 'framer-motion';
 import { S } from './Experience.styles';
 import { useState, useEffect } from 'react';
 import { ExperienceText } from './Experience.text';
-import { LineAnimationVariants, ListAnimationVariants, MouseSpringOptions } from '../../../utils/Constants';
+import {
+  AssetBucketUrlPrefix,
+  LineAnimationVariants,
+  ListAnimationVariants,
+  MouseSpringOptions,
+} from '../../../utils/Constants';
 import { IndentedContainer } from '../../Atoms/IndentedContainer/IndentedContainer';
 
 export const Experience = (props: any) => {
@@ -44,6 +49,12 @@ export const Experience = (props: any) => {
     },
   };
 
+  //TODO: REMOVE
+  const imagesLogoTest = [
+    `${AssetBucketUrlPrefix}/experience-assets/amazonLogo.png`,
+    `${AssetBucketUrlPrefix}/experience-assets/amazonGamesLogo.png`,
+    `${AssetBucketUrlPrefix}/experience-assets/awsLogo.png`,
+  ];
   const experienceItems = ExperienceText.contentItems.map((p, idx) => (
     <>
       <S.Grid
@@ -56,14 +67,13 @@ export const Experience = (props: any) => {
         idx={idx}
       >
         {idx === 0 && <S.Line initial="initial" whileInView="animate" variants={LineAnimationVariants} />}
-        <S.ContentSection>
-          <S.Title>{p.company}</S.Title>
-          <S.SubSection>
-            <p>{p.title}</p>
-            <p>{p.org}</p>
-            <p>{p.date}</p>
-          </S.SubSection>
-        </S.ContentSection>
+
+        <S.TitleImg src={imagesLogoTest[idx]} />
+        <S.SubSection>
+          <p>{p.title}</p>
+          <p>{p.org}</p>
+          <p>{p.date}</p>
+        </S.SubSection>
         <S.Description>{p.description}</S.Description>
         <S.Line initial="initial" whileInView="animate" variants={LineAnimationVariants} />
       </S.Grid>
@@ -85,6 +95,7 @@ export const Experience = (props: any) => {
             variants={imageAnimationVariants}
             initial="initial"
             animate="animate"
+            loading="lazy"
           />
         )}
       </S.ImgContainer>

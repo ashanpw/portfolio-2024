@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Container = styled.div`
   max-width: 100%;
-  min-height: 140dvh;
+  min-height: 180dvh;
   position: relative;
   pointer-events: none;
   margin-bottom: 20rem;
@@ -32,7 +32,7 @@ const H1 = styled.h1`
   text-align: center;
 `;
 
-const LogoContainer = styled(motion.div)`
+const LogoContainerItem = styled(motion.div)`
   position: relative;
   display: flex;
   justify-content: center;
@@ -56,6 +56,11 @@ const LogoContainer = styled(motion.div)`
   }
 `;
 
+const LogoContainer = styled.div`
+  overflow: hidden;
+  padding: 30rem 0;
+`;
+
 const Img = styled.img`
   filter: grayscale(100%);
 `;
@@ -64,5 +69,6 @@ export const S = {
   Container,
   H1,
   LogoContainer,
+  LogoContainerItem,
   Img,
 };

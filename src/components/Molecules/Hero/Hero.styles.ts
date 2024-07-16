@@ -10,7 +10,7 @@ const Container = styled(motion.div)`
 const Title = styled(motion.p)`
   font-family: bona nova;
   font-size: 100dvh;
-  margin: auto;
+  line-height: 100dvh;
   z-index: 2;
   color: ${ColorTokens.title};
 `;

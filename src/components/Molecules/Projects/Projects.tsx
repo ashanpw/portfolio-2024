@@ -35,19 +35,19 @@ export const Projects = () => {
         ],
         mediaAlt: '',
       },
-      // {
-      //     name: "QUARANTINE APP",
-      //     date: "AUG - SEP 2019",
-      //     description:
-      //         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!",
-      //     mediaList: [
-      //         {
-      //             src: `${assetBucketProjectUrlPrefix}/quarantine/quarantineVideo`,
-      //             type: "video",
-      //         },
-      //     ],
-      //     mediaAlt: "",
-      // },
+      {
+        name: 'QUARANTINE APP',
+        date: 'AUG - SEP 2019',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
+        mediaList: [
+          {
+            src: `${assetBucketProjectUrlPrefix}/quarantine/quarantine`,
+            type: 'video',
+          },
+        ],
+        mediaAlt: '',
+      },
       {
         name: 'PROJECT MOON',
         date: 'FRONTEND',

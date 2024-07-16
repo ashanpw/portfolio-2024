@@ -5,11 +5,12 @@ import { motion } from 'framer-motion';
 const Grid = styled(motion.div)<{ idx: number }>`
   ${(props) => props.idx > 0 && 'padding-top: 5rem;'}
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: top;
   gap: 4rem 0;
   @media (min-width: 768px) {
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 5rem 0;
   }
 `;
@@ -29,18 +30,23 @@ const ContentSection = styled.div`
 const SubSection = styled.div``;
 
 const Description = styled.p`
-  align-self: center;
-
   line-height: 2.8rem;
-  color: ${ColorTokens.tertiary};
+  margin-top: -0.5rem;
+  color: ${ColorTokens.secondary};
   @media (min-width: 768px) {
     padding: 0 5rem 0 0;
+    min-height: 12rem;
   }
 `;
 
-const Title = styled.p`
-  font-size: 1.35rem;
+const TitleImg = styled.img`
   margin-bottom: 1.8rem;
+  max-height: 22px;
+  max-width: 60px;
+  filter: grayscale(100%);
+  @media (min-width: 768px) {
+    padding: 0 5rem;
+  }
 `;
 
 const Img = styled(motion.img)`
@@ -68,7 +74,7 @@ export const S = {
   Line,
   ContentSection,
   SubSection,
-  Title,
+  TitleImg,
   Img,
   ImgContainer,
 };
