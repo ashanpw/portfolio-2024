@@ -68,11 +68,11 @@ export const LinesOfCode = () => {
       y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
     },
     {
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/cannyLandscape.webp`,
-      y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/turboCheckout.webp`,
+      y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-800, 400), 0]),
     },
     {
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonOldExperience.webp`,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonOldStats.webp`,
       y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
     },
     {
@@ -87,10 +87,9 @@ export const LinesOfCode = () => {
       imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/bruteForce.webp`,
       y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-800, 400), 0]),
     },
-
     {
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/turboCheckout.webp`,
-      y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-800, 400), 0]),
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/cannyLandscape.webp`,
+      y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
     },
     {
       imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/studyBubble.webp`,
@@ -115,7 +114,6 @@ export const LinesOfCode = () => {
     },
     {
       imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectWindMain.webp`,
-      x: randomIntFromInterval(-200, 2),
       y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-800, 400), 0]),
     },
   ];
@@ -128,15 +126,15 @@ export const LinesOfCode = () => {
           <h2>{text.subtitle}</h2>
         </S.Title>
         <S.Grid>
-          {imageList.map((i) => {
+          {imageList.map((i, index) => {
             return (
               <S.MotionImg
                 src={i.imgSrc}
                 style={{
-                  x: i.x,
                   y: i.y,
                 }}
                 loading="lazy"
+                key={index}
               />
             );
           })}
@@ -145,13 +143,3 @@ export const LinesOfCode = () => {
     </div>
   );
 };
-
-/*
-          <S.MotionImg
-            src="https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss"
-            style={{
-              
-              y: useTransform(scrollYProgress, [1, 0], [-1200, 0]),
-            }}
-          />
-*/

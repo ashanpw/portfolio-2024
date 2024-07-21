@@ -49,14 +49,8 @@ export const Experience = (props: any) => {
     },
   };
 
-  //TODO: REMOVE
-  const imagesLogoTest = [
-    `${AssetBucketUrlPrefix}/experience-assets/amazonLogo.png`,
-    `${AssetBucketUrlPrefix}/experience-assets/amazonGamesLogo.png`,
-    `${AssetBucketUrlPrefix}/experience-assets/awsLogo.png`,
-  ];
   const experienceItems = ExperienceText.contentItems.map((p, idx) => (
-    <>
+    <div key={idx}>
       <S.Grid
         initial="initial"
         whileInView="animate"
@@ -64,14 +58,13 @@ export const Experience = (props: any) => {
         onMouseMove={() => handleOnHover(idx)}
         onMouseLeave={() => setCurrentHoveredItem(-1)}
         onMouseEnter={() => setCurrentHoveredItem(idx)}
-        idx={idx}
+        $idx={idx}
       >
         {idx === 0 && <S.Line initial="initial" whileInView="animate" variants={LineAnimationVariants} />}
-
-        <S.TitleImg src={imagesLogoTest[idx]} />
+        <p style={{ paddingLeft: '5rem', fontSize: '1.4rem' }}>{p.company}</p>
         <S.SubSection>
-          <p>{p.title}</p>
           <p>{p.org}</p>
+          <p>{p.title}</p>
           <p>{p.date}</p>
         </S.SubSection>
         <S.Description>{p.description}</S.Description>
@@ -99,7 +92,7 @@ export const Experience = (props: any) => {
           />
         )}
       </S.ImgContainer>
-    </>
+    </div>
   ));
 
   return (

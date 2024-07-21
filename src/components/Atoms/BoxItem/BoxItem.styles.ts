@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ColorTokens } from '../../../ColorTokens/ColorTokens';
 
 const FlexBox = styled(motion.div)<{
-  useDarkMode?: boolean;
+  $useDarkMode?: boolean;
 }>`
   position: relative;
   display: flex;
@@ -11,7 +11,7 @@ const FlexBox = styled(motion.div)<{
   justify-content: space-between;
   padding: 1.5rem 2rem;
 
-  ${(props) => (props.useDarkMode ? 'border: 1px solid gray' : 'border: 1px solid black')};
+  ${(props) => (props.$useDarkMode ? 'border: 1px solid gray' : 'border: 1px solid black')};
 
   margin: -0.1rem 0 0 -0.1rem;
   min-height: 20rem;
@@ -43,8 +43,8 @@ const HorizontalContainer = styled.div`
   justify-content: space-between;
 `;
 
-const H4 = styled.h4<{ useDarkMode?: boolean }>`
-  ${(props) => props.useDarkMode && `white;`}
+const H4 = styled.h4<{ $useDarkMode?: boolean }>`
+  ${(props) => props.$useDarkMode && `white;`}
 `;
 export const S = {
   FlexBox,

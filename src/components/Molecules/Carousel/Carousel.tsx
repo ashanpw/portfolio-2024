@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Dots } from '../../Atoms/NavigationDots/NavigationDots';
 import { motion } from 'framer-motion';
 import { SourceAnimationVariants } from '../../../utils/Constants';
+import { LazyLoadedVideo } from '../../Atoms/LazyLoadedVideo/LazyLoadedVideo';
 
 export const Carousel = (props: any) => {
   const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -24,44 +25,19 @@ export const Carousel = (props: any) => {
       `${media.src}-small.webp 768w`,
     ];
     const imgFallBackSrc = `${media.src}.jpg`;
-    const videoSrcSet = [`${media.src}-large.webm`, `${media.src}-medium.webm`, `${media.src}-small.webm`];
+    const videoSrcSet = [`{${media.src}-large.webm`, `${media.src}-medium.webm`, `${media.src}-small.webm`];
     const videoFallBackSrc = `${media.src}.mp4`;
 
     return (
       <EmblaSlide key={idx}>
         {media.type === 'video' && (
-          <motion.video
-            autoPlay={true}
-            controls={false}
-            loop={true}
-            muted={true}
-            width="100%"
-            height="100%"
-            initial="initial"
-            whileInView="animate"
-            variants={SourceAnimationVariants}
-            preload="metadata"
-          >
-            <motion.source
-              src={videoSrcSet[0]}
-              type="video/webm"
-              media="(min-width: 1500px)"
-              style={{ aspectRatio: '16/9' }}
-            />
-            <motion.source
-              src={videoSrcSet[1]}
-              type="video/webm"
-              media="(min-width: 750px)"
-              style={{ aspectRatio: '16/9' }}
-            />
-            <motion.source
-              src={videoSrcSet[2]}
-              type="video/webm"
-              media="(min-width: 0)"
-              style={{ aspectRatio: '16/9' }}
-            />
-            <motion.source src={videoFallBackSrc} type="video/mp4" style={{ aspectRatio: '16/9' }} />
-          </motion.video>
+          <LazyLoadedVideo
+            sources={[
+              { src: media.src, type: 'webm', useSrcSet: true },
+              { src: media.src, type: 'mp4', useSrcSet: false },
+            ]}
+            aspectRatio="16/9"
+          />
         )}
 
         {media.type === 'image' && (

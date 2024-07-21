@@ -4,7 +4,7 @@ import { IndentedContainer } from '../../Atoms/IndentedContainer/IndentedContain
 export const Technology = () => {
   const text = {
     title: 'TECHNOLOGY',
-    index: 1,
+    index: 2,
     contentItems: [
       {
         header: 'FRONTEND',

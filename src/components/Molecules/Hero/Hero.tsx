@@ -69,6 +69,32 @@ export const Hero = () => {
   const y = useMotionValue(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnimations, setShowAnimations] = useState(false);
+
+  useEffect(() => {
+    // const animations = [
+    //   ['#title-text', { opacity: 1 }, { duration: 0, delay: 2.5 }],
+    //   [
+    //     '#title-text',
+    //     { scale: 1 },
+    //     { duration: 1, delay: 2.5, type: 'spring', stiffness: 100, mass: 0.3, damping: 30 },
+    //   ],
+    //   [
+    //     '#title-text',
+    //     { x: '40rem' },
+    //     { duration: 3.5, delay: 3, type: 'spring', ease: 'easeInOut', stiffness: 100, mass: 10, damping: 100 },
+    //   ],
+    // ];
+    animate([
+      ['#title-text', { opacity: 1 }, { duration: 0 }],
+      ['#title-text', { scale: 1 }, { duration: 1, type: 'spring', stiffness: 100, mass: 0.3, damping: 30 }],
+      [
+        '#title-text',
+        { x: '30rem' },
+        { duration: 0.2, type: 'spring', ease: 'easeInOut', stiffness: 100, mass: 10, damping: 100 },
+      ],
+    ]);
+  }, [animate]);
+
   useEffect(() => {
     const handleMouseMove = (event: { clientX: any; clientY: any }) => {
       if (!showAnimations) {
@@ -155,10 +181,9 @@ export const Hero = () => {
       onMouseEnter={() => setShowAnimations(true)}
       onMouseLeave={() => setShowAnimations(false)}
     >
-      {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}> */}
-      {/* <S.Title>a</S.Title> */}
-      {/* <S.Title>.</S.Title> */}
-      {/* </div> */}
+      <S.Title id="title-text" initial={{ top: '0dvh', left: '50dvw', translateX: '-40%', scale: 0.4, opacity: 0 }}>
+        A.
+      </S.Title>
 
       {images.map((image) => {
         return (

@@ -19,7 +19,7 @@ export const MouseCursor = () => {
     };
 
     const handleMouseDown = () => {
-      scale.set(10);
+      scale.set(20);
     };
 
     const handleMouseUp = () => {

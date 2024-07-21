@@ -11,7 +11,8 @@ const Title = styled(motion.p)`
   font-family: bona nova;
   font-size: 100dvh;
   line-height: 100dvh;
-  z-index: 2;
+  position: absolute;
+  pointerevents: none;
   color: ${ColorTokens.title};
 `;
 

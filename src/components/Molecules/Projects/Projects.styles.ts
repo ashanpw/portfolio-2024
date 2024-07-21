@@ -7,7 +7,7 @@ const Container = styled(motion.div)`
   max-width: 100vw;
 `;
 
-const ContainerItem = styled.div<{ idx: number }>`
+const ContainerItem = styled.div`
   margin-left: 1rem;
   @media (min-width: 768px) {
     margin: 0 0 10rem 40%;
@@ -19,7 +19,7 @@ const ContainerItem = styled.div<{ idx: number }>`
   }
 `;
 
-const TextItem = styled(motion.div)<{ idx: number }>`
+const TextItem = styled(motion.div)<{ $idx: number }>`
   margin-bottom: 15rem;
   @media (min-width: 768px) {
     margin-bottom: 0;
@@ -27,7 +27,7 @@ const TextItem = styled(motion.div)<{ idx: number }>`
     grid-template-columns: 1fr 1.5fr;
     align-items: start;
     gap: 10rem;
-    ${(props) => props.idx % 3 === 1 && 'order: -1;'}
+    ${(props) => props.$idx % 3 === 1 && 'order: -1;'}
   }
 `;
 const Grid = styled(motion.div)`
@@ -61,8 +61,8 @@ const Title = styled.p`
   font-size: 1.35rem;
 `;
 const Description = styled(motion.p)`
-  color: ${ColorTokens.tertiary};
-  line-height: 2.8rem;
+  color: ${ColorTokens.secondary};
+  line-height: 2.7rem;
   @media (min-width: 768px) {
   }
 `;

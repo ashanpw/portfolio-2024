@@ -49,6 +49,19 @@ export const Projects = () => {
         mediaAlt: '',
       },
       {
+        name: 'DROWSINESS DETECTION SYSTEM',
+        date: 'ML',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
+        mediaList: [
+          {
+            src: `${assetBucketProjectUrlPrefix}/drowsiness-detection/drowsinessDetection`,
+            type: 'video',
+          },
+        ],
+        mediaAlt: '',
+      },
+      {
         name: 'PROJECT MOON',
         date: 'FRONTEND',
         description:
@@ -113,19 +126,6 @@ export const Projects = () => {
         ],
         mediaAlt: '',
       },
-      {
-        name: 'DROWSINESS DETECTION SYSTEM',
-        date: 'ML',
-        description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
-        mediaList: [
-          {
-            src: `${assetBucketProjectUrlPrefix}/drowsiness-detection/drowsinessDetection`,
-            type: 'video',
-          },
-        ],
-        mediaAlt: '',
-      },
     ],
   };
 
@@ -160,18 +160,16 @@ export const Projects = () => {
       <S.Container>
         {text.contentItems.map((p, idx) => {
           return (
-            <>
-              <S.ContainerItem idx={idx}>
-                <Carousel mediaList={p.mediaList} />
-                <S.TextItem idx={idx} variants={textContainerVariants} initial="initial" whileInView="animate">
-                  <motion.div variants={descriptionAnimationVariants}>
-                    <S.Title>{p.name}</S.Title>
-                    <S.Date>{p.date}</S.Date>
-                  </motion.div>
-                  <S.Description variants={descriptionAnimationVariants}>{p.description}</S.Description>
-                </S.TextItem>
-              </S.ContainerItem>
-            </>
+            <S.ContainerItem key={idx}>
+              <Carousel mediaList={p.mediaList} />
+              <S.TextItem $idx={idx} variants={textContainerVariants} initial="initial" whileInView="animate">
+                <motion.div variants={descriptionAnimationVariants}>
+                  <S.Title>{p.name}</S.Title>
+                  <S.Date>{p.date}</S.Date>
+                </motion.div>
+                <S.Description variants={descriptionAnimationVariants}>{p.description}</S.Description>
+              </S.TextItem>
+            </S.ContainerItem>
           );
         })}
       </S.Container>

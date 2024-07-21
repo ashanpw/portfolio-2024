@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { ColorTokens } from '../../../ColorTokens/ColorTokens';
 import { motion } from 'framer-motion';
 
-const Grid = styled(motion.div)<{ idx: number }>`
-  ${(props) => props.idx > 0 && 'padding-top: 5rem;'}
+const Grid = styled(motion.div)<{ $idx: number }>`
+  ${(props) => props.$idx > 0 && 'padding-top: 5rem;'}
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   align-items: top;
@@ -30,19 +30,19 @@ const ContentSection = styled.div`
 const SubSection = styled.div``;
 
 const Description = styled.p`
-  line-height: 2.8rem;
+  line-height: 2.7rem;
   margin-top: -0.5rem;
   color: ${ColorTokens.secondary};
   @media (min-width: 768px) {
-    padding: 0 5rem 0 0;
+    padding: 0 1rem 0 0;
     min-height: 12rem;
   }
 `;
 
 const TitleImg = styled.img`
   margin-bottom: 1.8rem;
-  max-height: 22px;
-  max-width: 60px;
+  max-height: 20px;
+  max-width: 52px;
   filter: grayscale(100%);
   @media (min-width: 768px) {
     padding: 0 5rem;

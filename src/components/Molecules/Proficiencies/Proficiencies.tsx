@@ -4,7 +4,7 @@ import { List } from '../../Atoms/List/List';
 export const Proficiencies = () => {
   const text = {
     title: 'PROFICIENCY',
-    index: 3,
+    index: 1,
     contentItems: [
       { label: 'FRONTEND DEVELOPMENT', value: 'INTERMEDIATE' },
       { label: 'BACKEND DEVELOPMENT', value: 'ADVANCED' },
