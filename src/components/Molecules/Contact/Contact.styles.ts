@@ -49,7 +49,7 @@ const Circle = styled(motion.div)`
 
 export const P = styled.p`
   font-size: 1.3rem;
-  color: ${ColorTokens.secondary};
+  color: ${ColorTokens.tertiary};
 `;
 export const S = {
   Container,

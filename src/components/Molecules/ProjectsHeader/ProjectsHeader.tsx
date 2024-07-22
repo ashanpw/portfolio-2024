@@ -44,13 +44,31 @@ export const ProjectsHeader = () => {
       .map((a) => a.value);
   };
   const movingBannersUpper = shuffle(text.contentList).map((t, idx) => (
-    <S.Img src={`${AssetBucketUrlPrefix}/library-logos/${t}.png`} height="17px" alt="" loading="lazy" key={idx} />
+    <S.Img
+      src={`${AssetBucketUrlPrefix}/library-logos/${t}.png`}
+      height="17px"
+      alt={`Logo image of ${t}`}
+      loading="lazy"
+      key={idx}
+    />
   ));
   const movingBannersCenter = shuffle(text.contentList).map((t, idx) => (
-    <S.Img src={`${AssetBucketUrlPrefix}/library-logos/${t}.png`} height="17px" alt="" loading="lazy" key={idx} />
+    <S.Img
+      src={`${AssetBucketUrlPrefix}/library-logos/${t}.png`}
+      height="17px"
+      alt={`Logo image of ${t}`}
+      loading="lazy"
+      key={idx}
+    />
   ));
   const movingBannersBottom = shuffle(text.contentList).map((t, idx) => (
-    <S.Img src={`${AssetBucketUrlPrefix}/library-logos/${t}.png`} height="17px" alt="" loading="lazy" key={idx} />
+    <S.Img
+      src={`${AssetBucketUrlPrefix}/library-logos/${t}.png`}
+      height="17px"
+      alt={`Logo image of ${t}`}
+      loading="lazy"
+      key={idx}
+    />
   ));
   return (
     <S.Container ref={ref} id="projects">

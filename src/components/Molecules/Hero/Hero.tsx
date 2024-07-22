@@ -3,6 +3,7 @@ import { S } from './Hero.styles';
 import { useEffect, useState } from 'react';
 import { AssetBucketUrlPrefix } from '../../../utils/Constants';
 import { v4 as uuidv4 } from 'uuid';
+import { ColorTokens } from '../../../ColorTokens/ColorTokens';
 
 interface Position {
   x: number;
@@ -57,6 +58,7 @@ const text = {
       },
     },
   ],
+  personalStatement: "HI I'M ASHAN. I BUILD FULLSTACK APPLICATIONS THAT RUN ON AWS CLOUD.",
 };
 export const Hero = () => {
   const [scope, animate] = useAnimate();
@@ -166,6 +168,21 @@ export const Hero = () => {
       <S.Title id="title-text" initial={{ top: '0dvh', left: '50dvw', translateX: '-40%', scale: 0.8, opacity: 0 }}>
         A.
       </S.Title>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 4.1 } }}
+        style={{
+          position: 'absolute',
+          bottom: '6dvh',
+          left: '50dvw',
+          transform: 'translate(-50%, 0)',
+          maxWidth: '32rem',
+          textAlign: 'center',
+          color: ColorTokens.secondary,
+        }}
+      >
+        {text.personalStatement}
+      </motion.p>
 
       {images.map((image) => {
         return (

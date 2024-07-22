@@ -11,7 +11,7 @@ export const AboutBoxes = () => {
       },
       {
         header: 'STATISTICS',
-        listItems: ['3 YOE', 'BS COMP SCI', 'UMD, COLLEGE PARK'],
+        listItems: ['4 YOE', 'BS COMP SCI', 'UMD, COLLEGE PARK'],
       },
       {
         header: 'INTERESTS',

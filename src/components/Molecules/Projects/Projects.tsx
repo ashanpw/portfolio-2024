@@ -19,21 +19,24 @@ export const Projects = () => {
           {
             src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindMain`,
             type: 'video',
+            alt: 'A home page for a portfolio website I created with video of wind moving in the background',
           },
           {
             src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindAbout`,
             type: 'video',
+            alt: 'About page for my portfolio website which displays my education and areas of expertise',
           },
           {
             src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindExperience`,
             type: 'image',
+            alt: 'Image of the experience page of my portfolio website which displays a video of a samurai and a list of my work experience',
           },
           {
             src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindProjects`,
             type: 'image',
+            alt: "Several images and videos of projects I've created in the past displayed in a grid",
           },
         ],
-        mediaAlt: '',
       },
       {
         name: 'QUARANTINE APP',
@@ -44,9 +47,9 @@ export const Projects = () => {
           {
             src: `${assetBucketProjectUrlPrefix}/quarantine/quarantine`,
             type: 'video',
+            alt: 'A picture of a banana is taken and a list of identified items in the image are shown. The user picks one and adds it to the list.',
           },
         ],
-        mediaAlt: '',
       },
       {
         name: 'DROWSINESS DETECTION SYSTEM',
@@ -57,9 +60,9 @@ export const Projects = () => {
           {
             src: `${assetBucketProjectUrlPrefix}/drowsiness-detection/drowsinessDetection`,
             type: 'video',
+            alt: 'Video of a female talking and driving. Her mouth and eyes have boxes around them to track her movement.',
           },
         ],
-        mediaAlt: '',
       },
       {
         name: 'PROJECT MOON',
@@ -70,22 +73,25 @@ export const Projects = () => {
           {
             src: `${assetBucketProjectUrlPrefix}/project-moon/projectMoonPlacesVisited`,
             type: 'video',
+            alt: 'A carousel of images showing locations visited',
           },
           {
             src: `${assetBucketProjectUrlPrefix}/project-moon/projectMoonMain`,
             type: 'image',
+            alt: 'Home page of the portfolio website',
           },
 
           {
             src: `${assetBucketProjectUrlPrefix}/project-moon/projectMoonStats`,
             type: 'image',
+            alt: 'A grid of text showing statistics',
           },
           {
             src: `${assetBucketProjectUrlPrefix}/project-moon/projectMoonAbout`,
             type: 'image',
+            alt: 'Image of myself with some statistics and a personal statement',
           },
         ],
-        mediaAlt: '',
       },
       {
         name: 'STORYBOARD APP',
@@ -96,21 +102,24 @@ export const Projects = () => {
           {
             src: `${assetBucketProjectUrlPrefix}/story-board/storyboardMain`,
             type: 'video',
+            alt: 'Video showing a mobile phone with 2 columns of squares where each square is a storyboard post',
           },
           {
             src: `${assetBucketProjectUrlPrefix}/story-board/storyboardPost`,
             type: 'video',
+            alt: 'Typing a comment and clicking the users name to open their posts',
           },
           {
             src: `${assetBucketProjectUrlPrefix}/story-board/storyboardFirebasePost`,
             type: 'image',
+            alt: "Image of the database structure on Google's Firebase website",
           },
           {
             src: `${assetBucketProjectUrlPrefix}/story-board/storyboardFirebaseComments`,
             type: 'image',
+            alt: "Image of the database structure for comments on Google's Firebase website",
           },
         ],
-        mediaAlt: '',
       },
 
       {
@@ -122,9 +131,9 @@ export const Projects = () => {
           {
             src: `${assetBucketProjectUrlPrefix}/pedestrian-detection/pedestrianDetection`,
             type: 'image',
+            alt: 'Image of several pedestrians walking with a neon green square around them showing if they were detected.',
           },
         ],
-        mediaAlt: '',
       },
     ],
   };

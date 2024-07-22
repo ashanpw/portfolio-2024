@@ -25,8 +25,6 @@ export const Carousel = (props: any) => {
       `${media.src}-small.webp 768w`,
     ];
     const imgFallBackSrc = `${media.src}.jpg`;
-    const videoSrcSet = [`{${media.src}-large.webm`, `${media.src}-medium.webm`, `${media.src}-small.webm`];
-    const videoFallBackSrc = `${media.src}.mp4`;
 
     return (
       <EmblaSlide key={idx}>
@@ -36,12 +34,13 @@ export const Carousel = (props: any) => {
               { src: media.src, type: 'webm', useSrcSet: true },
               { src: media.src, type: 'mp4', useSrcSet: false },
             ]}
+            ariaLabel={media.alt}
             aspectRatio="16/9"
           />
         )}
 
         {media.type === 'image' && (
-          <picture>
+          <picture aria-label={media.alt}>
             <motion.source
               srcSet={imgSrcSet.join(', ')}
               style={{ aspectRatio: '16/9' }}
@@ -62,7 +61,7 @@ export const Carousel = (props: any) => {
             />
             <motion.img
               src={`${imgFallBackSrc}`}
-              alt="A rad wolf"
+              alt={media.alt}
               style={{ aspectRatio: '16/9' }}
               width="100%"
               height="100%"

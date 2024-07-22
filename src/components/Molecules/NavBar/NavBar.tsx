@@ -33,7 +33,6 @@ export const NavBar = () => {
       <S.Name initial={{ opacity: 0, marginTop: '50dvh' }} id="name-container">
         <S.A
           href={`#${text.homeText}`}
-          whileHover={{ color: ColorTokens.quartenary }}
           initial={{ color: ColorTokens.quartenary }}
           animate={{ color: '#000', transition: { delay: 2.8, duration: 0.2 } }}
         >

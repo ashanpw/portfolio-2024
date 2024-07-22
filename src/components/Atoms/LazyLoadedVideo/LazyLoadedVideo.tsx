@@ -53,6 +53,7 @@ export const LazyLoadedVideo = (props: LazyLoadedVideoProps) => {
                 type={`video/${source.type}`}
                 media={`(min-width: ${item.minScreenSize})`}
                 style={{ aspectRatio: aspectRatio }}
+                aria-label={props.ariaLabel}
               />,
             );
           });
@@ -63,6 +64,7 @@ export const LazyLoadedVideo = (props: LazyLoadedVideoProps) => {
               src={`${source.src}.${source.type}`}
               type={source.type}
               style={{ aspectRatio: aspectRatio }}
+              aria-label={props.ariaLabel}
             />,
           );
         }

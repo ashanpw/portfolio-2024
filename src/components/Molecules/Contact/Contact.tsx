@@ -61,6 +61,7 @@ export const Contact = () => {
               srcSet={text.coverImage.srcSet.join(', ')}
               sizes="(min-width: 768px) 66.6vw, 100vw"
               alt={text.coverImage.alt}
+              loading="lazy"
             />
             <S.P>{text.coverImage.title}</S.P>
           </S.FlexBox>
