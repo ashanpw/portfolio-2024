@@ -156,7 +156,6 @@ export const Projects = () => {
   return (
     <>
       <ProjectsHeader />
-
       <S.Container>
         {text.contentItems.map((p, idx) => {
           return (

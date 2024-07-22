@@ -6,12 +6,12 @@ const Grid = styled(motion.div)<{ $idx: number }>`
   ${(props) => props.$idx > 0 && 'padding-top: 5rem;'}
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  align-items: top;
-  gap: 4rem 0;
+  align-items: center;
+  gap: 5rem 0;
   @media (min-width: 768px) {
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 5rem 0;
+    gap: 6rem 0;
   }
 `;
 
@@ -27,15 +27,15 @@ const ContentSection = styled.div`
   }
 `;
 
-const SubSection = styled.div``;
+const SubSection = styled.div`
+  color: ${ColorTokens.secondary};
+`;
 
 const Description = styled.p`
   line-height: 2.7rem;
-  margin-top: -0.5rem;
   color: ${ColorTokens.secondary};
   @media (min-width: 768px) {
-    padding: 0 1rem 0 0;
-    min-height: 12rem;
+    padding: 0 5rem 0 0;
   }
 `;
 

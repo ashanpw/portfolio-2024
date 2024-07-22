@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import styled from "styled-components";
-import { ColorTokens } from "../../../ColorTokens/ColorTokens";
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
+import { ColorTokens } from '../../../ColorTokens/ColorTokens';
 
 const Container = styled.div`
   min-height: 300dvh;
@@ -11,9 +11,8 @@ const Container = styled.div`
 
 const Title = styled(motion.div)`
   position: sticky;
-  top: 0;
-  padding-top: 35rem;
-  margin-top: -35rem;
+  top: calc(50% - 10vw / 2);
+  margin: auto;
   text-align: center;
   z-index: -1;
   color: ${ColorTokens.title};

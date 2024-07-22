@@ -52,6 +52,8 @@ export const MouseCursor = () => {
         pointerEvents: 'none',
         scale: scaleSpring,
       }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { type: 'spring', delay: 3, duration: 1 } }}
     />
   );
 };

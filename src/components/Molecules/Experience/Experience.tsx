@@ -9,6 +9,7 @@ import {
   MouseSpringOptions,
 } from '../../../utils/Constants';
 import { IndentedContainer } from '../../Atoms/IndentedContainer/IndentedContainer';
+import { ColorTokens } from '../../../ColorTokens/ColorTokens';
 
 export const Experience = (props: any) => {
   const x = useMotionValue(0);
@@ -61,9 +62,11 @@ export const Experience = (props: any) => {
         $idx={idx}
       >
         {idx === 0 && <S.Line initial="initial" whileInView="animate" variants={LineAnimationVariants} />}
-        <p style={{ paddingLeft: '5rem', fontSize: '1.4rem' }}>{p.company}</p>
+        <div>
+          <p style={{ paddingLeft: '5rem', fontSize: '1.4rem' }}>{p.company}</p>
+          <p style={{ paddingLeft: '5rem', color: ColorTokens.secondary }}>{p.org}</p>
+        </div>
         <S.SubSection>
-          <p>{p.org}</p>
           <p>{p.title}</p>
           <p>{p.date}</p>
         </S.SubSection>

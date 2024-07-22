@@ -54,7 +54,7 @@ export const ProjectsHeader = () => {
   ));
   return (
     <S.Container ref={ref} id="projects">
-      <S.H1>PROJECTS</S.H1>
+      <S.Title>PROJECTS</S.Title>
       <S.LogoContainer>
         <S.LogoContainerItem
           style={{

@@ -1,21 +1,21 @@
-import { BoxItem } from "../../Atoms/BoxItem/BoxItem";
-import { S } from "./AboutBoxes.styles";
+import { BoxItem } from '../../Atoms/BoxItem/BoxItem';
+import { S } from './AboutBoxes.styles';
 
 export const AboutBoxes = () => {
   const text = {
-    title: "TECHNOLOGY",
+    title: 'TECHNOLOGY',
     contentItems: [
       {
-        header: "PROFILE",
-        listItems: ["SOFTWARE DEV ENGINEER II", "FULL-STACK DEV", "AMAZON"],
+        header: 'PROFILE',
+        listItems: ['SOFTWARE DEV ENGINEER II', 'FULL-STACK', 'AMAZON'],
       },
       {
-        header: "STATISTICS",
-        listItems: ["3 YOE", "BS COMP SCI", "UMD, COLLEGE PARK"],
+        header: 'STATISTICS',
+        listItems: ['3 YOE', 'BS COMP SCI', 'UMD, COLLEGE PARK'],
       },
       {
-        header: "INTERESTS",
-        listItems: ["PC BUILDS", "KEYBOARD BUILDS", "FRONTEND NEWS"],
+        header: 'INTERESTS',
+        listItems: ['PC BUILDS', 'KEYBOARD BUILDS', 'FRONTEND NEWS'],
       },
     ],
   };

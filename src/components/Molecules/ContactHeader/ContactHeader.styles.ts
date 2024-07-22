@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import styled from "styled-components";
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
 const Container = styled.div`
   max-width: 100%;
@@ -12,7 +12,7 @@ const Container = styled.div`
 
 const Tunnel = styled(motion.div)`
   position: sticky;
-  top: 50%;
+  top: calc(50% - 28rem / 2);
   margin: auto;
   border-radius: 50% 50% 0 0;
 

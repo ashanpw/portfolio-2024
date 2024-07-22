@@ -14,15 +14,15 @@ const Container = styled.div`
   z-index: 99;
 `;
 
-const Name = styled.p`
+const Name = styled(motion.p)`
   font-weight: 600;
   font-size: 1.4rem;
   margin: 0;
 `;
 
-const Contact = styled.p`
+const Contact = styled(motion.p)`
   justify-self: end;
-  padding-right: 5rem;
+  padding-right: 6rem;
   margin: 0;
 `;
 
@@ -37,10 +37,11 @@ const A = styled(motion.a)`
   text-decoration: none;
   color: #000;
 `;
+
 export const S = {
+  Contact,
   Container,
   Name,
-  Contact,
   Ul,
   A,
 };
