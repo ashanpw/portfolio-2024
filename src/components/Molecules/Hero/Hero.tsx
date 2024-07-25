@@ -74,8 +74,12 @@ export const Hero = () => {
 
   useEffect(() => {
     animate([
-      ['#title-text', { opacity: 1 }, { duration: 0.6, delay: 2.1 }],
-      ['#title-text', { scale: 1 }, { duration: 1, type: 'spring', stiffness: 100, mass: 0.3, damping: 30 }],
+      ['#title-text', { opacity: 1 }, { duration: 0.7, delay: 2 }],
+      [
+        '#title-text',
+        { scale: 1 },
+        { duration: 1, delay: 0.1, type: 'spring', stiffness: 100, mass: 0.3, damping: 30 },
+      ],
     ]);
   }, [animate]);
 

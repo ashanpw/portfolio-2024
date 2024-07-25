@@ -15,7 +15,7 @@ import { LoadingScreen } from './components/Atoms/LoadingScreen/LoadingScreen';
 export const App = () => {
   return (
     <ReactLenis root>
-      {/* <LoadingScreen /> */}
+      <LoadingScreen />
       <NavBar />
       <MouseCursor />
       <Hero />
