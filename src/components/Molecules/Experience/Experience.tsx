@@ -64,7 +64,7 @@ export const Experience = (props: any) => {
         {idx === 0 && <S.Line initial="initial" whileInView="animate" variants={LineAnimationVariants} />}
         <div>
           <p style={{ paddingLeft: '5rem', fontSize: '1.4rem' }}>{p.company}</p>
-          <p style={{ paddingLeft: '5rem', color: ColorTokens.secondary }}>{p.org}</p>
+          <p style={{ paddingLeft: '5rem' }}>{p.org}</p>
         </div>
         <S.SubSection>
           <p>{p.title}</p>
@@ -99,7 +99,7 @@ export const Experience = (props: any) => {
   ));
 
   return (
-    <IndentedContainer index={ExperienceText.index} title={ExperienceText.title}>
+    <IndentedContainer index={ExperienceText.index} title={ExperienceText.title} id={ExperienceText.id}>
       {experienceItems}
     </IndentedContainer>
   );

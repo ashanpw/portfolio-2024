@@ -27,9 +27,7 @@ const ContentSection = styled.div`
   }
 `;
 
-const SubSection = styled.div`
-  color: ${ColorTokens.secondary};
-`;
+const SubSection = styled.div``;
 
 const Description = styled.p`
   line-height: 2.7rem;

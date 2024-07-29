@@ -19,7 +19,7 @@ const text = {
   imageList: [
     {
       id: 0,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/drowsinessDetection.webp`,
+      imgSrc: `${AssetBucketUrlPrefix}/hero/teamLabsSmoke.webp`,
       position: {
         x: 0,
         y: 0,
@@ -27,15 +27,24 @@ const text = {
     },
     {
       id: 1,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonPlacesVisited.webp`,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/drowsinessDetection.webp`,
+      position: {
+        x: 0,
+        y: 0,
+      },
+    },
+
+    {
+      id: 2,
+      imgSrc: `${AssetBucketUrlPrefix}/hero/mouse.webp`,
       position: {
         x: 0,
         y: 0,
       },
     },
     {
-      id: 2,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/characterRecognition.webp`,
+      id: 5,
+      imgSrc: `${AssetBucketUrlPrefix}/hero/teamLabsBlue.webp`,
       position: {
         x: 0,
         y: 0,
@@ -43,7 +52,15 @@ const text = {
     },
     {
       id: 3,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonHome.webp`,
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/characterRecognition.webp`,
+      position: {
+        x: 0,
+        y: 0,
+      },
+    },
+    {
+      id: 6,
+      imgSrc: `${AssetBucketUrlPrefix}/hero/quarantine.webp`,
       position: {
         x: 0,
         y: 0,
@@ -75,11 +92,7 @@ export const Hero = () => {
   useEffect(() => {
     animate([
       ['#title-text', { opacity: 1 }, { duration: 0.7, delay: 2 }],
-      [
-        '#title-text',
-        { scale: 1 },
-        { duration: 1, delay: 0.1, type: 'spring', stiffness: 100, mass: 0.3, damping: 30 },
-      ],
+      ['#title-text', { scale: 1 }, { duration: 1, type: 'spring', stiffness: 100, mass: 0.3, damping: 30 }],
     ]);
   }, [animate]);
 
@@ -107,7 +120,7 @@ export const Hero = () => {
         const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
 
         if (distance >= targetDistance) {
-          setCurrentIndex((prev) => (prev + 1) % 5);
+          setCurrentIndex((prev) => (prev + 1) % text.imageList.length);
 
           const newImage: ImageData = {
             id: uuidv4(),
@@ -116,7 +129,7 @@ export const Hero = () => {
           };
           setImages((prevImages) => {
             let updatedImages;
-            if (prevImages.length >= 5) {
+            if (prevImages.length >= text.imageList.length) {
               // Move the first element to the current mouse position
               updatedImages = [...prevImages.slice(1), newImage];
             } else {
@@ -168,6 +181,7 @@ export const Hero = () => {
       onMouseMove={() => setShowAnimations(true)}
       onMouseEnter={() => setShowAnimations(true)}
       onMouseLeave={() => setShowAnimations(false)}
+      id="hero"
     >
       <S.Title id="title-text" initial={{ top: '0dvh', left: '50dvw', translateX: '-40%', scale: 0.8, opacity: 0 }}>
         A.
@@ -197,8 +211,8 @@ export const Hero = () => {
             alt="Mouse Tracker"
             initial={{
               opacity: 0,
-              x: (initialPosition?.x ?? 0) - x.getVelocity() / 80,
-              y: (initialPosition?.y ?? 0) - y.getVelocity() / 80,
+              x: (initialPosition?.x ?? 0) - x.getVelocity() / 40,
+              y: (initialPosition?.y ?? 0) - y.getVelocity() / 40,
             }}
             animate={{
               opacity: 1,
@@ -207,11 +221,12 @@ export const Hero = () => {
             transition={{ duration: 0 }}
             style={{
               position: 'absolute',
-              width: '30rem',
+              width: '25rem',
               translateX: '-50%',
               translateY: '-50%',
               zIndex: -99,
               pointerEvents: 'none',
+              aspectRatio: '1/1',
             }}
             loading="eager"
           />

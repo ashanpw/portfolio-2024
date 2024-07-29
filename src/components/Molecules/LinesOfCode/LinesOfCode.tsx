@@ -20,20 +20,11 @@ export const LinesOfCode = () => {
 
   const imageList = [
     {
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/drowsinessDetection.webp`,
-      y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
-      alt: 'Image of a female driving with squares surrounding her eyes and mouth',
-    },
-    {
       imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectMoonPlacesVisited.webp`,
       y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
       alt: 'Image of a Japanese temple in a carousel component of a website',
     },
-    {
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/characterRecognition.webp`,
-      y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
-      alt: 'Large characters in black on a white background',
-    },
+
     {
       imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/depthDetection.webp`,
       y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
@@ -129,7 +120,11 @@ export const LinesOfCode = () => {
       y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-800, 400), 0]),
       alt: 'Image of an Amazon.com product page of a video game',
     },
-
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/characterRecognition.webp`,
+      y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
+      alt: 'Large characters in black on a white background',
+    },
     {
       imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/quarantinePoster.webp`,
       y: useTransform(scrollYProgress, [1, 0], [-3000, 200]),
@@ -140,10 +135,15 @@ export const LinesOfCode = () => {
       y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-800, 400), 0]),
       alt: 'Image of home page of a website with gray wind in the background',
     },
+    {
+      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/drowsinessDetection.webp`,
+      y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
+      alt: 'Image of a female driving with squares surrounding her eyes and mouth',
+    },
   ];
 
   return (
-    <div ref={ref}>
+    <div ref={ref} id="lines-of-code">
       <S.Container>
         <S.Title>
           <h1>{text.title}</h1>

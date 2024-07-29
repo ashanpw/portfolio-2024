@@ -24,6 +24,7 @@ export const Contact = () => {
 
   const text = {
     title: 'CONTACT',
+    id: 'contact',
     index: 3,
     contentItems: [
       { label: 'LOCATION', value: 'UNITED STATES' },
@@ -49,11 +50,12 @@ export const Contact = () => {
       title: 'CANNY EDGE DETECTION PYTHON SCRIPT',
       alt: 'An image of abstract art which was run through a canny edge detection script in Python',
     },
+    farewellMessage: 'THANKS FOR VISITING',
   };
   return (
     <>
-      <S.Container>
-        <S.Title>CONTACT</S.Title>
+      <S.Container id={text.id}>
+        <S.Title>{text.title}</S.Title>
         <IndentedContainer>
           <S.FlexBox>
             <S.Image
@@ -69,7 +71,7 @@ export const Contact = () => {
           <List contentItems={text.contentItems} useDarkMode />
 
           <S.Circle variants={circleAnimationVariants} initial="initial" whileInView="animate">
-            THANKS FOR VISITING
+            {text.farewellMessage}
           </S.Circle>
         </IndentedContainer>
       </S.Container>

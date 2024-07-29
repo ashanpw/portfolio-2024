@@ -1,13 +1,17 @@
 import { motion, useAnimate } from 'framer-motion';
 import { ColorTokens } from '../../../ColorTokens/ColorTokens';
 import { S } from './NavBar.styles';
-import { ListAnimationVariants, TextListContainerVariants, TextListItemVariants } from '../../../utils/Constants';
+import { TextListContainerVariants, TextListItemVariants } from '../../../utils/Constants';
 import { useEffect } from 'react';
+import { useLenis } from '@studio-freight/react-lenis';
 
 export const NavBar = () => {
   const text = {
     homeText: 'ASHAN PANDUWAWALA',
-    navItems: ['INTRODUCTION', 'TECHNOLOGY // EXPERIENCE', 'WORKSPACE', 'PROJECTS →'],
+    homeId: 'hero',
+    navItems: ['INTRODUCTION', 'CODE // TECHNOLOGY', 'EXPERIENCE', 'PROJECTS →'],
+    navIds: ['introduction', 'lines-of-code', 'experience', 'projects'],
+    contactId: 'contact',
     contactText: 'CONTACT',
   };
   const [scope, animate] = useAnimate();
@@ -28,13 +32,17 @@ export const NavBar = () => {
     },
   };
 
+  const lenis = useLenis();
+  const elementScrollHandler = (id: string) => {
+    lenis?.scrollTo(id);
+  };
   return (
     <S.Container ref={scope}>
       <S.Name initial={{ opacity: 0, marginTop: '50dvh' }} id="name-container">
         <S.A
-          href={`#${text.homeText}`}
           initial={{ color: ColorTokens.quartenary }}
           animate={{ color: '#000', transition: { delay: 2.8, duration: 0.2 } }}
+          onClick={() => elementScrollHandler(`#${text.homeId}`)}
         >
           {text.homeText}
         </S.A>
@@ -43,15 +51,18 @@ export const NavBar = () => {
       <S.Ul variants={listContainerVariants} initial="initial" whileInView="animate">
         {text.navItems.map((s, idx) => (
           <motion.li key={idx} variants={TextListItemVariants}>
-            <S.A href={`#${s.toLowerCase()}`} whileHover={{ color: ColorTokens.quartenary }}>
+            <S.A
+              whileHover={{ color: ColorTokens.quartenary }}
+              onClick={() => elementScrollHandler(`#${text.navIds[idx]}`)}
+            >
               {idx === text.navItems.length - 1 && <div style={{ marginTop: '1.5rem' }}></div>}
               {s}
             </S.A>
           </motion.li>
         ))}
       </S.Ul>
-      <S.Contact initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4.6 } }}>
-        <S.A href={`#${text.contactText}`} whileHover={{ color: ColorTokens.quartenary }}>
+      <S.Contact initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4.4 } }}>
+        <S.A whileHover={{ color: ColorTokens.quartenary }} onClick={() => elementScrollHandler(`#${text.contactId}`)}>
           {text.contactText}
         </S.A>
       </S.Contact>

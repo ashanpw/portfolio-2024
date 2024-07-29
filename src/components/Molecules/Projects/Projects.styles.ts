@@ -50,7 +50,6 @@ const Line = styled(motion.div)`
   }
 `;
 const Date = styled.p`
-  color: ${ColorTokens.secondary};
   margin-bottom: 2rem;
   @media (min-width: 768px) {
     margin-bottom: 0;

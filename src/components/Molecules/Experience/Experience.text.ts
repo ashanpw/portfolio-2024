@@ -1,6 +1,7 @@
 export const ExperienceText = {
   title: 'EXPERIENCE',
   index: 4,
+  id: 'experience',
   contentItems: [
     {
       company: 'AMAZON',
