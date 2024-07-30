@@ -11,7 +11,7 @@ export const Technology = () => {
         listItems: ['NODEJS', 'REACT', 'PLAYWRIGHT', 'STORYBOOK', 'NEXTJS', 'FRAMER MOTION'],
       },
       {
-        header: 'ML / AI',
+        header: 'ML // AI',
         listItems: ['PYTORCH', 'TENSORFLOW', 'NUMPY // PANDAS'],
       },
       {

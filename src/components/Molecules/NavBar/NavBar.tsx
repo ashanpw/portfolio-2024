@@ -17,7 +17,7 @@ export const NavBar = () => {
   const [scope, animate] = useAnimate();
   useEffect(() => {
     animate('#name-container', { opacity: 1 }, { duration: 0.8, delay: 0.5 }).then(() => {
-      animate('#name-container', { marginTop: 0 }, { duration: 0.7, delay: 0.5, type: 'tween', ease: 'easeInOut' });
+      animate('#name-container', { marginTop: 0 }, { duration: 0.7, delay: 0.4, type: 'tween', ease: 'easeInOut' });
     });
   }, []);
 
@@ -27,7 +27,7 @@ export const NavBar = () => {
       ...TextListContainerVariants.animate,
       transition: {
         ...TextListContainerVariants.animate.transition,
-        delayChildren: 3.3,
+        delayChildren: 3,
       },
     },
   };
@@ -41,8 +41,7 @@ export const NavBar = () => {
       <S.Name initial={{ opacity: 0, marginTop: '50dvh' }} id="name-container">
         <S.A
           initial={{ color: ColorTokens.quartenary }}
-          animate={{ color: '#000', transition: { delay: 2.8, duration: 0.2 } }}
-          onClick={() => elementScrollHandler(`#${text.homeId}`)}
+          animate={{ color: '#000', transition: { delay: 2.7, duration: 0.2 } }}
         >
           {text.homeText}
         </S.A>
@@ -61,7 +60,7 @@ export const NavBar = () => {
           </motion.li>
         ))}
       </S.Ul>
-      <S.Contact initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4.4 } }}>
+      <S.Contact initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4.2 } }}>
         <S.A whileHover={{ color: ColorTokens.quartenary }} onClick={() => elementScrollHandler(`#${text.contactId}`)}>
           {text.contactText}
         </S.A>

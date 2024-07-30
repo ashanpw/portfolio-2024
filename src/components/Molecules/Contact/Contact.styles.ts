@@ -5,7 +5,7 @@ const Container = styled.div`
   color: ${ColorTokens.quartenary};
   max-width: 100dvw;
   background-color: black;
-  padding-top: 80rem;
+  padding-top: 60rem;
 `;
 
 const FlexBox = styled.div`

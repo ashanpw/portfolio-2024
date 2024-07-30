@@ -110,11 +110,7 @@ export const LinesOfCode = () => {
       y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-800, 400), 0]),
       alt: 'Image of an Amazon.com product page selling a video game',
     },
-    {
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/storyboardAppFrame.webp`,
-      y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-800, 400), 0]),
-      alt: 'Image of four mobile phones with different pictures of an app',
-    },
+
     {
       imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/ggDetailPage1.webp`,
       y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-800, 400), 0]),
@@ -135,11 +131,16 @@ export const LinesOfCode = () => {
       y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-800, 400), 0]),
       alt: 'Image of home page of a website with gray wind in the background',
     },
-    {
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/drowsinessDetection.webp`,
-      y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
-      alt: 'Image of a female driving with squares surrounding her eyes and mouth',
-    },
+    // {
+    //   imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/drowsinessDetection.webp`,
+    //   y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-400, 400), 0]),
+    //   alt: 'Image of a female driving with squares surrounding her eyes and mouth',
+    // },
+    // {
+    //   imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/storyboardAppFrame.webp`,
+    //   y: useTransform(scrollYProgress, [1, 0], [randomIntFromInterval(-800, 400), 0]),
+    //   alt: 'Image of four mobile phones with different pictures of an app',
+    // },
   ];
 
   return (

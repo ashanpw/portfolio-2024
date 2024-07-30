@@ -35,6 +35,7 @@ const Ul = styled(motion.ul)`
 
 const A = styled(motion.a)`
   text-decoration: none;
+  cursor: pointer;
   color: #000;
 `;
 

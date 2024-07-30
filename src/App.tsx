@@ -10,11 +10,12 @@ import { ContactHeader } from './components/Molecules/ContactHeader/ContactHeade
 import { Technology } from './components/Molecules/Technology/Technology';
 import ReactLenis from '@studio-freight/react-lenis';
 import { MouseCursor } from './components/Molecules/MouseCursor/MouseCursor';
+import { LoadingScreen } from './components/Atoms/LoadingScreen/LoadingScreen';
 
 export const App = () => {
   return (
-    <ReactLenis root options={{ duration: 1.6 }}>
-      {/* <LoadingScreen /> */}
+    <ReactLenis root options={{ duration: 1.5 }}>
+      <LoadingScreen />
       <NavBar />
       <MouseCursor />
       <Hero />

@@ -25,7 +25,7 @@ const Grid = styled.div`
   max-width: 100vw;
   overflow: hidden;
   place-items: center;
-  gap: 2.5rem 0;
+  gap: 4rem 0;
   padding-top: 150rem;
   padding-bottom: 25rem;
   @media (min-width: 768px) {

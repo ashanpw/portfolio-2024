@@ -12,9 +12,9 @@ export const Projects = () => {
     contentItems: [
       {
         name: 'PROJECT WIND',
-        date: 'REACT, TS',
+        date: 'FRONTEND',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
+          'Second iteration of my portfolio website, codenamed "Project Wind". Designed with a wind-inspired flow and seamless GSAP transitions, built with React and JavaScript for interactivity.',
         mediaList: [
           {
             src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindMain`,
@@ -40,9 +40,9 @@ export const Projects = () => {
       },
       {
         name: 'QUARANTINE APP',
-        date: 'AUG - SEP 2019',
+        date: 'MOBILE',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
+          "Created Quarantine, a food expiration manager for Android using Java, Google's Vision API, and Firebase. Users can log in to manage their groceries, add or delete items, and use the Vision API to label items from photos automatically.",
         mediaList: [
           {
             src: `${assetBucketProjectUrlPrefix}/quarantine/quarantine`,
@@ -55,7 +55,7 @@ export const Projects = () => {
         name: 'DROWSINESS DETECTION SYSTEM',
         date: 'ML',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
+          'Developed a system to detect driver impairment by monitoring eye movements, yawns, and body activities using convolutional neural networks. Improved yawn detection and model robustness with brightness variation and histogram equalization.',
         mediaList: [
           {
             src: `${assetBucketProjectUrlPrefix}/drowsiness-detection/drowsinessDetection`,
@@ -68,7 +68,7 @@ export const Projects = () => {
         name: 'PROJECT MOON',
         date: 'FRONTEND',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
+          'Third iteration of my portfolio website, codenamed "Project Moon", featuring spherical elements and an industrial design. Built with React, TypeScript, Framer Motion, and Styled Components.',
         mediaList: [
           {
             src: `${assetBucketProjectUrlPrefix}/project-moon/projectMoonPlacesVisited`,
@@ -95,9 +95,9 @@ export const Projects = () => {
       },
       {
         name: 'SEAM CARVING',
-        date: 'COMPUTER VISION',
+        date: 'CV',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
+          'Implemented a Content-Aware Seam Carving algorithm to resize images by removing low-importance pixel paths using gradients and dynamic programming.',
         mediaList: [
           {
             src: `${assetBucketProjectUrlPrefix}/seam-carving/seamCarving`,
@@ -110,7 +110,7 @@ export const Projects = () => {
         name: 'STORYBOARD APP',
         date: 'MOBILE',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
+          'Collaborated with students David and Krishan to develop an Android app for storyboard artists to share their work, receive feedback, and interact via comments, likes, and profile views. Built in Java with Firebase for authentication and post storage.',
         mediaList: [
           {
             src: `${assetBucketProjectUrlPrefix}/story-board/storyboardMain`,
@@ -139,7 +139,7 @@ export const Projects = () => {
         name: 'PEDESTRIAN DETECTION SYSTEM',
         date: 'ML',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
+          'Created a pedestrian detection program with Python, PyTorch, OpenCV, and Pillow. Achieved 97.7% validation accuracy by fine-tuning the convolutional network and using dropout to prevent overfitting.',
         mediaList: [
           {
             src: `${assetBucketProjectUrlPrefix}/pedestrian-detection/pedestrianDetection`,

@@ -31,12 +31,31 @@ export const ProjectsHeader = () => {
       'storybook',
       'tensorflow',
       'typescript',
+      'androidstudio',
+      'apache',
+      'aws',
+      'cypress',
+      'framermotion',
+      'graphql',
+      'java',
+      'kotlin',
+      'nextjs',
+      'nodejs',
+      'opencv',
+      'playwright',
+      'python',
+      'pytorch',
+      'react',
+      'ruby',
+      'storybook',
+      'tensorflow',
+      'typescript',
     ],
   };
 
-  const moveRight = useTransform(scrollYProgress, [0, 1], ['-32.5%', '30%']);
-  const moveLeft = useTransform(scrollYProgress, [0, 1], ['-12.5%', '-80%']);
-  const moveDown = useTransform(scrollYProgress, [0, 1], ['0%', '200%']);
+  const moveRight = useTransform(scrollYProgress, [0, 1], ['-42.5%', '40%']);
+  const moveLeft = useTransform(scrollYProgress, [0, 1], ['-22.5%', '-120%']);
+  const moveDown = useTransform(scrollYProgress, [0, 1], ['-10%', '210%']);
   const shuffle = (array: string[]) => {
     return array
       .map((a) => ({ sort: Math.random(), value: a }))
