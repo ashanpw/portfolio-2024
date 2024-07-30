@@ -94,6 +94,19 @@ export const Projects = () => {
         ],
       },
       {
+        name: 'SEAM CARVING',
+        date: 'COMPUTER VISION',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magnam assumenda est quos neque accusantium, eveniet incidunt earum beatae repudiandae dolor, labore voluptatem ducimus blanditiis vero enim libero unde dolorem!',
+        mediaList: [
+          {
+            src: `${assetBucketProjectUrlPrefix}/seam-carving/seamCarving`,
+            type: 'video',
+            alt: 'A video of lady slowing inching towards a castle as the image is shrunk horizontally',
+          },
+        ],
+      },
+      {
         name: 'STORYBOARD APP',
         date: 'MOBILE',
         description:
