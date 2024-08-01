@@ -2,6 +2,7 @@ import { motion, useAnimate, useMotionValue, useSpring } from 'framer-motion';
 import { useEffect } from 'react';
 import { ColorTokens } from '../../../ColorTokens/ColorTokens';
 import { MouseSpringOptions } from '../../../utils/Constants';
+import { S } from './MouseCursor.styles';
 
 export const MouseCursor = () => {
   const x = useMotionValue(0);
@@ -38,22 +39,15 @@ export const MouseCursor = () => {
   }, []);
 
   return (
-    <motion.div
+    <S.Div
       style={{
-        position: 'fixed',
-        width: '5px',
-        height: '5px',
-        margin: '-10px',
-        backgroundColor: ColorTokens.title,
-        borderRadius: 10,
         translateX: xSpring,
         translateY: ySpring,
-        zIndex: 98,
-        pointerEvents: 'none',
+
         scale: scaleSpring,
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { type: 'spring', delay: 3, duration: 1 } }}
-    />
+    ></S.Div>
   );
 };

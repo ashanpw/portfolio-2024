@@ -75,3 +75,7 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+video::-webkit-media-controls {
+  display: none;
+}

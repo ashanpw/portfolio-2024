@@ -20,7 +20,7 @@ const ContainerItem = styled.div`
 `;
 
 const TextItem = styled(motion.div)<{ $idx: number }>`
-  margin: 0 0 15rem 2rem;
+  margin: 0 0 15rem 0rem;
 
   @media (min-width: 768px) {
     margin: 0;
