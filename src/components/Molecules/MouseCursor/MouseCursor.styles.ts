@@ -8,7 +8,7 @@ const Div = styled(motion.div)`
   height: 5px;
   margin: -10px;
   background-color: ${ColorTokens.title};
-  border-radius: 10;
+  border-radius: 100%;
   z-index: 98;
   pointerevents: none;
 

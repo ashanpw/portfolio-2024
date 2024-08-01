@@ -2,6 +2,7 @@ import { ReactElement, useEffect, useRef, useState } from 'react';
 import { LazyLoadedVideoProps } from './LazyLoadedVideo.types';
 import { motion } from 'framer-motion';
 import { SourceAnimationVariants } from '../../../utils/Constants';
+import { S } from './LazyLoadedVideo.styles';
 
 export const LazyLoadedVideo = (props: LazyLoadedVideoProps) => {
   const { aspectRatio, sources } = props;
@@ -75,7 +76,7 @@ export const LazyLoadedVideo = (props: LazyLoadedVideoProps) => {
   });
 
   return (
-    <motion.video
+    <S.Video
       ref={videoRef}
       autoPlay={isInView}
       controls={false}
@@ -87,8 +88,9 @@ export const LazyLoadedVideo = (props: LazyLoadedVideoProps) => {
       whileInView="animate"
       variants={SourceAnimationVariants}
       preload="metadata"
+      playsInline
     >
       {sourceList}
-    </motion.video>
+    </S.Video>
   );
 };
