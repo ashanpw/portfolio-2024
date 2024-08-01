@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { S } from './ProjectsHeader.styles';
 import { useMotionValueEvent, useScroll, useTransform } from 'framer-motion';
 import { AssetBucketUrlPrefix } from '../../../utils/Constants';
+import { projectsHeaderText } from './ProjectsHeader.text';
 
 export const ProjectsHeader = () => {
   const ref = useRef(null);
@@ -9,49 +10,6 @@ export const ProjectsHeader = () => {
     target: ref,
     offset: [-0.8, 1, 2, 3],
   });
-
-  const text = {
-    contentList: [
-      'androidstudio',
-      'apache',
-      'aws',
-      'cypress',
-      'framermotion',
-      'graphql',
-      'java',
-      'kotlin',
-      'nextjs',
-      'nodejs',
-      'opencv',
-      'playwright',
-      'python',
-      'pytorch',
-      'react',
-      'ruby',
-      'storybook',
-      'tensorflow',
-      'typescript',
-      'androidstudio',
-      'apache',
-      'aws',
-      'cypress',
-      'framermotion',
-      'graphql',
-      'java',
-      'kotlin',
-      'nextjs',
-      'nodejs',
-      'opencv',
-      'playwright',
-      'python',
-      'pytorch',
-      'react',
-      'ruby',
-      'storybook',
-      'tensorflow',
-      'typescript',
-    ],
-  };
 
   const moveRight = useTransform(scrollYProgress, [0, 1], ['-42.5%', '40%']);
   const moveLeft = useTransform(scrollYProgress, [0, 1], ['-22.5%', '-120%']);
@@ -62,7 +20,7 @@ export const ProjectsHeader = () => {
       .sort((a, b) => a.sort - b.sort)
       .map((a) => a.value);
   };
-  const movingBannersUpper = shuffle(text.contentList).map((t, idx) => (
+  const movingBannersUpper = shuffle(projectsHeaderText.contentList).map((t, idx) => (
     <S.Img
       src={`${AssetBucketUrlPrefix}/library-logos/${t}.png`}
       height="17px"
@@ -71,7 +29,7 @@ export const ProjectsHeader = () => {
       key={idx}
     />
   ));
-  const movingBannersCenter = shuffle(text.contentList).map((t, idx) => (
+  const movingBannersCenter = shuffle(projectsHeaderText.contentList).map((t, idx) => (
     <S.Img
       src={`${AssetBucketUrlPrefix}/library-logos/${t}.png`}
       height="17px"
@@ -80,7 +38,7 @@ export const ProjectsHeader = () => {
       key={idx}
     />
   ));
-  const movingBannersBottom = shuffle(text.contentList).map((t, idx) => (
+  const movingBannersBottom = shuffle(projectsHeaderText.contentList).map((t, idx) => (
     <S.Img
       src={`${AssetBucketUrlPrefix}/library-logos/${t}.png`}
       height="17px"
@@ -91,14 +49,14 @@ export const ProjectsHeader = () => {
   ));
   return (
     <S.Container ref={ref} id="projects">
-      <S.Title>PROJECTS</S.Title>
+      <S.Title>{projectsHeaderText.title}</S.Title>
       <S.LogoContainer>
         <S.LogoContainerItem
           style={{
             x: moveLeft,
             y: moveDown,
             zIndex: '1',
-            rotate: -4,
+            rotate: -5,
           }}
         >
           {movingBannersUpper}
@@ -108,7 +66,7 @@ export const ProjectsHeader = () => {
             x: moveRight,
             y: moveDown,
             zIndex: '-1',
-            rotate: 4,
+            rotate: 5,
           }}
         >
           {movingBannersCenter}
@@ -118,7 +76,8 @@ export const ProjectsHeader = () => {
             x: moveLeft,
             y: moveDown,
             zIndex: '1',
-            rotate: -4,
+            rotate: -5,
+            marginTop: '30rem',
           }}
         >
           {movingBannersBottom}

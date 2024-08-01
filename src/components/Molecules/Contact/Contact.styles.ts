@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { ColorTokens } from '../../../ColorTokens/ColorTokens';
+
 const Container = styled.div`
   color: ${ColorTokens.quartenary};
   max-width: 100dvw;
@@ -8,32 +9,19 @@ const Container = styled.div`
   padding-top: 60rem;
 `;
 
-const FlexBox = styled.div`
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const VideoContainer = styled.div`
   border: 1px solid ${ColorTokens.secondary};
-  gap: 3rem;
-  padding: 8rem 5rem;
+  margin: auto;
+  padding: 0rem 2rem;
   margin-bottom: 10rem;
-  position: relative;
-`;
-const MotionSvg = styled(motion.svg)`
-  margin-left: 25%;
-  color: #eaeaea;
-  opacity: 85%;
+  @media (min-width: 2000px) {
+    padding: 8rem 5rem;
+  }
 `;
 
 const Title = styled.h1`
   text-align: center;
   margin-bottom: 15rem;
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 40rem;
-  objectfit: cover;
 `;
 
 const Circle = styled(motion.div)`
@@ -48,16 +36,9 @@ const Circle = styled(motion.div)`
   margin-top: 20rem;
 `;
 
-export const P = styled.p`
-  font-size: 1.3rem;
-  color: ${ColorTokens.tertiary};
-`;
 export const S = {
   Container,
   Circle,
-  FlexBox,
-  MotionSvg,
+  VideoContainer,
   Title,
-  Image,
-  P,
 };

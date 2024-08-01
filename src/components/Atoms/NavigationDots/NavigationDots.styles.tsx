@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { ColorTokens } from '../../../ColorTokens/ColorTokens';
+
 // Dots under the carousel
 export const StyledDot = styled.div<{ $isSelected: boolean }>`
   background-color: ${(props) => (props.$isSelected ? ColorTokens.secondary : ColorTokens.quartenary)};
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 100%;
 `;
 

@@ -1,17 +1,12 @@
-import { motion, useAnimate, useMotionValue, useSpring } from 'framer-motion';
+import { useMotionValue, useSpring } from 'framer-motion';
 import { S } from './Experience.styles';
 import { useState, useEffect } from 'react';
-import { ExperienceText } from './Experience.text';
-import {
-  AssetBucketUrlPrefix,
-  LineAnimationVariants,
-  ListAnimationVariants,
-  MouseSpringOptions,
-} from '../../../utils/Constants';
+import { LineAnimationVariants, ListAnimationVariants, MouseSpringOptions } from '../../../utils/Constants';
 import { IndentedContainer } from '../../Atoms/IndentedContainer/IndentedContainer';
-import { ColorTokens } from '../../../ColorTokens/ColorTokens';
+import { imageAnimationVariants } from './Experience.animations';
+import { experienceText } from './Experience.text';
 
-export const Experience = (props: any) => {
+export const Experience = () => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const xSpring = useSpring(x, MouseSpringOptions);
@@ -35,23 +30,9 @@ export const Experience = (props: any) => {
     setCurrentHoveredItem(idx);
   };
 
-  const imageAnimationVariants = {
-    initial: {
-      opacity: 0,
-      scale: 0.3,
-    },
-    animate: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        ease: 'easeInOut',
-        duration: 0.3,
-      },
-    },
-  };
-
-  const experienceItems = ExperienceText.contentItems.map((p, idx) => (
+  const experienceItems = experienceText.contentItems.map((p, idx) => (
     <div key={idx}>
+      {idx === 0 && <S.Line initial="initial" whileInView="animate" variants={LineAnimationVariants} />}
       <S.Grid
         initial="initial"
         whileInView="animate"
@@ -61,18 +42,18 @@ export const Experience = (props: any) => {
         onMouseEnter={() => setCurrentHoveredItem(idx)}
         $idx={idx}
       >
-        {idx === 0 && <S.Line initial="initial" whileInView="animate" variants={LineAnimationVariants} />}
-        <div>
-          <p style={{ paddingLeft: '5rem', fontSize: '1.4rem' }}>{p.company}</p>
-          <p style={{ paddingLeft: '5rem' }}>{p.org}</p>
-        </div>
+        <S.TitleContainer>
+          <S.Title>{p.company}</S.Title>
+          <p>{p.org}</p>
+        </S.TitleContainer>
         <S.SubSection>
           <p>{p.title}</p>
           <p>{p.date}</p>
         </S.SubSection>
         <S.Description>{p.description}</S.Description>
-        <S.Line initial="initial" whileInView="animate" variants={LineAnimationVariants} />
       </S.Grid>
+      <S.Line initial="initial" whileInView="animate" variants={LineAnimationVariants} />
+
       <S.ImgContainer
         style={{
           position: 'fixed',
@@ -99,7 +80,7 @@ export const Experience = (props: any) => {
   ));
 
   return (
-    <IndentedContainer index={ExperienceText.index} title={ExperienceText.title} id={ExperienceText.id}>
+    <IndentedContainer index={experienceText.index} title={experienceText.title} id={experienceText.id}>
       {experienceItems}
     </IndentedContainer>
   );

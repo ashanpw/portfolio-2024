@@ -8,7 +8,7 @@ const Container = styled(motion.div)`
 `;
 
 const ContainerItem = styled.div`
-  margin-left: 1rem;
+  margin: 0 2rem;
   @media (min-width: 768px) {
     margin: 0 0 12rem 40%;
     padding: 0 5rem 5rem 5rem;
@@ -20,9 +20,10 @@ const ContainerItem = styled.div`
 `;
 
 const TextItem = styled(motion.div)<{ $idx: number }>`
-  margin-bottom: 15rem;
+  margin: 0 0 15rem 2rem;
+
   @media (min-width: 768px) {
-    margin-bottom: 0;
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     align-items: start;

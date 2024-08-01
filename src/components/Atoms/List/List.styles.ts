@@ -9,6 +9,7 @@ const Grid = styled(motion.div)`
 `;
 const Label = styled.p<{ $useDarkMode?: boolean }>`
   ${(props) => props.$useDarkMode && `color: ${ColorTokens.tertiary};`}
+  padding-left: 2rem;
   @media (min-width: 768px) {
     padding-left: 4rem;
   }

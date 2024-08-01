@@ -8,7 +8,7 @@ import { useLenis } from '@studio-freight/react-lenis';
 export const NavBar = () => {
   const text = {
     homeText: 'ASHAN PANDUWAWALA',
-    homeId: 'hero',
+    homeId: 'home',
     navItems: ['INTRODUCTION', 'CODE // TECHNOLOGY', 'EXPERIENCE', 'PROJECTS →'],
     navIds: ['introduction', 'lines-of-code', 'experience', 'projects'],
     contactId: 'contact',
@@ -42,6 +42,8 @@ export const NavBar = () => {
         <S.A
           initial={{ color: ColorTokens.quartenary }}
           animate={{ color: '#000', transition: { delay: 2.7, duration: 0.2 } }}
+          href={`#${text.homeId}`}
+          onClick={() => elementScrollHandler(`#${text.homeId}`)}
         >
           {text.homeText}
         </S.A>
@@ -52,6 +54,7 @@ export const NavBar = () => {
           <motion.li key={idx} variants={TextListItemVariants}>
             <S.A
               whileHover={{ color: ColorTokens.quartenary }}
+              href={`#${text.navIds[idx]}`}
               onClick={() => elementScrollHandler(`#${text.navIds[idx]}`)}
             >
               {idx === text.navItems.length - 1 && <div style={{ marginTop: '1.5rem' }}></div>}
@@ -61,7 +64,11 @@ export const NavBar = () => {
         ))}
       </S.Ul>
       <S.Contact initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4.2 } }}>
-        <S.A whileHover={{ color: ColorTokens.quartenary }} onClick={() => elementScrollHandler(`#${text.contactId}`)}>
+        <S.A
+          whileHover={{ color: ColorTokens.quartenary }}
+          onClick={() => elementScrollHandler(`#${text.contactId}`)}
+          href={`#${text.contactId}`}
+        >
           {text.contactText}
         </S.A>
       </S.Contact>

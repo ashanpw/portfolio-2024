@@ -31,6 +31,7 @@ const LogoContainerItem = styled(motion.div)`
   min-width: 200vw;
   margin-bottom: 10rem;
   padding: 2rem 12.5rem;
+
   @media (min-width: 768px) {
     padding: 2.5rem 12.5rem;
     gap: 20rem;
@@ -52,7 +53,6 @@ const Img = styled.img`
 export const S = {
   Title,
   Container,
-
   LogoContainer,
   LogoContainerItem,
   Img,

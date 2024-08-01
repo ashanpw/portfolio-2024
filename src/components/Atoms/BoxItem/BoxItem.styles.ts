@@ -16,7 +16,7 @@ const FlexBox = styled(motion.div)<{
   margin: -0.1rem 0 0 -0.1rem;
   min-height: 20rem;
   @media (min-width: 768px) {
-    min-height: 35rem;
+    min-height: 40rem;
     padding: 3rem 4rem;
   }
 `;

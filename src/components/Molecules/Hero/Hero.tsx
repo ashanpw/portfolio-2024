@@ -1,82 +1,10 @@
 import { motion, useAnimate, useMotionValue } from 'framer-motion';
 import { S } from './Hero.styles';
 import { useEffect, useState } from 'react';
-import { AssetBucketUrlPrefix } from '../../../utils/Constants';
 import { v4 as uuidv4 } from 'uuid';
-import { ColorTokens } from '../../../ColorTokens/ColorTokens';
+import { heroText } from './Hero.text';
+import { ImageData, Position } from './Hero.types';
 
-interface Position {
-  x: number;
-  y: number;
-}
-
-interface ImageData {
-  id: string;
-  position: Position;
-  imgSrc: string;
-}
-const text = {
-  imageList: [
-    {
-      id: 0,
-      imgSrc: `${AssetBucketUrlPrefix}/hero/teamLabsSmoke.webp`,
-      position: {
-        x: 0,
-        y: 0,
-      },
-    },
-    {
-      id: 1,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/drowsinessDetection.webp`,
-      position: {
-        x: 0,
-        y: 0,
-      },
-    },
-
-    {
-      id: 2,
-      imgSrc: `${AssetBucketUrlPrefix}/hero/mouse.webp`,
-      position: {
-        x: 0,
-        y: 0,
-      },
-    },
-    {
-      id: 5,
-      imgSrc: `${AssetBucketUrlPrefix}/hero/teamLabsBlue.webp`,
-      position: {
-        x: 0,
-        y: 0,
-      },
-    },
-    {
-      id: 3,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/characterRecognition.webp`,
-      position: {
-        x: 0,
-        y: 0,
-      },
-    },
-    {
-      id: 6,
-      imgSrc: `${AssetBucketUrlPrefix}/hero/quarantine.webp`,
-      position: {
-        x: 0,
-        y: 0,
-      },
-    },
-    {
-      id: 4,
-      imgSrc: `${AssetBucketUrlPrefix}/lines-of-code-images/projectWindExperience.webp`,
-      position: {
-        x: 0,
-        y: 0,
-      },
-    },
-  ],
-  personalStatement: "HI I'M ASHAN. I BUILD FULLSTACK APPLICATIONS THAT RUN ON AWS CLOUD.",
-};
 export const Hero = () => {
   const [scope, animate] = useAnimate();
   const [initialPosition, setInitialPosition] = useState<Position | null>(null);
@@ -91,7 +19,7 @@ export const Hero = () => {
 
   useEffect(() => {
     animate([
-      ['#title-text', { opacity: 1 }, { duration: 0.7, delay: 1.8 }],
+      ['#title-text', { opacity: 1 }, { duration: 0.7, delay: 1.7 }],
       ['#title-text', { scale: 1 }, { duration: 1, type: 'spring', stiffness: 100, mass: 0.3, damping: 30 }],
     ]);
   }, [animate]);
@@ -120,16 +48,16 @@ export const Hero = () => {
         const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
 
         if (distance >= targetDistance) {
-          setCurrentIndex((prev) => (prev + 1) % text.imageList.length);
+          setCurrentIndex((prev) => (prev + 1) % heroText.imageList.length);
 
           const newImage: ImageData = {
             id: uuidv4(),
             position: { x: event.clientX, y: event.clientY },
-            imgSrc: text.imageList[currentIndex].imgSrc,
+            imgSrc: heroText.imageList[currentIndex].imgSrc,
           };
           setImages((prevImages) => {
             let updatedImages;
-            if (prevImages.length >= text.imageList.length) {
+            if (prevImages.length >= heroText.imageList.length) {
               // Move the first element to the current mouse position
               updatedImages = [...prevImages.slice(1), newImage];
             } else {
@@ -181,26 +109,14 @@ export const Hero = () => {
       onMouseMove={() => setShowAnimations(true)}
       onMouseEnter={() => setShowAnimations(true)}
       onMouseLeave={() => setShowAnimations(false)}
-      id="hero"
+      id="home"
     >
       <S.Title id="title-text" initial={{ top: '0dvh', left: '50dvw', translateX: '-40%', scale: 0.8, opacity: 0 }}>
-        A.
+        {heroText.title}
       </S.Title>
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 4.1 } }}
-        style={{
-          position: 'absolute',
-          bottom: '6dvh',
-          left: '50dvw',
-          transform: 'translate(-50%, 0)',
-          maxWidth: '32rem',
-          textAlign: 'center',
-          color: ColorTokens.secondary,
-        }}
-      >
-        {text.personalStatement}
-      </motion.p>
+      <S.AboutText initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4.1 } }}>
+        {heroText.personalStatement}
+      </S.AboutText>
 
       {images.map((image) => {
         return (

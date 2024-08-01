@@ -7,7 +7,7 @@ export const LazyLoadedVideo = (props: LazyLoadedVideoProps) => {
   const { aspectRatio, sources } = props;
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isInView, setIsInView] = useState(false);
-  const defaultSrcSets = [
+  const defaultSrcSet = [
     { size: 'large', minScreenSize: '1500px' },
     { size: 'medium', minScreenSize: '750px' },
     { size: 'small', minScreenSize: '0' },
@@ -45,7 +45,7 @@ export const LazyLoadedVideo = (props: LazyLoadedVideoProps) => {
     if (isInView) {
       sources.forEach((source) => {
         if (source.useSrcSet) {
-          defaultSrcSets.forEach((item) => {
+          defaultSrcSet.forEach((item) => {
             outputSrcList.push(
               <source
                 key={`${source.src}-${item.size}.${source.type}`}

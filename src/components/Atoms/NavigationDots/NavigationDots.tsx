@@ -6,5 +6,6 @@ export const Dots = (props: any) => {
   for (let i = 0; i < props.size; i++) {
     dotList.push(<StyledDot $isSelected={i === props.selectedIdx} onClick={() => props.onClickFn(i)} key={i} />);
   }
+
   return <StyledDiv>{dotList}</StyledDiv>;
 };

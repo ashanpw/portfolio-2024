@@ -25,23 +25,24 @@ const Grid = styled.div`
   max-width: 100vw;
   overflow: hidden;
   place-items: center;
-  gap: 4rem 0;
+  gap: 2rem;
   padding-top: 150rem;
   padding-bottom: 25rem;
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4rem;
   }
 `;
 
 const MotionImg = styled(motion.img)`
-  max-width: 20rem;
+  max-width: 18rem;
   max-height: 20rem;
   @media (min-width: 768px) {
-    max-width: 22rem;
+    max-width: 20rem;
     max-height: 30rem;
   }
   @media (min-width: 1600px) {
-    max-width: 28rem;
+    max-width: 26rem;
   }
   @media (min-width: 2000px) {
     max-width: 35rem;
