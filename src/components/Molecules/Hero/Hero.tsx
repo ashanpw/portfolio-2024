@@ -114,7 +114,7 @@ export const Hero = () => {
       <S.Title id="title-text" initial={{ top: '0dvh', left: '50dvw', translateX: '-40%', scale: 0.8, opacity: 0 }}>
         {heroText.title}
       </S.Title>
-      <S.AboutText initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4.1 } }}>
+      <S.AboutText initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 3.9 } }}>
         {heroText.personalStatement}
       </S.AboutText>
 
