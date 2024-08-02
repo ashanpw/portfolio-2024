@@ -127,8 +127,8 @@ export const Hero = () => {
             alt="Mouse Tracker"
             initial={{
               opacity: 0,
-              x: (initialPosition?.x ?? 0) - x.getVelocity() / 40,
-              y: (initialPosition?.y ?? 0) - y.getVelocity() / 40,
+              x: (initialPosition?.x ?? 0) - x.getVelocity() / 38,
+              y: (initialPosition?.y ?? 0) - y.getVelocity() / 38,
             }}
             animate={{
               opacity: 1,
