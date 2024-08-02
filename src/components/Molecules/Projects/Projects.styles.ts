@@ -10,11 +10,11 @@ const Container = styled(motion.div)`
 const ContainerItem = styled.div`
   margin: 0 2rem;
   @media (min-width: 768px) {
-    margin: 0 0 18rem 40%;
+    margin: 0 0 15rem 40%;
     padding: 0 5rem 5rem 5rem;
   }
   @media (min-width: 2000px) {
-    margin: 0 0 18rem 50%;
+    margin: 0 0 15rem 50%;
     padding: 0 5rem 5rem 5rem;
   }
 `;
