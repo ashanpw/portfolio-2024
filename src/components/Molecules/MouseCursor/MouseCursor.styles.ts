@@ -10,7 +10,7 @@ const Div = styled(motion.div)`
   background-color: ${ColorTokens.title};
   border-radius: 100%;
   z-index: 98;
-  pointerevents: none;
+  pointer-events: none;
 
   @media (max-width: 768px) {
     display: none;
