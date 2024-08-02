@@ -19,7 +19,7 @@ export const Hero = () => {
 
   useEffect(() => {
     animate([
-      ['#title-text', { opacity: 1 }, { duration: 0.7, delay: 2.15 }],
+      ['#title-text', { opacity: 1 }, { duration: 0.7, delay: 1.8 }],
       ['#title-text', { scale: 1 }, { duration: 1, type: 'spring', stiffness: 100, mass: 0.3, damping: 30 }],
     ]);
   }, [animate]);
@@ -114,7 +114,7 @@ export const Hero = () => {
       <S.Title id="title-text" initial={{ top: '0dvh', left: '50dvw', translateX: '-40%', scale: 0.8, opacity: 0 }}>
         {heroText.title}
       </S.Title>
-      <S.AboutText initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4 } }}>
+      <S.AboutText initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 3.8 } }}>
         {heroText.personalStatement}
       </S.AboutText>
 

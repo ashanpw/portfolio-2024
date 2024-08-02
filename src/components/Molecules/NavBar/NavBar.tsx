@@ -20,12 +20,11 @@ export const NavBar = () => {
   const elementScrollHandler = (id: string) => {
     lenis?.scrollTo(id);
   };
-
   return (
     <S.Container ref={scope}>
       <S.Name initial={{ opacity: 0, marginTop: '50dvh' }} id="name-container">
         <S.A
-          initial={{ color: ColorTokens.quartenary }}
+          initial={{ color: ColorTokens.quinary }}
           animate={{ color: '#000', transition: { delay: 2.6, duration: 0.3 } }}
           href={`#${navBarText.homeId}`}
           onClick={() => elementScrollHandler(`#${navBarText.homeId}`)}
@@ -48,7 +47,7 @@ export const NavBar = () => {
           </motion.li>
         ))}
       </S.Ul>
-      <S.Contact initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4.4 } }}>
+      <S.Contact initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4.2 } }}>
         <S.A
           whileHover={{ color: ColorTokens.quartenary }}
           onClick={() => elementScrollHandler(`#${navBarText.contactId}`)}

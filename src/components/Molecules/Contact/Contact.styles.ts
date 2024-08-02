@@ -20,6 +20,7 @@ const VideoContainer = styled.div`
 `;
 
 const Title = styled.h1`
+  color: ${ColorTokens.quartenary};
   text-align: center;
   margin-bottom: 15rem;
 `;

@@ -28,7 +28,7 @@ const LogoContainerItem = styled(motion.div)`
   background: ${ColorTokens.background};
   z-index: -500;
   margin: auto;
-  min-width: 200vw;
+  min-width: 250vw;
   margin-bottom: 10rem;
   padding: 2rem 12.5rem;
 
