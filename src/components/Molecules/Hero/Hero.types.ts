@@ -7,4 +7,5 @@ export interface ImageData {
   id: string;
   position: Position;
   imgSrc: string;
+  alt: string;
 }

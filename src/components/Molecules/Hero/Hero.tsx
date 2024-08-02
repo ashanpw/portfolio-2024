@@ -54,6 +54,7 @@ export const Hero = () => {
             id: uuidv4(),
             position: { x: event.clientX, y: event.clientY },
             imgSrc: heroText.imageList[currentIndex].imgSrc,
+            alt: heroText.imageList[currentIndex].alt,
           };
           setImages((prevImages) => {
             let updatedImages;
@@ -127,8 +128,8 @@ export const Hero = () => {
             alt="Mouse Tracker"
             initial={{
               opacity: 0,
-              x: (initialPosition?.x ?? 0) - x.getVelocity() / 38,
-              y: (initialPosition?.y ?? 0) - y.getVelocity() / 38,
+              x: (initialPosition?.x ?? 0) - x.getVelocity() / 35,
+              y: (initialPosition?.y ?? 0) - y.getVelocity() / 35,
             }}
             animate={{
               opacity: 1,

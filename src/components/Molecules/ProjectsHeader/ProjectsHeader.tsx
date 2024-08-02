@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { S } from './ProjectsHeader.styles';
-import { useMotionValueEvent, useScroll, useTransform } from 'framer-motion';
+import { useScroll, useTransform } from 'framer-motion';
 import { AssetBucketUrlPrefix } from '../../../utils/Constants';
 import { projectsHeaderText } from './ProjectsHeader.text';
 
@@ -12,7 +12,7 @@ export const ProjectsHeader = () => {
   });
 
   const moveRight = useTransform(scrollYProgress, [0, 1], ['-42.5%', '40%']);
-  const moveLeft = useTransform(scrollYProgress, [0, 1], ['-22.5%', '-120%']);
+  const moveLeft = useTransform(scrollYProgress, [0, 1], ['-2.5%', '-120%']);
   const moveDown = useTransform(scrollYProgress, [0, 1], ['-10%', '210%']);
   const shuffle = (array: string[]) => {
     return array
@@ -67,6 +67,7 @@ export const ProjectsHeader = () => {
             y: moveDown,
             zIndex: '-1',
             rotate: 5,
+            marginTop: '25rem',
           }}
         >
           {movingBannersCenter}
@@ -77,7 +78,7 @@ export const ProjectsHeader = () => {
             y: moveDown,
             zIndex: '1',
             rotate: -5,
-            marginTop: '30rem',
+            marginTop: '15rem',
           }}
         >
           {movingBannersBottom}

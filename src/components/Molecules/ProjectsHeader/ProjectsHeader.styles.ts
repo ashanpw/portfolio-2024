@@ -12,9 +12,16 @@ const Container = styled.div`
 
 const Title = styled(motion.h1)`
   position: sticky;
-  top: calc(50% - 10vw / 2);
+  top: 46dvh;
   margin: auto;
   text-align: center;
+
+  @media (min-width: 768px) {
+    top: 36dvh;
+  }
+  @media (min-width: 1600px) {
+    top: 38dvh;
+  }
 `;
 
 const LogoContainerItem = styled(motion.div)`

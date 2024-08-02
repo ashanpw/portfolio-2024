@@ -11,11 +11,20 @@ const Container = styled.div`
 
 const Title = styled(motion.div)`
   position: sticky;
-  top: calc(50% - 10vw / 2);
+  top: 45dvh;
   margin: auto;
   text-align: center;
   z-index: -1;
   color: ${ColorTokens.title};
+  @media (min-width: 768px) {
+    top: 38dvh;
+  }
+  @media (min-width: 1200px) {
+    top: 32dvh;
+  }
+  @media (min-width: 2500px) {
+    top: 36dvh;
+  }
 `;
 
 const Grid = styled.div`
