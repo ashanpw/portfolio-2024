@@ -6,7 +6,7 @@ export const LoadingScreen = () => {
     <S.MotionContainer
       animate={{
         y: '-100dvh',
-        transition: { duration: 0.7, delay: 2.2, type: 'tween', ease: 'easeInOut' },
+        transition: { duration: 0.6, delay: 2.2, type: 'tween', ease: 'easeInOut' },
       }}
     ></S.MotionContainer>
   );
