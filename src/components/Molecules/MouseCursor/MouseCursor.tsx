@@ -1,6 +1,5 @@
-import { motion, useAnimate, useMotionValue, useSpring } from 'framer-motion';
+import { useMotionValue, useSpring } from 'framer-motion';
 import { useEffect } from 'react';
-import { ColorTokens } from '../../../ColorTokens/ColorTokens';
 import { MouseSpringOptions } from '../../../utils/Constants';
 import { S } from './MouseCursor.styles';
 
@@ -43,7 +42,6 @@ export const MouseCursor = () => {
       style={{
         translateX: xSpring,
         translateY: ySpring,
-
         scale: scaleSpring,
       }}
       initial={{ opacity: 0 }}

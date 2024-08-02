@@ -6,7 +6,7 @@ export const listContainerVariants = {
     ...TextListContainerVariants.animate,
     transition: {
       ...TextListContainerVariants.animate.transition,
-      delayChildren: 3,
+      delayChildren: 3.2,
     },
   },
 };
