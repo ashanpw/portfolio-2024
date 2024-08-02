@@ -9,7 +9,7 @@ export const NavBar = () => {
   const text = {
     homeText: 'ASHAN PANDUWAWALA',
     homeId: 'home',
-    navItems: ['INTRODUCTION', 'CODE // TECHNOLOGY', 'EXPERIENCE', 'PROJECTS →'],
+    navItems: ['INTRODUCTION', 'CODE // TECHNOLOGIES', 'EXPERIENCE', 'PROJECTS →'],
     navIds: ['introduction', 'lines-of-code', 'experience', 'projects'],
     contactId: 'contact',
     contactText: 'CONTACT',
