@@ -13,7 +13,7 @@ export const NavBar = () => {
 
   useEffect(() => {
     animate('#name-container', { opacity: 1 }, { duration: 0.8, delay: 0.5 }).then(() => {
-      animate('#name-container', { marginTop: 0 }, { duration: 0.6, delay: 0.4, type: 'tween', ease: 'easeInOut' });
+      animate('#name-container', { marginTop: 0 }, { duration: 0.7, delay: 0.4, type: 'tween', ease: 'easeInOut' });
     });
   }, []);
 
