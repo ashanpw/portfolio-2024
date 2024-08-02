@@ -14,9 +14,9 @@ const FlexBox = styled(motion.div)<{
   ${(props) => (props.$useDarkMode ? 'border: 1px solid gray' : 'border: 1px solid black')};
 
   margin: -0.1rem 0 0 -0.1rem;
-  min-height: 20rem;
+  min-height: 25rem;
   @media (min-width: 768px) {
-    min-height: 40rem;
+    min-height: 45rem;
     padding: 3rem 4rem;
   }
 `;
