@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ColorTokens } from '../../../ColorTokens/ColorTokens';
 
 const Container = styled.div`
-  min-height: 300dvh;
+  min-height: 280dvh;
   position: relative;
   margin-bottom: 20rem;
   max-width: 100%;
@@ -21,7 +21,7 @@ const Title = styled(motion.div)`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-height: 100dvh;
+  max-height: 200dvh;
   max-width: 100vw;
   overflow: hidden;
   place-items: center;
