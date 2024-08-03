@@ -112,7 +112,7 @@ export const Hero = () => {
       onMouseLeave={() => setShowAnimations(false)}
       id="home"
     >
-      <S.Title id="title-text" initial={{ top: '0dvh', left: '50dvw', translateX: '-40%', scale: 0.8, opacity: 0 }}>
+      <S.Title id="title-text" initial={{ left: '50dvw', translateX: '-40%', scale: 0.8, opacity: 0 }}>
         {heroText.title}
       </S.Title>
       <S.AboutText initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 3.8 } }}>
