@@ -125,7 +125,7 @@ export const Hero = () => {
             key={image.id}
             id={image.id}
             src={image.imgSrc}
-            alt="Mouse Tracker"
+            alt={image.alt}
             initial={{
               opacity: 0,
               x: (initialPosition?.x ?? 0) - x.getVelocity() / 35,
