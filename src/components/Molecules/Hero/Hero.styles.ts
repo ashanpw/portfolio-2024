@@ -31,8 +31,20 @@ const AboutText = styled(motion.p)`
   }
 `;
 
+const Image = styled(motion.img)`
+  width: 20rem;
+  z-index: -99;
+  pointer-events: none;
+  aspect-ratio: 1 / 1;
+
+  @media (min-width: 2000px) {
+    width: 25rem;
+  }
+`;
+
 export const S = {
   Container,
   AboutText,
+  Image,
   Title,
 };

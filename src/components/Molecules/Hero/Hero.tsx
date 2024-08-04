@@ -121,7 +121,7 @@ export const Hero = () => {
 
       {images.map((image) => {
         return (
-          <motion.img
+          <S.Image
             key={image.id}
             id={image.id}
             src={image.imgSrc}
@@ -138,12 +138,8 @@ export const Hero = () => {
             transition={{ duration: 0 }}
             style={{
               position: 'absolute',
-              width: '25rem',
               translateX: '-50%',
               translateY: '-50%',
-              zIndex: -99,
-              pointerEvents: 'none',
-              aspectRatio: '1/1',
             }}
             loading="eager"
           />
