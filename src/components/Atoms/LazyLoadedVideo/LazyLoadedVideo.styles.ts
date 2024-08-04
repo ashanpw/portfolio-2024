@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Video = styled(motion.video)`
   pointer-events: none;
-  filter: contrast(120%);
+  filter: contrast(105%);
 `;
 
 export const S = {
