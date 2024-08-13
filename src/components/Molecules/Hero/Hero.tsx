@@ -20,7 +20,7 @@ export const Hero = () => {
   useEffect(() => {
     animate([
       ['#title-text', { opacity: 1 }, { duration: 0.7, delay: 1.8 }],
-      ['#title-text', { scale: 1 }, { duration: 1, type: 'spring', stiffness: 100, mass: 0.3, damping: 30 }],
+      ['#title-text', { scale: 1 }, { duration: 0.6, type: 'spring', stiffness: 100, mass: 0.3, damping: 30 }],
     ]);
   }, [animate]);
 
@@ -117,7 +117,7 @@ export const Hero = () => {
       onMouseLeave={() => setShowAnimations(false)}
       id="home"
     >
-      <S.Title id="title-text" initial={{ left: '50dvw', translateX: '-40%', scale: 0.8, opacity: 0 }}>
+      <S.Title id="title-text" initial={{ left: '50dvw', translateX: '-40%', scale: 0.75, opacity: 0 }}>
         {heroText.title}
       </S.Title>
       <S.AboutText initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 3.8 } }}>
