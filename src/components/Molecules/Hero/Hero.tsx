@@ -1,4 +1,4 @@
-import { motion, useAnimate, useMotionValue } from 'framer-motion';
+import { useAnimate, useMotionValue } from 'framer-motion';
 import { S } from './Hero.styles';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
@@ -10,7 +10,7 @@ export const Hero = () => {
   const [initialPosition, setInitialPosition] = useState<Position | null>(null);
   const [currentPosition, setCurrentPosition] = useState<Position | null>(null);
   const [images, setImages] = useState<ImageData[]>([]);
-  const targetDistance = 180; // Set the target distance in pixels
+  const targetDistance = 150; // Set the target distance in pixels
   // x, y used for tracking velocity
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -40,14 +40,10 @@ export const Hero = () => {
         setInitialPosition(currentPosition);
       }
 
-      if (initialPosition !== null && currentPosition !== null) {
+      if (currentPosition !== null) {
         setCurrentPosition(newCurrentPosition);
-
-        const distanceX = newCurrentPosition.x - initialPosition.x;
-        const distanceY = newCurrentPosition.y - initialPosition.y;
-        const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-
-        if (distance >= targetDistance) {
+        const distance = calculateDistanceBetweenPoints(newCurrentPosition, initialPosition);
+        if (distance >= targetDistance || distance === -1) {
           setCurrentIndex((prev) => (prev + 1) % heroText.imageList.length);
 
           const newImage: ImageData = {
@@ -80,6 +76,15 @@ export const Hero = () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [initialPosition, currentPosition, x, y, currentIndex, showAnimations]);
+
+  const calculateDistanceBetweenPoints = (coord1: Position | null, coord2: Position | null): number => {
+    if (coord1 == null || coord2 == null) {
+      return -1;
+    }
+    const distanceX = coord1.x - coord2.x;
+    const distanceY = coord1.y - coord2.y;
+    return Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+  };
 
   const animateImg = (image: ImageData) => {
     const element = document.getElementById(image.id);

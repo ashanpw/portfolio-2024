@@ -12,17 +12,23 @@ const Container = styled.div`
 const VideoContainer = styled.div`
   border: 1px solid ${ColorTokens.secondary};
   margin: auto;
-  padding: 0rem 2rem;
+  padding: 3rem 2rem;
   margin-bottom: 10rem;
+  @media (min-width: 768px) {
+    padding: 5rem 4rem;
+  }
   @media (min-width: 2000px) {
-    padding: 8rem 5rem;
+    padding: 8rem 4rem;
   }
 `;
 
-const Title = styled.h1`
+const Title = styled(motion.h1)`
   color: ${ColorTokens.quartenary};
   text-align: center;
   margin-bottom: 15rem;
+  position: sticky;
+  top: calc(50% - 28rem / 2);
+  margin: auto;
 `;
 
 const Circle = styled(motion.div)`
@@ -37,9 +43,16 @@ const Circle = styled(motion.div)`
   margin-top: 20rem;
 `;
 
+const StickyContainer = styled.div`
+  min-height: 70dvh;
+  position: relative;
+  margin-bottom: 20rem;
+  max-width: 100%;
+`;
 export const S = {
   Container,
   Circle,
   VideoContainer,
+  StickyContainer,
   Title,
 };

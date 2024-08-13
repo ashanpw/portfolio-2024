@@ -14,7 +14,7 @@ import { LoadingScreen } from './components/Atoms/LoadingScreen/LoadingScreen';
 
 export const App = () => {
   return (
-    <ReactLenis root options={{ duration: 1.5 }}>
+    <ReactLenis root options={{ duration: 1.7 }}>
       <LoadingScreen />
       <NavBar />
       <MouseCursor />

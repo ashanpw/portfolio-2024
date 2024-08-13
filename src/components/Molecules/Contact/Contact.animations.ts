@@ -15,3 +15,17 @@ export const circleAnimationVariants = {
     },
   },
 };
+
+export const contactTitleAnimationVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      ease: 'easeOut',
+      delay: 0.3,
+      duration: 0.8,
+    },
+  },
+};

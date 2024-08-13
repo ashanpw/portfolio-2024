@@ -2,13 +2,18 @@ import { S } from './Contact.styles';
 import { IndentedContainer } from '../../Atoms/IndentedContainer/IndentedContainer';
 import { List } from '../../Atoms/List/List';
 import { LazyLoadedVideo } from '../../Atoms/LazyLoadedVideo/LazyLoadedVideo';
-import { circleAnimationVariants } from './Contact.animations';
+import { circleAnimationVariants, contactTitleAnimationVariants } from './Contact.animations';
 import { contactText } from './Contact.text';
 export const Contact = () => {
   return (
     <>
       <S.Container id={contactText.id}>
-        <S.Title>{contactText.title}</S.Title>
+        <S.StickyContainer>
+          <S.Title initial="initial" whileInView="animate" variants={contactTitleAnimationVariants}>
+            {contactText.title}
+          </S.Title>
+        </S.StickyContainer>
+
         <IndentedContainer>
           <S.VideoContainer>
             <LazyLoadedVideo

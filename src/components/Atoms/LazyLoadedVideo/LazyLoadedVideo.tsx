@@ -1,6 +1,5 @@
 import { ReactElement, useEffect, useRef, useState } from 'react';
 import { LazyLoadedVideoProps } from './LazyLoadedVideo.types';
-import { motion } from 'framer-motion';
 import { SourceAnimationVariants } from '../../../utils/Constants';
 import { S } from './LazyLoadedVideo.styles';
 
@@ -54,7 +53,6 @@ export const LazyLoadedVideo = (props: LazyLoadedVideoProps) => {
                 type={`video/${source.type}`}
                 media={`(min-width: ${item.minScreenSize})`}
                 style={{ aspectRatio: aspectRatio }}
-                aria-label={props.ariaLabel}
               />,
             );
           });
@@ -65,7 +63,6 @@ export const LazyLoadedVideo = (props: LazyLoadedVideoProps) => {
               src={`${source.src}.${source.type}`}
               type={source.type}
               style={{ aspectRatio: aspectRatio }}
-              aria-label={props.ariaLabel}
             />,
           );
         }
@@ -88,6 +85,7 @@ export const LazyLoadedVideo = (props: LazyLoadedVideoProps) => {
       whileInView="animate"
       variants={SourceAnimationVariants}
       preload="metadata"
+      aria-label={props.ariaLabel}
       playsInline
     >
       {sourceList}
