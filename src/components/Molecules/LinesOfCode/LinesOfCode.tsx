@@ -14,7 +14,7 @@ const generateImageList = (scrollYProgress: any) => {
     y: useTransform(
       scrollYProgress,
       [1, 0],
-      content.yTransformOverride ? content.yTransformOverride : [randomIntFromInterval(-400, 400), 0],
+      content.yTransformOverride ? content.yTransformOverride : [randomIntFromInterval(-600, 400), 0],
     ),
   }));
 };
