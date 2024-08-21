@@ -11,7 +11,7 @@ export const experienceText = {
       org: 'PEOPLE ENGINE',
       date: 'NOV 2023 - PRESENT',
       description:
-        'Built a service to routinely check for missing Employee information such as Emergency contact info and notify up to 3 million employees to update their data.',
+        'Built a service to routinely check for missing employee personal information and notify up to 3 million employees to update their data.',
       imgSrc: `${AssetBucketUrlPrefix}/experience-assets/atozProfilePage.webp`,
       imgAlt:
         "Image of an Amazon employee's profile page showing a red banner at the top to indicate that they are missing personal information",
