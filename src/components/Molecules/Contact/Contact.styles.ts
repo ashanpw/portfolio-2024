@@ -23,7 +23,7 @@ const VideoContainer = styled.div`
 `;
 
 const Title = styled(motion.h1)`
-  color: ${ColorTokens.quartenary};
+  color: ${ColorTokens.quinary};
   text-align: center;
   margin-bottom: 15rem;
   position: sticky;

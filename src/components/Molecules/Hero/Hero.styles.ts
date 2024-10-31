@@ -9,13 +9,13 @@ const Container = styled(motion.div)`
 `;
 const Title = styled(motion.p)`
   font-family: bona nova;
-  font-size: 90dvw;
+  font-size: 85dvw;
   line-height: 100dvh;
   position: absolute;
   pointerevents: none;
   color: ${ColorTokens.title};
   @media (min-width: 1000px) {
-    font-size: 100dvh;
+    font-size: 95dvh;
   }
 `;
 
