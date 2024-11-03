@@ -105,7 +105,7 @@ export const projectsText = {
       name: 'STORYBOARD APP',
       date: 'MOBILE',
       description:
-        'Worked with students David and Krishan to develop an Android app for storyboard artists to share their work, receive feedback, and interact via comments, likes, and profile views. Built with Java and integrated Firebase for authentication and post storage.',
+        'Worked with students David Eluma and Krishan Panduwawala to develop an Android app for storyboard artists to share their work, receive feedback, and interact via comments, likes, and profile views. Built with Java and integrated Firebase for authentication and post storage.',
       mediaList: [
         {
           src: `${assetBucketProjectUrlPrefix}/story-board/storyboardMain`,
