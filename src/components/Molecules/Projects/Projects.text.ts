@@ -50,7 +50,7 @@ export const projectsText = {
       name: 'DROWSINESS DETECTION SYSTEM',
       date: 'ML',
       description:
-        'Under Professor Mohamed Teli, collaborated with students Hyekang and Krishan to build a real-time driver drowsiness detection system using convolutional neural networks. Trained models to detect blinks, yawns, and driver actions, assessing drowsiness by analyzing yawn frequency and blink duration.',
+        'Under Professor Mohamed Teli, collaborated with students Hyekang Joo and Krishan Panduwawala to build a real-time driver drowsiness detection system using convolutional neural networks. Trained models to detect blinks, yawns, and driver actions, assessing drowsiness by analyzing yawn frequency and blink duration.',
       mediaList: [
         {
           src: `${assetBucketProjectUrlPrefix}/drowsiness-detection/drowsinessDetection`,
