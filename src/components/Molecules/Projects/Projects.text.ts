@@ -6,7 +6,7 @@ export const projectsText = {
   title: 'PROJECTS',
   contentItems: [
     {
-      name: 'CASE ROULETTE WEBSITE',
+      name: 'CASE ROULETTE',
       date: 'FULLSTACK',
       description:
         "Recreated Counter-Strike's inventory system for case opening and item retrieval. Built the frontend with React (TanStack) and the backend with Kotlin (REST, DynamoDB).",
