@@ -50,9 +50,9 @@ const Description = styled.p`
 
 const Img = styled(motion.img)`
   pointer-events: none;
-  width: 25rem;
+  width: 30rem;
   @media (min-width: 2000px) {
-    width: 30rem;
+    width: 38rem;
   }
 
   aspect-ratio: 1 / 1;

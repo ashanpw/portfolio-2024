@@ -6,30 +6,15 @@ export const projectsText = {
   title: 'PROJECTS',
   contentItems: [
     {
-      name: 'PROJECT WIND',
-      date: 'FRONTEND',
+      name: 'CASE ROULETTE WEBSITE',
+      date: 'FULLSTACK',
       description:
-        'Second iteration of my portfolio website, codenamed "Project Wind". Designed with a wind-inspired flow and seamless GSAP transitions, built with React and JavaScript for interactivity.',
+        "Recreated Counter-Strike's inventory system with a React frontend (TanStack, useQuery) and a Kotlin backend (REST, DynamoDB), allowing users to list, open, and receive random case items.",
       mediaList: [
         {
-          src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindMain`,
+          src: `${assetBucketProjectUrlPrefix}/case-roulette/caseRoulette`,
           type: 'video',
-          alt: 'A home page for a portfolio website I created with video of wind moving in the background',
-        },
-        {
-          src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindAbout`,
-          type: 'video',
-          alt: 'About page for my portfolio website which displays my education and areas of expertise',
-        },
-        {
-          src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindExperience`,
-          type: 'image',
-          alt: 'Image of the experience page of my portfolio website which displays a video of a samurai and a list of my work experience',
-        },
-        {
-          src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindProjects`,
-          type: 'image',
-          alt: "Several images and videos of projects I've created in the past displayed in a grid",
+          alt: 'A video of a video game inventory system displayed in the browser',
         },
       ],
     },
@@ -89,15 +74,30 @@ export const projectsText = {
       ],
     },
     {
-      name: 'SEAM CARVING',
-      date: 'CV',
+      name: 'PROJECT WIND',
+      date: 'FRONTEND',
       description:
-        'Implemented a Content-Aware Seam Carving algorithm to resize images by removing low-importance pixel paths using gradients and dynamic programming.',
+        'Second iteration of my portfolio website, codenamed "Project Wind". Designed with a wind-inspired flow and seamless GSAP transitions, built with React and JavaScript for interactivity.',
       mediaList: [
         {
-          src: `${assetBucketProjectUrlPrefix}/seam-carving/seamCarving`,
+          src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindMain`,
           type: 'video',
-          alt: 'A video of lady slowing inching towards a castle as the image is shrunk horizontally',
+          alt: 'A home page for a portfolio website I created with video of wind moving in the background',
+        },
+        {
+          src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindAbout`,
+          type: 'video',
+          alt: 'About page for my portfolio website which displays my education and areas of expertise',
+        },
+        {
+          src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindExperience`,
+          type: 'image',
+          alt: 'Image of the experience page of my portfolio website which displays a video of a samurai and a list of my work experience',
+        },
+        {
+          src: `${assetBucketProjectUrlPrefix}/project-wind/projectWindProjects`,
+          type: 'image',
+          alt: "Several images and videos of projects I've created in the past displayed in a grid",
         },
       ],
     },
