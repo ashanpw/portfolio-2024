@@ -9,7 +9,7 @@ export const projectsText = {
       name: 'CASE ROULETTE WEBSITE',
       date: 'FULLSTACK',
       description:
-        "Recreated Counter-Strike's inventory system with a React frontend (TanStack, useQuery) and a Kotlin backend (REST, DynamoDB), allowing users to list, open, and receive random case items.",
+        "Recreated Counter-Strike's inventory system for case opening and item retrieval. Built the frontend with React (TanStack) and the backend with Kotlin (REST, DynamoDB).",
       mediaList: [
         {
           src: `${assetBucketProjectUrlPrefix}/case-roulette/caseRoulette`,
