@@ -11,10 +11,10 @@ export const experienceText = {
       org: 'GEN AI',
       date: 'JUL 2025 - PRESENT',
       description:
-        'Built a service to routinely check for missing employee personal information and notify up to 3 million employees to update their data.',
+        'Developing the GenAI platform for data labeling workflows that power model training for OpenAI, Google, and Meta.',
       imgSrc: ``,
       imgAlt:
-        "",
+        "TODO",
     },
     {
       company: 'AMAZON',
@@ -22,7 +22,7 @@ export const experienceText = {
       org: 'PEOPLE ENGINE',
       date: 'NOV 2023 - JUL 2025',
       description:
-        'Developing the GenAI platform for data labeling workflows that power model training for OpenAI, Google, and Meta.',
+        'Built a service to routinely check for missing employee personal information and notify up to 3 million employees to update their data.',
       imgSrc: `${AssetBucketUrlPrefix}/experience-assets/atozProfilePage.webp`,
       imgAlt:
         "Image of an Amazon employee's profile page showing a red banner at the top to indicate that they are missing personal information",
