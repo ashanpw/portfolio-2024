@@ -10,7 +10,7 @@ export const contactText = {
     {
       label: 'SOCIAL',
       value: 'LINKEDIN',
-      url: 'https://www.linkedin.com/in/ashanpandu/',
+      url: 'https://www.linkedin.com/in/ashanpw/',
     },
     {
       label: 'CODE',
