@@ -64,7 +64,7 @@ export const Experience = () => {
           translateY: '-50%',
         }}
       >
-        {currentHoveredItem === idx && (
+        {currentHoveredItem === idx && p.imgSrc && (
           <S.Img
             src={p.imgSrc}
             alt={p.imgAlt}
