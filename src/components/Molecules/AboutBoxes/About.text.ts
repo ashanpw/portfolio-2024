@@ -3,11 +3,11 @@ export const AboutText = {
   contentItems: [
     {
       header: 'PROFILE',
-      listItems: ['SOFTWARE DEV ENGINEER II', 'FULL-STACK', 'AMAZON'],
+      listItems: ['Full-Stack Software Engineer', 'GEN AI', 'SCALE AI'],
     },
     {
       header: 'STATISTICS',
-      listItems: ['4 YOE', 'BS COMP SCI', 'UMD, COLLEGE PARK'],
+      listItems: ['5 YOE', 'BS COMP SCI', 'UMD, COLLEGE PARK'],
     },
     {
       header: 'INTERESTS',
