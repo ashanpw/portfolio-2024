@@ -2,7 +2,7 @@ import { AssetBucketUrlPrefix } from '../../../utils/Constants';
 
 const linesOfCodeAssetBucketPrefix = `${AssetBucketUrlPrefix}/lines-of-code-images`;
 export const linesOfCodeText = {
-  title: '100K+',
+  title: '200K+',
   subtitle: 'LINES OF CODE',
   contentItems: [
     {
