@@ -2,16 +2,27 @@ import { AssetBucketUrlPrefix } from '../../../utils/Constants';
 
 export const experienceText = {
   title: 'EXPERIENCE',
-  index: 3,
+  index: 4,
   id: 'experience',
   contentItems: [
+    {
+      company: 'NVIDIA',
+      title: 'SENIOR SOFTWARE ENGINEER',
+      org: 'METROPOLIS',
+      date: 'JAN 2026 - PRESENT',
+      description:
+        'Building the Public Safety blueprint to automate real-time video search and intelligent security alerting. https://docs.nvidia.com/vss/3.0.0/publicsafety-docs/3.0.0/index.html',
+      imgSrc: ``,
+      imgAlt:
+        "TODO",
+    },
     {
       company: 'SCALE AI',
       title: 'FULL-STACK SOFTWARE ENGINEER',
       org: 'GEN AI',
-      date: 'JUL 2025 - PRESENT',
+      date: 'JUL 2025 - JAN 2026',
       description:
-        'Developing the GenAI platform for data labeling workflows that power model training for OpenAI, Google, and Meta.',
+        'Developed the GenAI platform for data labeling workflows that power model training for OpenAI, Google, and Meta.',
       imgSrc: ``,
       imgAlt:
         "TODO",
