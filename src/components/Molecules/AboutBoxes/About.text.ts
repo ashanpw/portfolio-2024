@@ -3,7 +3,7 @@ export const AboutText = {
   contentItems: [
     {
       header: 'PROFILE',
-      listItems: ['SOFTWARE ENGINEER', 'FULL-STACK', 'SCALE AI'],
+      listItems: ['SENIOR SOFTWARE ENGINEER', 'FULL-STACK', 'NVIDIA'],
     },
     {
       header: 'STATISTICS',
